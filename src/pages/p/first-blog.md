@@ -31,9 +31,9 @@ Year 2019, I discovered Illustrator and found its usefulness and started learnin
 
 There is still much to my graphics design story.
 
-You can check out my Deeesigns Portfolio here - <a href='deeesigns' title='Deeesigns Studios'>Deeesigns Studios</a>
+<!-- You can check out my Deeesigns Portfolio here - <a href='deeesigns' title='Deeesigns Studios'>Deeesigns Studios</a> -->
 
-Stay tuned as I'll be posting helpful articles on my blog. Thank you.
+Stay tuned as I'll be posting helpful articles on my blog. Thank you 😃
 
 <!-- 
 ```jsx
