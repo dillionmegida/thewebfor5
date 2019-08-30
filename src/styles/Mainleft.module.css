@@ -1,0 +1,29 @@
+.Mainleft {
+    width: 20%;
+    background-color: var(--mainColor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    bottom: 0;
+    padding: 0 10px;
+    color: white;
+}
+  .Mainleft h1 {
+    font-size: 20px;
+  }
+
+.navSection {
+    text-align: center;
+    width: 150px;
+}
+
+@media (max-width: 900px) {
+    .Mainleft {
+      display: none;
+    }
+}
