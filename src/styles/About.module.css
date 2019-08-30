@@ -1,0 +1,13 @@
+.AboutSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+.Bio {
+	max-width: 500px;
+	padding: 20px;
+}
+.Dp {
+	text-align: center;
+}
