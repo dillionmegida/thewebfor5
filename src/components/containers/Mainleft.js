@@ -16,8 +16,8 @@ let Mainleft = (props) => (
     <div className={Styles.Mainleft}>
         <section>
             <Dp imgDivStyle={imgDivStyle}/>
-            <h1>Dillion Megida <span role='img' aria-label='true'>&#128640;</span></h1>
-            <p>Front End Developer and <br/>Technical Writer</p>
+            {/*<h1>Dillion Megida <span role='img' aria-label='true'>&#128640;</span></h1>
+            <p>Front End Developer and <br/>Technical Writer</p>*/}
         </section>
         <nav className={Styles.navSection}>
             <NavLinks/>
