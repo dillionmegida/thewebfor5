@@ -12,7 +12,6 @@
             <h2>{props.title}</h2>
             <p>{props.date} | {props.readTime} read</p>
             <p style={{lineHeight: '25px'}}>
-                {props.next}
                 {props.content}
             </p>
         </a>
@@ -59,7 +58,6 @@ export default () => (
                                     readTime={node.frontmatter.readTime}
                                     date={node.frontmatter.date}
                                     content={node.excerpt}
-                                    // next={node.next.frontmatter.title}
                                 />
                             </div>
                     ))}

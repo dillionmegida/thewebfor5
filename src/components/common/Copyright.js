@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-let Copyright = (props) => (
-    <p style={{color: props.color}}>
+let Copyright = props => {
+    return(
+        <p style={{color: props.color}}>
         <span style={{fontSize: '18px'}}>
             Copyright {new Date().getFullYear()}
         </span>
@@ -12,6 +13,7 @@ let Copyright = (props) => (
             Dillion Megida
         </a>
     </p>
-)
+    )
+}
 
 export default Copyright;

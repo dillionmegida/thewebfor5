@@ -12,6 +12,7 @@ export default ({ data }) => {
         <div style={{lineHeight: '30px'}}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
+        <hr/>
         {console.log(data)}
       </Layout>
   )
