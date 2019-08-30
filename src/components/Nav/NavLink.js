@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from '../../styles/NavLink.module.css';
+require('../../styles/NavLink.module.css');
 
 const navLink = (props) => {
     return (

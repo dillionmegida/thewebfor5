@@ -1,13 +1,11 @@
 import React from 'react';
-import Mainleft from '../components/containers/Mainleft'
-import Mainright from '../components/containers/Mainright'
+import Layout from '../components/Layout/Layout';
 
 
 let Porfolio = () => (
-    <div className="App">
-        <Mainleft className='mainleft'/>
-        <Mainright className='mainright'/>
-    </div>
+    <Layout>
+    	<h1>About Me</h1>
+    </Layout>
 );
 
 export default Porfolio;

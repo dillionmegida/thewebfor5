@@ -42,7 +42,6 @@ class Layout extends Component {
                         <div></div>
                     </div>
                 </header>
-                {console.log(this.state.drawerStatus)}
                 {this.state.drawerStatus ? 
                     <nav className={['NavSection', this.state.class].join(' ')}>
                         <p onClick={this.closeNavDrawer} className='CloseDrawer'>X</p>
