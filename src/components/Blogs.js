@@ -9,9 +9,9 @@
             margin: '0'
             }}
         >
-            <h2 style={{color: '#319ac1'}}>{props.title}</h2>
-            <p style={{color: '#5c6061'}}>{props.date} | {props.readTime} read</p>
-            <p style={{color: '#5c6061', lineHeight: '25px'}}>
+            <h2>{props.title}</h2>
+            <p>{props.date} | {props.readTime} read</p>
+            <p style={{lineHeight: '25px'}}>
                 {props.next}
                 {props.content}
             </p>
@@ -49,7 +49,7 @@ export default () => (
             console.log(data.allMarkdownRemark.edges);
             return (
                 <section className='Blogs'>
-                    <p style={{textDecoration: 'underline', marginLeft: '20px'}}>{data.allMarkdownRemark.totalCount} Posts</p>
+                    <p className='numArticles'>{data.allMarkdownRemark.totalCount} Articles Written</p>
                     {
                         data.allMarkdownRemark.edges.map(({ node }) => (
                             <div key={node.id} className='Blog'>
@@ -61,7 +61,6 @@ export default () => (
                                     content={node.excerpt}
                                     // next={node.next.frontmatter.title}
                                 />
-                                <hr width='100%' color='var(--mainColor1)'/>
                             </div>
                     ))}
                 </section>
