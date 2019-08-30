@@ -9,6 +9,7 @@
   :root {
     --mainColor1: #8a6047;
     --mainColor2: #f9cb3e;
+    --lightBlue: #319ac1;
   }
 
   body {
@@ -88,10 +89,35 @@
   }
 
   .Blog {
+    padding: 20px;
+    border-bottom: 3px solid var(--mainColor1);
+  }
+  .Blog h2 {
+    color: var(--lightBlue);
+  }
+  .numArticles {
+    width: 150px;
     padding: 10px;
+    color: white;
+    background-color: var(--mainColor1);
+    margin-left: 20px;
+    font-size: 16px;
+    display:  block;
+    text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom: 2px solid var(--mainColor2);
+  }
+  .Blog p {
+    color: #5c6061
   }
   .Blog:hover {
     box-shadow: 2px 2px 10px #ddd;
+    border-radius: 20px;
+    border-bottom: 3px solid var(--mainColor2);
+  }
+  .Blog:hover h2 {
+    color: var(--mainColor2);
   }
 
   .mobile-copyright {
