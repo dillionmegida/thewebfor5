@@ -3,13 +3,14 @@ import React from 'react';
 
 export default (props) => (
     <div className='App'>
-    	// <Helmet>
+    	{// <Helmet>
     	// 	<meta charSet="utf-8" />
     	// 	<title>
     	// 		{props.PageTitle}
     	// 	</title>
     	// 	<link rel="canonical" href=`http://mysite.com/{props.PageLink}` />
-    	// </Helmet>
+		// </Helmet>
+		}
         {props.children}
     </div>
 )

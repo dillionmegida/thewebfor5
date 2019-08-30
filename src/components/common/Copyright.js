@@ -7,7 +7,7 @@ let Copyright = props => {
             Copyright {new Date().getFullYear()}
         </span>
         <br/><br/>
-        Articles written with ❤️
+        Articles written with <span role='img' style={{fontSize: '20px', color: 'red'}}> &#10084; </span>
         by<br/>
         <a href='http://twitter.com/iamdillion' style={{color: props.color, fontWeight: 'bold', letterSpacing: '1px'}} title='Dillion Megida'>
             Dillion Megida
