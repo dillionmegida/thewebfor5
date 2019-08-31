@@ -13,9 +13,38 @@
     padding: 0 10px;
     color: white;
 }
-  .Mainleft h1 {
-    font-size: 20px;
+.ImgDiv, .ImgDivSmall {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 2px solid var(--mainColor1);
+  animation: DpRotate 3s linear infinite alternate;
+}
+.ImgDiv {
+  width: 150px;
+  height: 150px;
+}
+.ImgDivSmall {
+  width: 50px;
+  height: 50px;
+}
+@keyframes DpRotate {
+  25% {
+    border-left-color: var(--mainColor2);
   }
+  50% {
+    border-bottom-color: var(--mainColor2);
+  }
+  75% {
+    border-right-color: var(--mainColor2);
+  }
+  100% {
+    border-top-color: var(--mainColor2);
+  }
+}
+.Mainleft h1 {
+  font-size: 20px;
+}
 
 .navSection {
     display: flex;

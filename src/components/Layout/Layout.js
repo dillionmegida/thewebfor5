@@ -6,13 +6,7 @@ import Mainright from '../containers/Mainright';
 import NavLinks from '../Nav/NavLinks';
 import Dp from '../common/Dp';
 import Copyright from '../common/Copyright';
-
-let imgDivStyle = {
-    width: '50px',
-    height: '50px',
-    borderRadius: '50%',
-    overflow: 'hidden'
-}
+import Styles from '../../styles/Mainleft.module.css';
 
 class Layout extends Component {
     state = {
@@ -46,7 +40,7 @@ class Layout extends Component {
                         to='/'
                         title='Dillion Megida'
                     >
-                        <Dp imgDivStyle={imgDivStyle}/>
+                        <Dp imgDivClass={Styles.ImgDivSmall}/>
                     </Link>
                     <h3>Dillion Megida <span role='img' aria-label='true'>&#128640;</span></h3>
                     <div onClick={this.openNavDrawer} className='Harmburger'>

@@ -8,6 +8,29 @@
 	max-width: 500px;
 	padding: 20px;
 }
+.ImgDiv {
+	max-width: 300px;
+	max-height: 300px;
+	overflow: hidden;
+    margin: 0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+	border-radius: 80px 20px;
+	animation: ImgAnim 5s linear infinite alternate;
+}
+@keyframes ImgAnim {
+	25% {
+		border-radius: 20px 80px;
+	}
+	50% {
+		border-radius: 80px 20px;
+	}
+	75% {
+		border-radius: 20px 80px;
+	}
+	100% {
+		border-radius: 80px 20px;
+	}
+}
 .Dp {
 	text-align: center;
 }

@@ -3,14 +3,6 @@ import Dp from '../components//common/Dp';
 import Layout from '../components/Layout/Layout';
 import Styles from '../styles/About.module.css';
 
-let imgDivStyle = {
-	maxWidth: '300px',
-	maxHeight: '300px',
-	borderRadius: '20px',
-	overflow: 'hidden',
-	margin: 0
-}
-
 let Porfolio = () => (
     <Layout
         PageTitle='About Me - Dillion Megida'
@@ -32,7 +24,7 @@ let Porfolio = () => (
                 </p>
     		</section>
     		<section className={Styles.Dp}>
-    			<Dp imgDivStyle={imgDivStyle}/>
+    			<Dp imgDivClass={Styles.ImgDiv}/>
     			<h1>DILLION MEGIDA &#128640;</h1>
                 <p>
                 	<i className="fa fa-envelope"></i> dillionmegida@gmail.com<br/>

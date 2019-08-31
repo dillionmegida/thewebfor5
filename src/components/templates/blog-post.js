@@ -6,7 +6,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
       <Layout
-        PageTitle={`${post.frontmatter.title} - Dillion Megida's Blog`}
+        PageTitle={`${post.frontmatter.title} - Dillion's Blog`}
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
