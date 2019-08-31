@@ -24,10 +24,6 @@ form input, form textarea {
 	border: 1px solid #ddd;
 	padding: 10px 20px;
 }
-.name_and_email {
-	display: flex;
-	flex-direction: column;
-}
 form label {
 	margin-left: 20px;
 }
@@ -39,7 +35,7 @@ form input:hover:not([type='submit']), form textarea:hover {
 .submit_btn {
 	display: block;
 	margin: auto;
-	margin-top: 30px;
+	margin-top: 5px;
 	margin-bottom: 50px;
 	background-color: var(--mainColor2);
     color: var(--mainColor1);

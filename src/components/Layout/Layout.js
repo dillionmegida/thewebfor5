@@ -53,14 +53,18 @@ class Layout extends Component {
                     <nav className={['NavSection', this.state.class].join(' ')}>
                         <p onClick={this.closeNavDrawer} className='CloseDrawer'>X</p>
                         <section style={{
-                                height: '200px',
+                                height: '400px',
                                 display: 'flex',
                                 justifyContent: 'space-around',
                                 flexDirection: 'column',
                                 alignitems: 'center',
-                                width: '150px'
+                                minWidth: '300px'
                             }}>
                             <NavLinks/>
+                            <div style={{height: '1px', width: '100%', backgroundColor: '#eee'}}>
+
+                            </div>
+                            <Copyright color='white' />
                         </section>
                     </nav> :
                     null

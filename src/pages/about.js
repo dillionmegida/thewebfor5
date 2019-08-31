@@ -2,6 +2,7 @@ import React from 'react';
 import Dp from '../components//common/Dp';
 import Layout from '../components/Layout/Layout';
 import Styles from '../styles/About.module.css';
+import { Link } from 'gatsby';
 
 let Porfolio = () => (
     <Layout
@@ -29,8 +30,10 @@ let Porfolio = () => (
                 <p>
                 	<i className="fa fa-envelope"></i> dillionmegida@gmail.com<br/>
 	                <i className="fa fa-phone"></i> +234 905 896 1095<br/><br/>
-	                {/* You can connect with me on my<br/>social media handles &#128512;<br/> */}
-	                <a href='contact' title='Contact Me'><u>Contact Me</u></a>
+                    {/* You can connect with me on my<br/>social media handles &#128512;<br/> */}
+                    <Link to='/contact' title='Contact Me'>
+                        <u>Contact Me</u>
+                    </Link>
                 </p>
     		</section>
     	</section>

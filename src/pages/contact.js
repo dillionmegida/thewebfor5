@@ -19,19 +19,19 @@ let Contact = () => {
                     <form action="https://formspree.io/dillionmegida@gmail.com" method="POST">
                         <div>
                             <div>
-                                <label for="name">Name:</label><br/>
+                                <label htmlFor="name">Name:</label><br/>
                                 <input name='name' type="text" placeholder="Enter your fullname..." /><br/>
                             </div>
                             <div>
-                                <label for="name">Email Address:</label><br/>
+                                <label htmlFor="name">Email Address:</label><br/>
                                 <input name='email' type="email" placeholder="Enter your email address..."/ ><br/>
                             </div>
                         </div>
-                        <label for="name">Message:</label><br/>
-                        <textarea name="message" cols="30" rows="10" placeholder="Enter your message...">
-
-                        </textarea>
-                        <input className={Styles.submit_btn} type="submit" class="submit_btn" value="Send Message"></input>
+                        <div>
+                            <label htmlFor="name">Message:</label><br/>
+                            <textarea name="message" cols="30" rows="10" placeholder="Enter your message..."></textarea>
+                        </div>
+                        <input className={Styles.submit_btn} type="submit" value="Send Message"></input>
                     </form>
                 </section>
             </section>
