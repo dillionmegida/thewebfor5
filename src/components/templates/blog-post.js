@@ -14,7 +14,7 @@ export default ({ data }) => {
         <h1 style={{color: 'var(--lightBlue)'}}>{post.frontmatter.title}</h1>
         <p style={{color: 'var(--mainColor1)', fontWeight: 'bold'}}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
         <hr/>
-        <div style={{lineHeight: '30px'}}>
+        <div style={{lineHeight: '30px', fontSize: '20px'}}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
         <hr/>
