@@ -5,7 +5,12 @@ import Layout from '../Layout/Layout';
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-      <Layout>
+      <Layout
+        PageTitle={`${post.frontmatter.title} - Dillion Megida's Blog`}
+        PageLink={post.fields.slug}
+        PageDescription={post.frontmatter.pageDescription}
+        PageKeywords={post.frontmatter.pageKeywords}
+      >
         <h1 style={{color: 'var(--lightBlue)'}}>{post.frontmatter.title}</h1>
         <p style={{color: 'var(--mainColor1)', fontWeight: 'bold'}}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
         <hr/>
@@ -22,11 +27,16 @@ export default ({ data }) => {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       html
       frontmatter {
         title
         date
         readTime
+        pageDescription
+        pageKeywords
       }
     }
   }

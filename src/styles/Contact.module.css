@@ -1,0 +1,51 @@
+.ContactSection {
+    width:  80%;
+    margin: auto;
+}
+.ContactSection form {
+    display: flex; 
+	flex-direction: column;
+	width: 100%;
+}
+form input {
+	width: 100%;
+	margin:  0 0 20px;
+		
+}
+form textarea {
+	width: 100%;
+	max-height: 300px;
+	min-height: 300px;
+	margin:  0 0 30px;
+}
+
+form input, form textarea {
+	border-radius: 20px;
+	border: 1px solid #ddd;
+	padding: 10px 20px;
+}
+.name_and_email {
+	display: flex;
+	flex-direction: column;
+}
+form label {
+	margin-left: 20px;
+}
+
+form input:focus, form textarea:focus,
+form input:hover:not([type='submit']), form textarea:hover {
+	background-color: rgb(234, 232, 246);
+}
+.submit_btn {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	background-color: var(--mainColor2);
+    color: var(--mainColor1);
+    cursor: pointer;
+}
+.submit_btn:hover {
+	color: var(--mainColor2);
+	background-color: var(--mainColor1);
+}

@@ -1,7 +1,9 @@
 ---
-title: "Dillion Megida - First Blog"
+title: "Dillion Megida's First Blog"
 date: "18-06-2019"
-readTime: "3 mins"
+readTime: "2 mins"
+pageDescription: "The first blog on my website"
+pageKeywords: "Dillion First Blog"
 ---
 
 My name is <b>Dillion Megida</b>.

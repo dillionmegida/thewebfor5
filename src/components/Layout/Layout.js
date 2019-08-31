@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'gatsby';
 import App from '../App';
 import MainLeft from '../containers/Mainleft';
 import Mainright from '../containers/Mainright';
@@ -32,9 +33,21 @@ class Layout extends Component {
     }
     render() {
         return (
-            <App>
+            <App
+                PageTitle={this.props.PageTitle}
+                PageLink={this.props.PageLink}
+                PageDescription={this.props.PageDescription}
+                PageKeywords={this.props.PageKeywords}
+                TwitterCardTtitle={this.props.TwitterCardTtitle ? this.props.TwitterCardTtitle : this.props.PageTitle}
+                TwitterCardDescription={this.props.PageDescription}
+            >
                 <header className='TopSection'>
-                    <Dp imgDivStyle={imgDivStyle}/>
+                    <Link
+                        to='/'
+                        title='Dillion Megida'
+                    >
+                        <Dp imgDivStyle={imgDivStyle}/>
+                    </Link>
                     <h3>Dillion Megida <span role='img' aria-label='true'>&#128640;</span></h3>
                     <div onClick={this.openNavDrawer} className='Harmburger'>
                         <div></div>
@@ -45,7 +58,14 @@ class Layout extends Component {
                 {this.state.drawerStatus ? 
                     <nav className={['NavSection', this.state.class].join(' ')}>
                         <p onClick={this.closeNavDrawer} className='CloseDrawer'>X</p>
-                        <section style={{width: '150px'}}>
+                        <section style={{
+                                height: '200px',
+                                display: 'flex',
+                                justifyContent: 'space-around',
+                                flexDirection: 'column',
+                                alignitems: 'center',
+                                width: '150px'
+                            }}>
                             <NavLinks/>
                         </section>
                     </nav> :

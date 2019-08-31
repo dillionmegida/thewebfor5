@@ -1,15 +1,18 @@
 import React from 'react';
-require('../../styles/NavLink.module.css');
+import  { Link } from 'gatsby';
+import Styles from '../../styles/NavLink.module.css';
 
 const navLink = (props) => {
     return (
-        <ul>
-            <a key={props.title} href={props.href} title={props.title}>
-                <li>
-                    {props.nav.toUpperCase()}
-                </li>
-            </a>
-        </ul>
+        <Link
+            className={Styles.Link}
+            to={`/${props.href}`}
+            activeClassName={Styles.ActiveLink}
+            title={props.title}
+        >
+            {props.nav.toUpperCase()}
+        </Link>
+       
     )
 }
 

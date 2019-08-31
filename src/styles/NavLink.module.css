@@ -1,17 +1,14 @@
-ul {
+.Link {
     padding: 0;
     margin: 0;
     font-size: 17px;
     letter-spacing: 1px;
-}
-ul a {
     color: var(--mainColor2);
     font-weight: bold;
+    display: block;
+    margin: 7px 0;
 }
-ul li {
-    padding: 7px 0;
-}
-ul li:hover, .activeNav {
-	transform: scale(1.1);
-	color:  white;
+.Link:hover, .ActiveLink {
+    transform: scale(1.1);
+    color: white;
 }

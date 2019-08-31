@@ -1,12 +1,13 @@
     import React from 'react';
-    import { StaticQuery, graphql } from 'gatsby';
+    import { StaticQuery, graphql, Link } from 'gatsby';
 
     let Blog = (props) => (
-        <a title={props.title} href={props.href} style={{
-            textAlign: 'left',
-            fontFamily: 'roboto',
-            fontWeight: 'bold',
-            margin: '0'
+        <Link
+            to={props.href}
+            title={props.title}
+            style={{
+                fontFamily: 'roboto',
+                fontWeight: 'bold'
             }}
         >
             <h2>{props.title}</h2>
@@ -14,7 +15,8 @@
             <p style={{lineHeight: '25px'}}>
                 {props.content}
             </p>
-        </a>
+
+        </Link>
     )
 
 
