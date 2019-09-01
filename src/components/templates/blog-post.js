@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from '../Layout/Layout';
+import Disqus from './disqus';
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -19,6 +20,7 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
         <hr/>
+        <Disqus Url={post.fileAbsolutePath} PostId={post.id} PostTitle={post.frontmatter.title}/>
         {console.log(data)}
       </Layout>
   )
