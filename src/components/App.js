@@ -22,7 +22,8 @@ export default (props) => (
 			<meta name="twitter:site" content="@iamdillion" />
 			<meta name="twitter:title" content={props.TwitterCardTtitle} /> {/* edit */}
 			<meta name="twitter:description" content={props.TwitterCardDescription} /> {/* edit */}
-			<meta name="twitter:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" />
+			{/* <meta name="twitter:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
+			<meta name="twitter:image" content={props.TwitterBlogImage} />
 			<meta name="twitter:creator" content="iamdillion" />
 
 			{/* For fontawesome */}

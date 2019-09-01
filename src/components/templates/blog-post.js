@@ -10,6 +10,7 @@ export default ({ data }) => {
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
+        TwitterBlogImage='https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png'
       >
         <h1 style={{color: 'var(--lightBlue)'}}>{post.frontmatter.title}</h1>
         <p style={{color: 'var(--mainColor1)', fontWeight: 'bold'}}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
