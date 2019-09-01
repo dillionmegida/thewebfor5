@@ -12,8 +12,8 @@ This is my first blog and I plan to keep this as a reference as to when I launch
 
 I plan to share tutorials and articles on my blog every week so that I could also in my own little way, add value to the community and also challenge/improve myself.
 
-I am a Front Web Developer, quite efficient with HTML5, CSS3, Nodejs, Reacjs, Javascript and few other front end languages.
-Also, I am a graphics designer and my tools at the moment are Adobe Photoshop and Illustrator. Services comprises of Branding Design, Advertisements Design and other graphics designs.
+At the moment, I am a Front Web Developer, quite efficient with HTML5, CSS3, Nodejs, Reactjs, Javascript and few other front end languages.
+Also, I am a graphic designer and my tools at the moment are Adobe Photoshop and Illustrator. Services include Branding Design, Advertisements Design and other graphic designs.
 
 Currently, I am learning more of Nodejs and Reactjs because I aim at being a <b>Full Stack Developer</b>
 
