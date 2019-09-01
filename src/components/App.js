@@ -19,7 +19,7 @@ export default (props) => (
 			<meta property="og:url" content="https://dillionmegida.com" />
 			<meta property="og:type" content="article" />
 			<meta name="twitter:card" content="summary" />
-			<meta name="twitter:site" content="@Dillion Megida" />
+			<meta name="twitter:site" content="@iamdillion" />
 			<meta name="twitter:title" content={props.TwitterCardTtitle} /> {/* edit */}
 			<meta name="twitter:description" content={props.TwitterCardDescription} /> {/* edit */}
 			<meta name="twitter:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" />
