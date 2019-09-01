@@ -1,4 +1,4 @@
-.Link {
+.Link, .A {
     padding: 0;
     margin: 0;
     font-size: 17px;
@@ -8,7 +8,7 @@
     display: block;
     margin: 7px 0;
 }
-.Link:hover, .ActiveLink {
+.Link:hover, .ActiveLink, .A:hover {
     transform: scale(1.1);
     color: white;
 }
