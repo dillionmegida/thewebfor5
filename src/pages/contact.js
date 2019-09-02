@@ -31,7 +31,8 @@ let Contact = () => {
                             <label htmlFor="name">Message:</label><br/>
                             <textarea name="message" cols="30" rows="10" placeholder="Enter your message..."></textarea>
                         </div>
-                        <input className={Styles.submit_btn} type="submit" value="Send Message"></input>
+                        <input name='_next' type="hidden" value="/" />
+                        <input className={Styles.submit_btn} type="submit" value="Send Message" />
                     </form>
                 </section>
             </section>

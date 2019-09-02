@@ -12,6 +12,9 @@ export default (props) => (
 			<meta name='description' content={props.PageDescription} /> {/* edit */}
 			<meta name="keywords" content={props.PageKeywords} /> {/* edit */}
 			<meta name='author' content='Dillion Megida' />
+
+			<meta name="robots" content="index, follow" />
+			<meta name="theme-color" content="#8a6047" />
 			
 			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png' />
 
@@ -25,6 +28,8 @@ export default (props) => (
 			{/* <meta name="twitter:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
 			<meta name="twitter:image" content={props.TwitterBlogImage} />
 			<meta name="twitter:creator" content="iamdillion" />
+
+			<meta name="referrer" content="origin-when-crossorigin" />
 
 			{/* For fontawesome */}
 			<script src="https://use.fontawesome.com/ec33c661f9.js"></script>
