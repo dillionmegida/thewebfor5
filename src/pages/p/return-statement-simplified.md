@@ -1,6 +1,6 @@
 ---
 title: "Return Statement Simplified"
-date: "22-06-2019"
+date: "06-22-2019"
 readTime: "4 mins"
 pageDescription: "Javascript Return Statement is a function used to evaluate statements and attach the results to certain functions. When such functions are called, the evaluated (returned) value becomes the result"
 pageKeywords: "Return Statement Simplified, return statement, javascript return, javascript return statement"
