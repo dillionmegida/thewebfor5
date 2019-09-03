@@ -66,7 +66,7 @@ This is the normal result we expect to happen, since the div element is stated b
 ```css
 /* Add the property of float to the above program */
 .container div {
-    display: float;
+    float: right;
 }
 ```
 Our result is,
