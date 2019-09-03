@@ -59,7 +59,7 @@ Take a look at this code,
     font-size: 30px;
 }
 ```
-<img width="100%" src='https://res.cloudinary.com/dillionmegida/image/upload/v1567261173/images/code_samples/div_on_paragraph_edit_kqunde.jpg' alt='Example Image'/>
+<img style='max-width: 100%' src='https://res.cloudinary.com/dillionmegida/image/upload/v1567261173/images/code_samples/div_on_paragraph_edit_kqunde.jpg' alt='Example Image'/>
 This is the normal result we expect to happen, since the div element is stated before the `p` element. Lets make the `div` float to the right.
 
 ```css
@@ -70,7 +70,7 @@ This is the normal result we expect to happen, since the div element is stated b
 ```
 Our result is,
 
-<img width='100%' src='https://res.cloudinary.com/dillionmegida/image/upload/v1567261218/images/code_samples/div_on_paragraph_qk3bsg.jpg' alt='Example picture' />
+<img style='max-width: 100%' src='https://res.cloudinary.com/dillionmegida/image/upload/v1567261218/images/code_samples/div_on_paragraph_qk3bsg.jpg' alt='Example picture' />
 
 
 #### What do you notice?
