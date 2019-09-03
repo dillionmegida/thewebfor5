@@ -60,6 +60,7 @@ Take a look at this code,
 }
 ```
 <img style='max-width: 100%' src='https://res.cloudinary.com/dillionmegida/image/upload/v1567261173/images/code_samples/div_on_paragraph_edit_kqunde.jpg' alt='Example Image'/>
+<br/>
 This is the normal result we expect to happen, since the div element is stated before the `p` element. Lets make the `div` float to the right.
 
 ```css
