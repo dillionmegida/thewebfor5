@@ -113,8 +113,9 @@ The value `none` when used with the display property on a browser simply tells t
 The value `inline-block` allows the elements to behave like inline elements, but properties like `height` and `width` can be applied to them.
 ##### - `display: flex`
 The value `flex` displays an element as a block-level flex container.
-##### - `display: block`
-The value `flex` displays an element as a block-level grid container.
+##### - `display: grid`
+The value `grid` displays an element as a block-level grid container.
+
 These are the major display values. You can find a list of other values [here](https://www.w3schools.com/cssref/pr_class_display.asp) and you can read more on display property [here](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
 Check out [this W3Schools Resource](https://www.w3schools.com/css/css_positioning.asp) for the position property.
