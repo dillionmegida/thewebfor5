@@ -1,7 +1,7 @@
 ---
 title: "CSS Flex Property"
 date: "09-09-2019"
-readTime: "4 mins"
+readTime: "5 mins"
 pageDescription: "When the display of a container is set as flex, it renders it's elements flexible. This aids in responsiveness in several media screens as long as the associating properties such as flex-direction, flex-wrap, etc are used appropriately"
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css flex, css flex-wrap, css flex-direction, css justify-content, css align-items, align-items, justify-content, css styles."
 ---
@@ -52,6 +52,12 @@ Let's take an example
     height: 100px;
     width: 100px;
     margin: 10px;
+}
+.flexContainer1 div {
+    background-color: red;
+}
+.flexContainer2 div {
+    background-color: blue;
 }
 ```
 The above css file renders our divs - `flexContainer1` and `flexContainer2` div as a flex container by `display: flex`
