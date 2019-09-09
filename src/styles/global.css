@@ -111,6 +111,7 @@
   .Blog h2 {
     color: var(--lightBlue);
   }
+  /* Removed the indidcation for number of articles
   .numArticles {
     width: 150px;
     padding: 10px;
@@ -123,7 +124,7 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom: 2px solid var(--mainColor2);
-  }
+  } */
   .Blog p {
     color: #5c6061
   }

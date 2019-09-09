@@ -1,6 +1,6 @@
 ---
 title: "Making Layouts With CSS"
-date: "22-09-2019"
+date: "09-03-2019"
 readTime: "5 mins"
 pageDescription: "CSS has the ability to control how elements are displayed in a browser. Layouts of elements in a webpage gives attractive presentation and logic means to that page."
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css position, css float, css box model, css styles."
@@ -122,7 +122,7 @@ Check out [this W3Schools Resource](https://www.w3schools.com/css/css_positionin
 ## Box-model
 Each element on your page is treated as a box.
 The Box model refers to everything that surrounds an element in a box. Such things are `padding`, `margin`, `borders` and the actual content.
-For a default element as a box, say `<p class='name'>Dillion`</p> and we have this css;
+For a default element as a box, say `<p class='name'>Dillion</p>` and we have this css;
 ```css
 .name {
     width: 400px;

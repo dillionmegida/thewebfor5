@@ -43,22 +43,22 @@ let Porfolio = () => (
              <section className={Styles.Services}>
                 <section>
                     <div>
-                        <img src={require('../img/web.png')} width='30%'/>
+                        <img src={require('../img/web.png')} width='30%' alt='Web Development Illustration'/>
                         <h4>Web Development</h4>
                     </div>
                     <div>
-                        <img src={require('../img/brand.png')} width="30%" />
+                        <img src={require('../img/brand.png')} width="30%" alt='Branding Identity Illustration'/>
                         <h4>Branding Identity</h4>
                     </div>
                 </section>
 
                 <section>
                     <div>
-                        <img src={require('../img/motion.png')} width="30%" />
+                        <img src={require('../img/motion.png')} width="30%" alt='Motion Graphics Illustration'/>
                         <h4>Motion Graphics</h4>
                     </div>
                     <div>
-                        <img src={require('../img/flyer.png')} width="30%" />
+                        <img src={require('../img/flyer.png')} width="30%" alt='Flyer and Banners Illustration'/>
                         <h4>Flyers / Banners</h4>
                     </div>
                 </section>
