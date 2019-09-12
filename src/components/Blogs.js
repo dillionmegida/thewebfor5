@@ -39,7 +39,7 @@ export default () => (
                             fields {
                                 slug
                             }
-                            excerpt(pruneLength: 50)
+                            excerpt(pruneLength: 70)
                         }
                     }
                     }
@@ -50,7 +50,9 @@ export default () => (
             console.log(data.allMarkdownRemark.edges);
             return (
                 <section className='Blogs'>
-                    <p className='numArticles'>{data.allMarkdownRemark.totalCount} Articles Written</p>
+                    {/* Number of articles written
+                        <p className='numArticles'>{data.allMarkdownRemark.totalCount} Articles Written</p>
+                    */}
                     {
                         data.allMarkdownRemark.edges.map(({ node }) => (
                             <div key={node.id} className='Blog'>
