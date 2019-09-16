@@ -9,6 +9,7 @@ module.exports = {
     siteUrl: `https://dillionmegida.com`,
   },
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
