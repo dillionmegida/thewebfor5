@@ -1,14 +1,19 @@
 backend:
-  name: test-repo
-media_folder: static/assets
-public_folder: assets
+  name: github
+  repo: dillionmegida/Blog
+media_folder: "static/img/uploads"
+public_folder: "img/uploads"
 collections:
-  - name: games
-    label: Blogs
-    folder: fire
-    create: false
+  - name: "blogs"
+    label: "Blogs"
+    description: "Blog posts"
+    folder: "src/pages/p"
+    create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: readTime, label: Read Time }
+      - { name: pageDescription, label: Page Description }
+      - { name: pageKeywords, label: SEO Keywords }
       - { name: body, label: Body, widget: markdown }
+publish_mode: editorial_workflow
