@@ -1,0 +1,14 @@
+backend:
+  name: test-repo
+media_folder: static/assets
+public_folder: assets
+collections:
+  - name: games
+    label: Blogs
+    folder: fire
+    create: false
+    fields:
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: datetime }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
