@@ -60,14 +60,19 @@ Well, I'm usually curious. So I dug in deep to discover why one was preferred ov
 ## - Inline Events
 `Code 1` is an example of an inline event. Here the event is specified with a function as an attribute to the HTML tag and the function used is specified in the javascript area (which could be in the script tag or an external javascript file).
 
-`<button onclick="btnClick()">Click Me</button>`
+```html
+<button onclick="btnClick()">Click Me</button>
+```
 
 Here, once the button is clicked, the `btnClick()` function is invoked. As specified in the javascript area of `Code 1`, 'Button Clicked' is logged to the console.
 
 Imagine we had;
-`<button onclick="function1()" onfocus="function2()" ondblclick="function3">Click Me</button>`
+```html
+<button onclick="function1()" onfocus="function2()" ondblclick="function3">
+  Click Me
+</button>```
 
-This could turn out different to read - more to the fact that it's just a button 😟.
+This could turn out difficult to read - more to the fact that it's just a button 😟.
 
 The solution to reducing the events in your tag or to completely remove events in your tag (for easy readability - which I highly recommend) is what we have in `Code 2`. All you have to do is give your element an identity (which could be most preferably, `id`, or class).
 > You do not necessarily have to give your element an identity. The aim is just to find a means to easily locate your target element.
@@ -85,9 +90,6 @@ For example, by `id`, you could add as many events as possible such as:
 ```
 
 Another advantage of this inline javascript method over the inline HTML event is that inline HTML requires the event to be global. The scope of the function cannot be controlled there unlike the inline javascript where scope (or even closures) can be controlled.
-
-
-> `document.querySelector()` is another method used in selecting elements. [Read more about it here](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
 ## - addEventListener()
 As seen in `Code 3`;
@@ -149,7 +151,8 @@ Function2
 Function3
 Function4
 ```
-`var btn1 = document.getElementById('bnt1');` has been overwritten by the second function.
+What do you notice?
+The first function has been overwritten by the second function.
 
 ### 2. useCapture
 The value `false` (which could be replaced with true) is a boolean for useCaptures. This controls how the event could be propagated. Propagation events could be bubbling or capturing. Propagation here refers to how the event is transmitted to the ancestor or children elements such that these elements inherit the events.
@@ -160,7 +163,7 @@ These are the major differences.
 Therefore, to ensure easy readability of HTML tags, it's advisable to use the javascript environment for any event handling.
 Also, if more than one function or expression would be applied to an event, use addEventListeners, else, inline events.
 
-Learn more about addEventListeners and the benefits they provide in this article - [EventTarget.addEventListener()
+Learn more about addEventListeners and the benefits they provide in this article - [addEventListener()
 ](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
 Even if you weren't curious (like myself), I do hope you have been able to learn a thing or two from this 😃

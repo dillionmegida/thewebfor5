@@ -16,18 +16,17 @@ export default ({ data }) => {
         <h1 style={{color: 'var(--lightBlue)'}}>{post.frontmatter.title}</h1>
         <p style={{color: 'var(--mainColor1)', fontWeight: 'bold'}}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
         <hr/>
-        <div style={{lineHeight: '30px', fontSize: '20px'}}>
+        <div style={{lineHeight: '30px', fontSize: '20px', wordBreak: 'break-all'}}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
         <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>
         <p style={{fontSize: '30px', margin: '0'}}>
-          <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`}>
+          <a href={`https:twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`}>
             <i style={{color: '#1DA1F2'}} class='fa fa-twitter'></i>
           </a>
           </p>
         <hr/>
         <Disqus Url={post.fileAbsolutePath} PostId={post.id} PostTitle={post.frontmatter.title}/>
-        {console.log(data)}
       </Layout>
   )
 }
