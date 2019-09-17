@@ -47,7 +47,6 @@ export default () => (
             `
         }
         render={data => {
-            console.log(data.allMarkdownRemark.edges);
             return (
                 <section className='Blogs'>
                     {/* Number of articles written
