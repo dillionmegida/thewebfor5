@@ -126,7 +126,7 @@
     border-bottom: 2px solid var(--mainColor2);
   } */
   .Blog p {
-    color: #5c6061
+    color: #5c6061;
   }
   .Blog:hover {
     box-shadow: 2px 2px 10px #ddd;
