@@ -70,7 +70,8 @@ Imagine we had;
 ```html
 <button onclick="function1()" onfocus="function2()" ondblclick="function3">
   Click Me
-</button>```
+</button>
+```
 
 This could turn out difficult to read - more to the fact that it's just a button 😟.
 
