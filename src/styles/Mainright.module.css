@@ -4,6 +4,7 @@
     background-color: #eee;
     text-align: left;
     min-height: 100%;
+    margin-left: 20%;
 
 }
 
@@ -12,5 +13,6 @@
       width: 100%;
       margin-top: 70px;
       padding: 0 10px;
+      margin-left: 0;
     }
 }
