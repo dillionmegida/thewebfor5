@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 let Copyright = props => {
     return(
         <Fragment>
-            <p style={{color: props.color}}>
+            <p style={{color: props.color, margin: '10px 0 0'}}>
                 <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px', margin: 'auto'}}>
                     <a style={{color: props.color}} href='https://twitter.com/iamdillion'>
                         <i className='fa fa-twitter'></i>

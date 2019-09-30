@@ -16,7 +16,7 @@ let Mainleft = (props) => (
         <nav style={{height: '50px'}} className={Styles.navSection}>
             <NavLinks/>
         </nav>
-        <TwitterFollow />
+        {/* <TwitterFollow /> */}
         <Copyright color='white'/>
     </div>
 )
