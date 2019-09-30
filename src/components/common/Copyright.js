@@ -3,18 +3,18 @@ import React, { Fragment } from 'react';
 let Copyright = props => {
     return(
         <Fragment>
-            <p style={{color: props.color, margin: '10px 0 0'}}>
-                <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px', margin: 'auto'}}>
-                    <a style={{color: props.color}} href='https://twitter.com/iamdillion'>
+            <p style={{color: props.color}}>
+                <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px', margin: '30px auto 0'}}>
+                    <a style={{color: props.color}} href='https://twitter.com/iamdillion' title='Twitter Profile'>
                         <i className='fa fa-twitter'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://github.com/dillionmegida'>
+                    <a style={{color: props.color}} href='https://github.com/dillionmegida' title='Github Profile'>
                         <i className='fa fa-github'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://www.facebook.com/dillion.megida'>
+                    <a style={{color: props.color}} href='https://www.facebook.com/dillion.megida' title='Facebook Profile'>
                         <i className='fa fa-facebook'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://www.linkedin.com/in/dillionmegida/'>
+                    <a style={{color: props.color}} href='https://www.linkedin.com/in/dillionmegida/' title='LinkedIn Profile'>
                         <i className='fa fa-linkedin'></i>
                     </a>
                 </span>
