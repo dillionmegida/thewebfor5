@@ -33,7 +33,7 @@ let Portfolio = () => {
                             <div className={Styles.Desc}>
                                 <p className={Styles.PDesc}>{p.desc}</p>
                             </div>
-                            <a className={Styles.CheckOut} href={p.link} target='_blank' title={`${p.title} Link`}>Check Out</a>
+                            <a className={Styles.CheckOut} href={p.link} target='_blank' rel="noopener noreferrer" title={`${p.title} Link`}>Check Out</a>
                         </div>
                     ))
                 }

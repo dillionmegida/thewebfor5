@@ -21,7 +21,7 @@ export default ({ data }) => {
         </div>
         <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>
         <p style={{fontSize: '30px', margin: '0'}}>
-          <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`} target='_blank'>
+          <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`} target='_blank' rel="noopener noreferrer">
             <i style={{color: '#1DA1F2'}} class='fa fa-twitter'></i>
           </a>
           </p>

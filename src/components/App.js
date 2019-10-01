@@ -7,7 +7,7 @@ export default (props) => (
     		<title>
     			{props.PageTitle}
     		</title>
-    		<link rel="canonical" href={`http://dillionmegida.com${props.PageLink}`} /> {/* edit */}
+    		<link rel="canonical" href={`https://dillionmegida.com${props.PageLink}`} /> {/* edit */}
 
 			<meta name='description' content={props.PageDescription} /> {/* edit */}
 			<meta name="keywords" content={props.PageKeywords} /> {/* edit */}

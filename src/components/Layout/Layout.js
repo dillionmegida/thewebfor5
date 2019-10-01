@@ -43,7 +43,7 @@ class Layout extends Component {
                     >
                         <Dp imgDivClass={Styles.ImgDivSmall}/>
                     </Link>
-                    <h3>Dillion Megida <span role='img' aria-label='true'>&#128640;</span></h3>
+                    <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h3>
                     <div onClick={this.openNavDrawer} className='Harmburger'>
                         <div></div>
                         <div></div>

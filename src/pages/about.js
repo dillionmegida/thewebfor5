@@ -26,7 +26,7 @@ let Porfolio = () => (
     		</section>
     		<section className={Styles.Dp}>
     			<Dp imgDivClass={Styles.ImgDiv}/>
-    			<h1>DILLION MEGIDA &#128640;</h1>
+    			<h1>DILLION MEGIDA <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h1>
                 <p>
                 	<i className="fa fa-envelope"></i> dillionmegida@gmail.com<br/>
 	                <i className="fa fa-phone"></i> +234 905 896 1095<br/><br/>
