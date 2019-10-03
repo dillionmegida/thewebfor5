@@ -1,6 +1,6 @@
 ---
 title: Gatsby with Netlify CMS
-date: 2019-10-02T21:07:33.244Z
+date: 10-03-2019
 readTime: 3 mins
 pageDescription: Managing contents in Gatsby site with Netlify Content Management System (CMS)
 pageKeywords: 'gatsby, cms, netlify, netlify cms, gatsby blog, gatsby netlify'
