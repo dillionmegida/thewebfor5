@@ -21,7 +21,7 @@ From [netlifycms.org/docs](https://www.netlifycms.org/docs/intro/)
 
 When I started running this website, I'd have to pass through the following process to publish an article;
 
-* Write the article in a markdown file of which `gatsby-file-system` working with `gatsby-transformer-remark` and `createPages API` would automatically create a HTML page for the file.
+* Write the article in a markdown file of which [`gatsby-source-filesystem`](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) working with [`gatsby-transformer-remark`](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and [`createPages API`](https://www.gatsbyjs.org/tutorial/part-seven/) would automatically create a HTML page for the file.
 * Push the file to my Github repository when the article is ready
 * Access my Ubuntu system on digitalocean, pull files from repository and serve from there.
 
@@ -42,8 +42,8 @@ Now, my focus is centered on the CMS rather than my former procedures. Pretty mu
 You wouldn't want to manage contents that you rarely update or change because it wouldn't seem necessary, though, you still could.
 Like I stated earlier, I'd be using a blog for example.
 
-* Want to build a Gatsby site having a blog of yours from scratch? [Check out this Gatsby tutorial](<>) or
-* Use this [Gatsby starter blog template](<>)
+* Want to build a Gatsby site having a blog of yours from scratch? [Check out this Gatsby tutorial](https://www.gatsbyjs.org/tutorial/) or
+* Use this [Gatsby starter blog template](https://github.com/gatsbyjs/gatsby-starter-blog)
 
 At this point, I want to believe that your site is running locally and also you have a repository for your files.
 
@@ -93,13 +93,14 @@ collections:
 publish_mode: editorial_workflow
 ```
 
-The backend provided aids in efficient connection for netlify.
-The media_folder specified tells the CMS where to upload your images or videos to.
-The public folder is pretty much where the published images go to.
-Collections determine our contents.
+* The backend option specifies how to access the content for your site, including authentication.
+* The media_folder specified tells the CMS where to upload your images or videos to.
+* The public folder is pretty much where the published are accessed.
+* Collections determine our contents.
 As seen above, we want to control blog contents.
 A folder is specified which we would get and also load our contents from. It may be different in your repository but the target is the location of your posts.
 The fields mentioned are those you'd like to fill in when writing post. They are just like the frontmatter and body you create when writing markdown files.
+* The publish mode allows you specify controls for the different phases of publishing contents.
 
 At this point, you can run `gatsby develop` to see for yourself.
 
