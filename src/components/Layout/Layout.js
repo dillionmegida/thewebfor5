@@ -35,6 +35,7 @@ class Layout extends Component {
                 TwitterCardTtitle={this.props.TwitterCardTtitle ? this.props.TwitterCardTtitle : this.props.PageTitle}
                 TwitterCardDescription={this.props.PageDescription}
                 TwitterBlogImage={this.props.TwitterBlogImage ? this.props.TwitterBlogImage : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg'}
+                LargeTwitterCard = {this.props.LargeTwitterCard}
             >
                 <header className='TopSection'>
                     <Link
