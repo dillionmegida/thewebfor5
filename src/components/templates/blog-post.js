@@ -11,11 +11,17 @@ export default ({ data }) => {
         PageLink={post.fields.slug}
         PageDescription={post.frontmatter.pageDescription}
         PageKeywords={post.frontmatter.pageKeywords}
-        TwitterBlogImage='https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png'
+        TwitterBlogImage={post.frontmatter.cover ? post.frontmatter.cover : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png'}
+        LargeTwitterCard = {post.frontmatter.cover ? true : false}
       >
         <h1 style={{color: 'var(--lightBlue)'}}>{post.frontmatter.title}</h1>
         <p style={{color: 'var(--mainColor1)', fontWeight: 'bold'}}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
         <hr/>
+        {
+          post.frontmatter.cover ?
+          <img src={post.frontmatter.cover} alt='Image Illustration' width='100%' /> : 
+          null
+        }
         <div style={{lineHeight: '30px', fontSize: '20px'}}>
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </div>
@@ -45,6 +51,7 @@ export const query = graphql`
         readTime
         pageDescription
         pageKeywords
+        cover
       }
     }
   }

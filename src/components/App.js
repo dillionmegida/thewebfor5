@@ -21,7 +21,16 @@ export default (props) => (
 			<meta property="og:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" />
 			<meta property="og:url" content="https://dillionmegida.com" />
 			<meta property="og:type" content="article" />
-			<meta name="twitter:card" content="summary" />
+
+			{/* This selects the summary card by default but if the LargeTwitterCard props is specified, it users the bigger card
+			I implemented bigger cards for articles with covers */}
+			{
+				props.LargeTwitterCard ?
+				<meta name="twitter:card" content="summary_large_image" /> :
+				<meta name="twitter:card" content="summary" />
+
+			}
+			
 			<meta name="twitter:site" content="@iamdillion" />
 			<meta name="twitter:title" content={props.TwitterCardTtitle} /> {/* edit */}
 			<meta name="twitter:description" content={props.TwitterCardDescription} /> {/* edit */}
