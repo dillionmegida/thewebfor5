@@ -15,5 +15,6 @@ collections:
       - { name: readTime, label: Read Time }
       - { name: pageDescription, label: Page Description }
       - { name: pageKeywords, label: SEO Keywords }
+      - { name: cover, label: Blog Cover Link }
       - { name: body, label: Body, widget: markdown }
 publish_mode: editorial_workflow
