@@ -63,7 +63,7 @@
     font-weight: bold;
 }
 .CheckOut:hover {
-    color: white;
+    color: var(--mainColor3);
 }
 
 .CheckGitHub {
