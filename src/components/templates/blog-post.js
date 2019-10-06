@@ -22,7 +22,7 @@ export default ({ data }) => {
             <p className={Styles.BlogDate}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
           </section>
           {
-            post.frontmatter.cover || post.frontmatter.cover != '' ?
+            post.frontmatter.cover && post.frontmatter.cover != '' ?
             <img src={post.frontmatter.cover} alt='Image Illustration' width='100%' /> : 
             null
           }
