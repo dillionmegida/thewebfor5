@@ -2,7 +2,7 @@
 title: Gatsby with Netlify CMS
 date: 10-03-2019
 readTime: 3 mins
-cover: https://res.cloudinary.com/dillionmegida/image/upload/v1570089133/images/blogs_cover/gatsby-with-cms.jpg
+cover: https://res.cloudinary.com/dillionmegida/image/upload/v1570399382/images/blogs_cover/gatsby-with-cms.jpg
 pageDescription: Managing contents in Gatsby site with Netlify Content Management System (CMS)
 pageKeywords: 'gatsby, cms, netlify, netlify cms, gatsby blog, gatsby netlify'
 ---
@@ -22,7 +22,7 @@ From [netlifycms.org/docs](https://www.netlifycms.org/docs/intro/)
 
 When I started running this website, I'd have to pass through the following process to publish an article;
 
-* Write the article in a markdown file of which [`gatsby-source-filesystem`](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) working with [`gatsby-transformer-remark`](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and [`createPages API`](https://www.gatsbyjs.org/tutorial/part-seven/) would automatically create a HTML page for the file.
+* Write the article in a markdown file of which [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/) working with [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) and [createPages API](https://www.gatsbyjs.org/tutorial/part-seven/) would automatically create a HTML page for the file.
 * Push the file to my Github repository when the article is ready
 * Access my Ubuntu system on digitalocean, pull files from repository and serve from there.
 
