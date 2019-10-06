@@ -3,6 +3,17 @@
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-top: 10px;
+	font-size: 18px;
+}
+.AboutSection a {
+    color: var(--mainColor1);
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 2px;
+}
+.AboutSection a:hover, .AboutSection a:focus {
+    text-decoration: none;
+    outline: 1px solid var(--mainColor1);
 }
 .Bio {
 	max-width: 500px;

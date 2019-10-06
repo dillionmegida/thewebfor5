@@ -1,15 +1,19 @@
 .PortfolioSection {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
 }
 .PortfolioSection h1 {
     width: 100%;
     font-size: 25px;
     margin-left: 20px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--mainColor1);
+}
+.Projects {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .Project {
     background-color: white;
@@ -29,10 +33,10 @@
 .PTitle {
     width: 100%;
     padding: 10px;
-    background-color: var(--mainColor2);
+    background-color: var(--mainColor1);
     text-align: center;
     font-size: 20px;
-    color: var(--mainColor1);
+    color: var(--mainColor2);
     font-weight: bold;
     margin: 0;
     border-top-right-radius: 20px;
@@ -60,6 +64,22 @@
 }
 .CheckOut:hover {
     color: white;
+}
+
+.CheckGitHub {
+    display: block;
+    width: 270px;
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--mainColor1);
+    padding: 10px;
+    font-size: 18px;
+    flex: 100% 100% 100%;
+}
+.CheckGitHub:hover, .CheckGitHub:focus {
+    text-decoration: none;
+    outline: 1px solid var(--mainColor1);
 }
 
 @media only screen and (max-width: 700px) {

@@ -20,9 +20,12 @@ form textarea {
 }
 
 form input, form textarea {
-	border-radius: 20px;
-	border: 1px solid #ddd;
+	border-radius: 10px;
+	border: 0;
 	padding: 10px 20px;
+	font-family: nunito;
+	font-size: 16px;
+	color: black;
 }
 form label {
 	margin-left: 20px;

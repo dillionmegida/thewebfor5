@@ -3,12 +3,13 @@
     margin: 0;
     font-size: 17px;
     letter-spacing: 1px;
-    color: var(--mainColor2);
+    color: var(--mainColor3);
     font-weight: bold;
     display: block;
     margin: 7px 0;
 }
-.Link:hover, .ActiveLink, .A:hover {
+.Link:hover, .ActiveLink, .A:hover,
+.Link:focus, .A:focus {
     transform: scale(1.1);
     color: white;
 }

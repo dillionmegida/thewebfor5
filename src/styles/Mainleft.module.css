@@ -29,16 +29,16 @@
 }
 @keyframes DpRotate {
   25% {
-    border-left-color: var(--mainColor2);
+    border-left-color: var(--mainColor3);
   }
   50% {
-    border-bottom-color: var(--mainColor2);
+    border-bottom-color: var(--mainColor3);
   }
   75% {
-    border-right-color: var(--mainColor2);
+    border-right-color: var(--mainColor3);
   }
   100% {
-    border-top-color: var(--mainColor2);
+    border-top-color: var(--mainColor3);
   }
 }
 .Mainleft h1 {
