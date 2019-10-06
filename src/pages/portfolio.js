@@ -4,9 +4,9 @@ import Styles from '../styles/Portfolio.module.css';
 
 const PortfolioList = [
     {
-        title: 'dillionmegida.com',
-        desc: 'My personal website built with Gatsby where I write technical articles in markdowns. It also works with Netlify CMS were I manage and control my contents.',
-        link: 'https://dillionmegida.com'
+        title: 'CSS Flex Generator',
+        desc: 'A playground built with React for helping web developers understand how flex containers work.',
+        link: 'https://cssflex-generator.netlify.com'
     },
     {
         title: 'Burger Builder App',
@@ -26,6 +26,7 @@ let Portfolio = () => {
         >
             <main className={Styles.PortfolioSection}>
                 <h1>Projects I've Worked On</h1>
+                <section className={Styles.Projects}>
                 {
                     PortfolioList.map(p => (
                         <div className={Styles.Project}>
@@ -37,6 +38,10 @@ let Portfolio = () => {
                         </div>
                     ))
                 }
+                </section>
+                <p>
+                    <a className={Styles.CheckGitHub} href='https://github.com/dillionmegida' title='Check More Projects on GitHub'>Check More Projects on GitHub</a>
+                </p>
             </main>
         </Layout>
  )

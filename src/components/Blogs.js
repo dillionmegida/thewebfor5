@@ -6,12 +6,11 @@
             to={props.href}
             title={props.title}
             style={{
-                fontFamily: 'roboto',
-                fontWeight: 'bold'
+                fontFamily: 'Antic'
             }}
         >
             <h2>{props.title}</h2>
-            <p>{props.date} | {props.readTime} read</p>
+            <p style={{color: 'purple'}}>{props.date} | {props.readTime} read</p>
             <p style={{lineHeight: '25px'}}>
                 {props.content}
             </p>
@@ -39,7 +38,7 @@ export default () => (
                             fields {
                                 slug
                             }
-                            excerpt(pruneLength: 70)
+                            excerpt(pruneLength: 100)
                         }
                     }
                     }

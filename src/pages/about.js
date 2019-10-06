@@ -32,7 +32,7 @@ let Porfolio = () => (
 	                <i className="fa fa-phone"></i> +234 905 896 1095<br/><br/>
                     {/* You can connect with me on my<br/>social media handles &#128512;<br/> */}
                     <Link to='/contact' title='Contact Me'>
-                        <u>Contact Me</u>
+                        Contact Me
                     </Link>
                 </p>
     		</section>
