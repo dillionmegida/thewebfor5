@@ -20,12 +20,12 @@ form textarea {
 }
 
 form input, form textarea {
-	border-radius: 10px;
+	border-radius: 5px;
 	border: 0;
 	padding: 10px 20px;
-	font-family: nunito;
+	font-family: 'Antic', 'Helvetica';
 	font-size: 16px;
-	color: black;
+	color: var(--mainColor1);
 }
 form label {
 	margin-left: 20px;
@@ -33,14 +33,14 @@ form label {
 
 form input:focus, form textarea:focus,
 form input:hover:not([type='submit']), form textarea:hover {
-	background-color: rgb(234, 232, 246);
+	/* background-color: rgb(234, 232, 246); */
+	box-shadow: 2px 2px 5px rgba(0,0,0,.1);
 }
 .submit_btn {
 	display: block;
-	margin: auto;
-	margin-top: 5px;
-	margin-bottom: 50px;
-	background-color: var(--mainColor2);
+	width: 250px;
+	margin: 5px auto 50px;
+	background-color: var(--lightBlue);
     color: var(--mainColor1);
     cursor: pointer;
 }

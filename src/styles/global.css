@@ -56,6 +56,7 @@
     padding: 0 10px;
     height: 70px;
     color: white;
+    z-index: 10;
   }
   .Harmburger {
     height: 25px;

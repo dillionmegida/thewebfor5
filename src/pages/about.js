@@ -4,6 +4,22 @@ import Layout from '../components/Layout/Layout';
 import Styles from '../styles/About.module.css';
 import { Link } from 'gatsby';
 
+const ProjectList = [
+    {
+        title: 'CSS Flex Generator',
+        desc: 'A playground built with React for helping web developers understand how flex containers work.',
+        cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1570444392/images/website/flex-generator-site-cover.jpg',
+        link: 'https://cssflex-generator.netlify.com'
+    },
+    {
+        title: 'Burger Builder App',
+        desc: 'First application built with React. It was inspired by a course on Udemy on React and most parts of the application were directed by the course. I also added personal features, built it from scratch again and hosted on Heroku.',
+        cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1570445060/images/website/burger-app-cover.jpg',
+        link: 'https://deee-burger-app.herokuapp.com/'
+    }
+    
+];
+
 let Porfolio = () => (
     <Layout
         PageTitle='About Me - Dillion Megida'
@@ -38,27 +54,49 @@ let Porfolio = () => (
     		</section>
     	</section>
 
+        <section className={Styles.ProjectsSection}>
+            <h2>Projects I've Worked On</h2>
+            <p><b>Click/Hover For More Info</b></p>
+            <section className={Styles.Projects}>
+                {
+                    ProjectList.map((project, index) =>
+                        <div key={index}>
+                            <p className={Styles.ProjectTitle}>{project.title}</p>
+                            <p className={Styles.ProjectDesc}>
+                                {project.desc}
+                                <a href={project.link} title='View Project Live' target='_blank' rel='noopener noreferrer'>View Live</a>
+                            </p>
+                            <div className={Styles.ProjectCover}>
+                                <img src={project.cover} alt='Project Cover' />
+                            </div>
+                        </div>
+                    )
+                }
+            </section>
+            <a className={Styles.CheckGitHub} href='https://github.com/dillionmegida' title='GitHub Profile'>Check More on GitHub</a>
+        </section>
+
     	<section className={Styles.ServicesSection}>
              <h2>What I do</h2>
              <section className={Styles.Services}>
                 <section>
                     <div>
-                        <img src={require('../img/web.png')} width='30%' alt='Web Development Illustration'/>
+                        <img src={require('../img/web.png')} alt='Web Development Illustration'/>
                         <h4>Web Development</h4>
                     </div>
                     <div>
-                        <img src={require('../img/brand.png')} width="30%" alt='Branding Identity Illustration'/>
+                        <img src={require('../img/brand.png')} alt='Branding Identity Illustration'/>
                         <h4>Branding Identity</h4>
                     </div>
                 </section>
 
                 <section>
                     <div>
-                        <img src={require('../img/motion.png')} width="30%" alt='Motion Graphics Illustration'/>
+                        <img src={require('../img/motion.png')} alt='Motion Graphics Illustration'/>
                         <h4>Motion Graphics</h4>
                     </div>
                     <div>
-                        <img src={require('../img/flyer.png')} width="30%" alt='Flyer and Banners Illustration'/>
+                        <img src={require('../img/flyer.png')} alt='Flyer and Banners Illustration'/>
                         <h4>Flyers / Banners</h4>
                     </div>
                 </section>
