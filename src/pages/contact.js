@@ -11,7 +11,7 @@ let Contact = () => {
             TwitterCardTtitle='Dillion Megida'
         >
             <section className={Styles.ContactSection}>
-                <h1 align='center'>Need A Website, Graphic Design(s) or Just to say Hi?</h1>
+                <h1 align='center'>You have a project for me to work on<br/>or You want to make an enquiry?</h1>
                 <p align='center'>Kindly fill in your informations</p>
             
 

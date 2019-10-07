@@ -1,6 +1,9 @@
 .ContactSection {
     width:  80%;
-    margin: auto;
+    margin: 40px auto 0;
+}
+.ContactSection > p {
+	font-size: 18px;
 }
 .ContactSection form {
     display: flex; 
@@ -29,6 +32,7 @@ form input, form textarea {
 }
 form label {
 	margin-left: 20px;
+	font-weight: bold;
 }
 
 form input:focus, form textarea:focus,
