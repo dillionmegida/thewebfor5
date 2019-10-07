@@ -14,11 +14,15 @@ export default (props) => (
 			<meta name='author' content='Dillion Megida' />
 
 			<meta name="robots" content="index, follow" />
-			<meta name="theme-color" content="#8a6047" />
+			<meta name="theme-color" content="#130327" />
 			
 			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png' />
 
-			<meta property="og:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" />
+			{/* <meta property="og:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
+
+
+			{/* TwiiterBlogImage is the card image for og and twitter cards specified from each pages. For blogs, it either chooses the favicon image or the blog cover. For other pages, it is simply my profile picture */ }
+			<meta property="og:image" content={props.TwitterBlogImage} />
 			<meta property="og:url" content="https://dillionmegida.com" />
 			<meta property="og:type" content="article" />
 
