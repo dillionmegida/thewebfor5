@@ -16,7 +16,7 @@ export default (props) => (
 			<meta name="robots" content="index, follow" />
 			<meta name="theme-color" content="#130327" />
 			
-			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1567211530/images/website/favicon.png' />
+			<link rel='icon' href='https://res.cloudinary.com/dillionmegida/image/upload/v1570493725/images/website/favicon.png' />
 
 			{/* <meta property="og:image" content="https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg" /> */}
 
