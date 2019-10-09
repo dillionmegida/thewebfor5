@@ -5,13 +5,25 @@
 	margin-top: 10px;
 	font-size: 18px;
 }
-.AboutSection a {
+.AboutSection a:not(.Resume) {
     color: var(--mainColor1);
     text-decoration: underline;
     font-weight: bold;
     padding: 2px;
 }
-.AboutSection a:hover, .AboutSection a:focus {
+.Resume {
+	color: var(--mainColor1);
+    padding: 2px;
+	font-size: 20px;
+	outline: 1px solid var(--mainColor1);
+	text-decoration: none;
+	padding: 5px;
+}
+.Resume:hover, .Resume:focus {
+	background-color: var(--mainColor1);
+	color: white;
+}
+.AboutSection a:not(.Resume):hover, .AboutSection a:not(.Resume):focus {
     text-decoration: none;
     outline: 1px solid var(--mainColor1);
 }

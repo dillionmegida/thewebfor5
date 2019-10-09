@@ -38,6 +38,11 @@ let Porfolio = () => (
 	                Efficient use of Adobe Photoshop and Adobe Illustrator for graphics designing. These includes photo editing, logo designing and advertisement cards. <br/><br/>
 	                Average use of Adobe After Effects and Adobe Premiere Pro for video editing and motion graphics.<br/><br/>
 	                Founder, <b>Deeesigns Studios</b>, which deals in Web Development and Graphics Designing.
+                    <br/>
+                    <br/>
+                    <a className={Styles.Resume} href='/resume.pdf' title='My Resume' target='_blank'>
+                        Resume
+                    </a>
                 </p>
     		</section>
     		<section className={Styles.Dp}>
@@ -45,8 +50,9 @@ let Porfolio = () => (
     			<h1>DILLION MEGIDA <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h1>
                 <p>
                 	<i className="fa fa-envelope"></i> dillionmegida@gmail.com<br/>
-	                <i className="fa fa-phone"></i> +234 905 896 1095<br/><br/>
+	                <i className="fa fa-phone"></i> +234 905 896 1095<br/>
                     {/* You can connect with me on my<br/>social media handles &#128512;<br/> */}
+                    <br/>
                     <Link to='/contact' title='Contact Me'>
                         Contact Me
                     </Link>
