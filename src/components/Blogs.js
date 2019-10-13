@@ -1,6 +1,8 @@
     import React from 'react';
     import { StaticQuery, graphql, Link } from 'gatsby';
 
+    import { formatBlogDate } from '../components/common/functions';
+
     let Blog = (props) => (
         <Link
             to={props.href}
@@ -10,7 +12,7 @@
             }}
         >
             <h2>{props.title}</h2>
-            <p style={{color: 'purple'}}>{props.date} | {props.readTime} read</p>
+            <p style={{color: 'purple'}}>{formatBlogDate(props.date)} | {props.readTime} read</p>
             <p style={{lineHeight: '25px'}}>
                 {props.content}
             </p>

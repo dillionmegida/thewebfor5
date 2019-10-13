@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from '../Layout/Layout';
 import Disqus from './disqus';
+import { formatBlogDate } from '../common/functions';
 
 import Styles from '../../styles/BlogTemplate.module.css';
 
@@ -19,7 +20,7 @@ export default ({ data }) => {
         <main className={Styles.BlogPost}>
           <section className={Styles.BlogInfo}>
             <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
-            <p className={Styles.BlogDate}>{post.frontmatter.date} | {post.frontmatter.readTime} read</p>
+            <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {post.frontmatter.readTime} read</p>
           </section>
           {
             post.frontmatter.cover && post.frontmatter.cover !== '' ?
@@ -29,6 +30,8 @@ export default ({ data }) => {
           <div className={Styles.BlogContent}>
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
+
+          {/* Sharing the article with media APIs */}
           <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>
           <p style={{fontSize: '30px', margin: '0'}}>
             <a href={`https://twitter.com/intent/tweet?text=${post.frontmatter.title} by @iamdillion - https://dillionmegida.com${post.fields.slug}`} target='_blank' rel="noopener noreferrer">
