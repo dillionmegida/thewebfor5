@@ -13,7 +13,6 @@ const formatBlogDate = date => {
     let month = parseInt(monthArr.join(''));
     let day = parseInt(dayArr.join(''));
     let lastDigitOfDay = parseInt(dayArr.join('').charAt(dayArr.join('').length - 1));
-    console.log(lastDigitOfDay);
     let year = parseInt(yearArr.join(''));
 
     // switch case to get the month name
