@@ -76,7 +76,7 @@ const formatBlogDate = date => {
             daySuffix = 'th';
     }
     
-    let fullDate = `${day}${daySuffix} ${monthName}, ${year}`;
+    let fullDate = `${monthName} ${day}${daySuffix}, ${year}`;
     return fullDate;
 }
 
