@@ -43,8 +43,9 @@ Check out the pen below to understand the difference better.
 Since the target property has given us access to the element, we could them read some of the properties (which are the attributes) and also display them somewhere else. 
 
 ## `event.target` use cases
-1. The most common use case of this property is in input elements.
-Usually, a `change` event is listened to on an input field. This event is fired once there is a change in the contents of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
+#### 1. Getting properties
+The most common use case is in input elements.
+For example, a `change` event is listened to on an input field. This event is fired once there is a change in the contents of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
 
 Check out this pen - A simple program that displays the value as it changes.
 
@@ -64,7 +65,8 @@ Let's analyse the code used.
 
 - I used the `target` property to target the input.
 
-2. You could also use the property to set attributes of an element. For example, the class attribute. For example, let's say you have a class attribute of 'red' which changes the text color of elements to red, you could have this;
+#### 2. Setting properties
+You could also use the property to set attributes of an element. For example, the class attribute. Let's say you have a class attribute of 'red' which changes the text color of elements to red, you could have this;
 ```html
 <style>
 .red {
