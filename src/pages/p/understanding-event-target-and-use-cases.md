@@ -71,9 +71,7 @@ Let's analyse the code used.
     color: red;
 }
 </style>
-
 <p id='toBeChanged'>My color can change</p>
-
 <script>
   function changeColorToRed(event) {
     event.target.className= 'red';
@@ -82,6 +80,7 @@ Let's analyse the code used.
   toBeChanged.addEventListener('click', changeColorToRed, false);
 </script>
 ```
+
 If you tried this code, you'd notice that when you click on the paragraph, its color changes to red.
 
 There are other use cases that could be made out of this property. From the above examples which showed how to get properties and set properties of elements which events were fired on, I believe you'd be able to create more interactive applications.
