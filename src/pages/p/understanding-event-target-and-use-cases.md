@@ -33,12 +33,10 @@ This property gives us access to the properties of that element.
 
 **NOTE that** this property is different from `currentTarget`. `currentTarget` returns a reference to the actual object that fired the event while `target` returns a reference to the object of which the event was fired upon regardless of the element that listened to the event. If you're still confused about this difference, [check out this pen](https://codepen.io/Dillion/pen/MWWyvLZ) then come back to continue reading.
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="Dillion" data-slug-hash="MWWyvLZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="currentTargetVStarget">
-  <span>See the Pen <a href="https://codepen.io/Dillion/pen/MWWyvLZ">
-  currentTargetVStarget</a> by Dillion Megida (<a href="https://codepen.io/Dillion">@Dillion</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="currentTargetVStarget" src="https://codepen.io/Dillion/embed/MWWyvLZ?height=265&theme-id=dark&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/Dillion/pen/MWWyvLZ'>currentTargetVStarget</a> by Dillion Megida
+  (<a href='https://codepen.io/Dillion'>@Dillion</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 Since the target property has given us access to the element, we could them read some of the properties (which are the attributes) and also display them somewhere else. 
 
