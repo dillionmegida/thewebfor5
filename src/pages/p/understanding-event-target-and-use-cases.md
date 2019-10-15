@@ -22,7 +22,8 @@ Events refer to happenings in the DOM from the loading of a page to the navigati
 
 Examples of events include `click` (pressing mouse button), `change`(e.g an input field changing), `load` (when an object has been loaded, often used with the body element) and so many more.
 
-Events also possess properties which provides more information about that event. Find a list of those properties in [the MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties).<br/>
+Events also possess properties which provides more information about that event. Find a list of those properties in [the MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/Event#Properties).
+
 Among these properties, I'd be explaining the `target` property, which can be accessed like this, `event.target`
 
 ## `event.target`
@@ -31,9 +32,10 @@ Among these properties, I'd be explaining the `target` property, which can be ac
 
 This property gives us access to the properties of that element.
 
-**NOTE that** this property is different from `currentTarget`. `currentTarget` returns a reference to the actual object that fired the event while `target` returns a reference to the object of which the event was fired upon regardless of the element that listened to the event. If you're still confused about this difference, [check out this pen](https://codepen.io/Dillion/pen/MWWyvLZ) then come back to continue reading.
+**NOTE that** this property is different from `currentTarget`. `currentTarget` returns a reference to the actual object that fired the event while `target` returns a reference to the object of which the event was fired upon regardless of the element that listened to the event.<br/>
+Check out the pen below to understand the difference better.
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="currentTargetVStarget" src="https://codepen.io/Dillion/embed/MWWyvLZ?height=265&theme-id=dark&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="419" style="width: 100%;" scrolling="no" title="currentTargetVStarget" src="https://codepen.io/Dillion/embed/MWWyvLZ?height=419&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/Dillion/pen/MWWyvLZ'>currentTargetVStarget</a> by Dillion Megida
   (<a href='https://codepen.io/Dillion'>@Dillion</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -43,12 +45,24 @@ Since the target property has given us access to the element, we could them read
 ## `event.target` use cases
 1. The most common use case of this property is in input elements.
 Usually, a `change` event is listened to on an input field. This event is fired once there is a change in the contents of that input (which could be a change in value). The value of the input could then be transformed or displayed somewhere else.
-[Check out this pen]() - A simple program that displays the value as it changes.
+
+Check out this pen - A simple program that displays the value as it changes.
+
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="Dillion" data-slug-hash="MWWyEXY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="event.target.value">
+  <span>See the Pen <a href="https://codepen.io/Dillion/pen/MWWyEXY">
+  event.target.value</a> by Dillion Megida (<a href="https://codepen.io/Dillion">@Dillion</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 Let's analyse the code used.
-  a. The reason I added the event listener to the input instead of the container is that I do not want to listen to  every change event on the container. Other change events could occur in it such as `select` tags or `textarea`. Hence, I listened for only change events in the input tag.
-  b. I set variable references to the input tag and the initially empty h1 tag.
-  c. I listened for every change event on the input and applied a function that sets the value of the input to the contents of the h1 tag.
-  d. I used the `target` property to target the input.
+- The reason I added the event listener to the input instead of the container is that I do not want to listen to  every change event on the container. Other change events could occur in it such as `select` tags or `textarea`. Hence, I listened for only change events in the input tag.
+ 
+- I set variable references to the input tag and the initially empty h1 tag.
+
+- I listened for every change event on the input and applied a function that sets the value of the input to the contents of the h1 tag.
+
+- I used the `target` property to target the input.
 
 2. You could also use the property to set attributes of an element. For example, the class attribute. For example, let's say you have a class attribute of 'red' which changes the text color of elements to red, you could have this;
 ```html
