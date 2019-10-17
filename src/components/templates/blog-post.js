@@ -18,18 +18,20 @@ export default ({ data }) => {
         LargeTwitterCard = {post.frontmatter.cover ? true : false}
       >
         <main className={Styles.BlogPost}>
-          <section className={Styles.BlogInfo}>
-            <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
-            <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {post.frontmatter.readTime} read</p>
-          </section>
-          {
-            post.frontmatter.cover && post.frontmatter.cover !== '' ?
-            <img src={post.frontmatter.cover} alt='Blog Cover' width='100%' /> : 
-            null
-          }
-          <div className={Styles.BlogContent}>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
+          <article>
+            <div className={Styles.BlogInfo}>
+              <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
+              <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {post.frontmatter.readTime} read</p>
+            </div>
+            {
+              post.frontmatter.cover && post.frontmatter.cover !== '' ?
+              <img src={post.frontmatter.cover} alt='Blog Cover' width='100%' /> : 
+              null
+            }
+            <div className={Styles.BlogContent}>
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </div>
+          </article>
 
           {/* Sharing the article with media APIs */}
           <p style={{fontSize: '25px', fontWeight: 'bold', margin: '0'}}>Share this article</p>

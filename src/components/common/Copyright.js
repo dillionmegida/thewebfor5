@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
-
+import Styles from '../../styles/Copyright.module.css';
 let Copyright = props => {
     return(
         <Fragment>
             <p style={{color: props.color}}>
                 <span style={{display: 'flex', justifyContent: 'space-between', width: '100px', fontSize: '20px', margin: '30px auto 0'}}>
-                    <a style={{color: props.color}} href='https://twitter.com/iamdillion' title='Twitter Profile'>
+                    <a className={Styles.sm} style={{color: props.color}} href='https://twitter.com/iamdillion' title='Twitter Profile'>
                         <i className='fa fa-twitter'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://github.com/dillionmegida' title='Github Profile'>
+                    <a className={Styles.sm} style={{color: props.color}} href='https://github.com/dillionmegida' title='Github Profile'>
                         <i className='fa fa-github'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://www.facebook.com/dillion.megida' title='Facebook Profile'>
+                    <a className={Styles.sm} style={{color: props.color}} href='https://www.facebook.com/dillion.megida' title='Facebook Profile'>
                         <i className='fa fa-facebook'></i>
                     </a>
-                    <a style={{color: props.color}} href='https://www.linkedin.com/in/dillionmegida/' title='LinkedIn Profile'>
+                    <a className={Styles.sm} style={{color: props.color}} href='https://www.linkedin.com/in/dillionmegida/' title='LinkedIn Profile'>
                         <i className='fa fa-linkedin'></i>
                     </a>
                 </span>

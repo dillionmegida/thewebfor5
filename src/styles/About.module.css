@@ -5,7 +5,7 @@
 	margin-top: 10px;
 	font-size: 18px;
 }
-.AboutSection a:not(.Resume) {
+.AboutSection a:not(.Resume):not(.Contact) {
     color: var(--mainColor1);
     text-decoration: underline;
     font-weight: bold;
@@ -57,10 +57,15 @@
 .Dp {
 	text-align: center;
 }
-
+.Contact {
+	color: black;
+	padding: 5px;
+	display: block;
+}
 .ProjectsSection {
 	width: 100%;
 	text-align: center;
+	margin: 0 0 20px;
 }
 .Projects {
 	width: 100%;

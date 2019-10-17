@@ -31,15 +31,16 @@ let Porfolio = () => (
     	<h1 style={{textAlign: 'center'}}>About Me</h1>
     	<section className={Styles.AboutSection}>
     		<section className={Styles.Bio}>
-    			<h3 align='left'>Front End Developer + Graphics Deeesigner</h3>
+    			<h3 align='left'>Front End Developer, Technical Writer and Graphics Deeesigner</h3>
                 <p align='justify'>
-                    Efficient with HTML5 & CSS3, JS and it's frameworks such as ReactJs and jQuery.<br/>
-	                I'm a technical writer writing mostly about web development on my blog here and other blog media.<br/><br/>
+                    I'm passionate about Web Accessibility and JAMstack applications.<br/><br/>
+	                I write mostly about front-end web development topics on my blog here and other blog media.<br/><br/>
+                    Proficient in HTML, CSS, JS, ReactJS and GatsbyJS.<br/><br/>
 	                Efficient use of Adobe Photoshop and Adobe Illustrator for graphics designing. These includes photo editing, logo designing and advertisement cards. <br/><br/>
 	                Average use of Adobe After Effects and Adobe Premiere Pro for video editing and motion graphics.<br/><br/>
-	                Founder, <b>Deeesigns Studios</b>, which deals in Web Development and Graphics Designing.
+	                {/* Founder, <b>Deeesigns Studios</b>, which deals in Web Development and Graphics Designing.
                     <br/>
-                    <br/>
+                    <br/> */}
                     <a className={Styles.Resume} href='/resume.pdf' title='My Resume' target='_blank'>
                         Resume
                     </a>
@@ -49,10 +50,8 @@ let Porfolio = () => (
     			<Dp imgDivClass={Styles.ImgDiv}/>
     			<h1>DILLION MEGIDA <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h1>
                 <p>
-                	<i className="fa fa-envelope"></i> dillionmegida@gmail.com<br/>
-	                <i className="fa fa-phone"></i> +234 905 896 1095<br/>
-                    {/* You can connect with me on my<br/>social media handles &#128512;<br/> */}
-                    <br/>
+                	<a className={Styles.Contact} href='mailto:dillionmegida@gmail.com'><i className="fa fa-envelope"></i> dillionmegida@gmail.com</a>
+	                <a className={Styles.Contact} href="tel:+2349058961095"><i className="fa fa-phone"></i> +234 905 896 1095</a>
                     <Link to='/contact' title='Contact Me'>
                         Contact Me
                     </Link>
@@ -82,7 +81,7 @@ let Porfolio = () => (
             <a className={Styles.CheckGitHub} href='https://github.com/dillionmegida' title='GitHub Profile'>Check More on GitHub</a>
         </section>
 
-    	<section className={Styles.ServicesSection}>
+    	{/* <section className={Styles.ServicesSection}>
              <h2>What I do</h2>
              <section className={Styles.Services}>
                 <section>
@@ -108,7 +107,7 @@ let Porfolio = () => (
                 </section>
 
             </section>
-        </section>
+        </section> */}
     </Layout>
 );
 

@@ -8,7 +8,7 @@
             to={props.href}
             title={props.title}
             style={{
-                fontFamily: 'Antic'
+                fontFamily: 'Antic, helvetica'
             }}
         >
             <h2>{props.title}</h2>
@@ -16,7 +16,6 @@
             <p style={{lineHeight: '25px'}}>
                 {props.content}
             </p>
-
         </Link>
     )
 
@@ -40,7 +39,7 @@ export default () => (
                             fields {
                                 slug
                             }
-                            excerpt(pruneLength: 100)
+                            excerpt(pruneLength: 150)
                         }
                     }
                     }
@@ -55,7 +54,7 @@ export default () => (
                     */}
                     {
                         data.allMarkdownRemark.edges.map(({ node }) => (
-                            <div key={node.id} className='Blog'>
+                            <article key={node.id} className='Blog'>
                                 <Blog
                                     href={node.fields.slug}
                                     title={node.frontmatter.title} 
@@ -63,7 +62,7 @@ export default () => (
                                     date={node.frontmatter.date}
                                     content={node.excerpt}
                                 />
-                            </div>
+                            </article>
                     ))}
                 </section>
             )
