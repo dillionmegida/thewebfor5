@@ -81,5 +81,23 @@ module.exports = {
         anonymize: true,
       },
     },
+
+    // For gatsby manifest
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Dillion Megida`,
+        short_name: `Dillion Megida`,
+        start_url: `/`,
+        background_color: `#130327`,
+        theme_color: `#130327`,
+        display: `standalone`,
+        icon: `src/img/icon.png`,
+      },
+    },
+
+
+    // Gatsby offline
+    `gatsby-plugin-offline`
   ]
 }
