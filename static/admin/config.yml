@@ -11,7 +11,7 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date }
       - { name: readTime, label: Read Time }
       - { name: pageDescription, label: Page Description }
       - { name: pageKeywords, label: SEO Keywords }
