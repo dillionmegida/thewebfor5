@@ -35,7 +35,6 @@ Check out the pen below to understand the difference better.
 
 <iframe height="419" style="width: 100%;" scrolling="no" title="currentTargetVStarget" src="https://codepen.io/Dillion/embed/MWWyvLZ?height=419&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/Dillion/pen/MWWyvLZ'>currentTargetVStarget</a> by Dillion Megida
-  (<a href='https://codepen.io/Dillion'>@Dillion</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 Since the target property has given us access to the element, we could then read some of the properties (which are the attributes) and also display them somewhere else. 
@@ -47,12 +46,9 @@ For example, a `change` event is listened to on an input field. This event is fi
 
 Check out this pen - A simple program that displays the value as it changes.
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="result" data-user="Dillion" data-slug-hash="MWWyEXY" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="event.target.value">
-  <span>See the Pen <a href="https://codepen.io/Dillion/pen/MWWyEXY">
-  event.target.value</a> by Dillion Megida (<a href="https://codepen.io/Dillion">@Dillion</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="419" style="width: 100%;" scrolling="no" title="event.target.value" src="https://codepen.io/Dillion/embed/MWWyEXY?height=419&theme-id=dark&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/Dillion/pen/MWWyvLZ'>event.target.value</a> by Dillion Megida
+</iframe>
 
 Let's analyze the code used.
 - The reason I added the event listener to the input instead of the container is that I do not want to listen to every change event on the container. Other change events could occur in it such as `select` tags or `textarea`. Hence, I listened to only change events in the input tag.
