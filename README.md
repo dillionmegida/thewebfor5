@@ -16,7 +16,16 @@ To run locally, you must have gatsby installed first. Learn how in the reference
 ```shell
 npm install
 ```
-- 
+- Start server
+```shell
+gatsby develop
+```
+Check [localhost:8000]() in your browser to see the site
+- For production, run
+```shell
+gatsby build
+```
+Check [localhost:9000]() in your browser to see the built site
 
 ### Author
 [Dillion Megida](https://dillionmegida.com/about)
