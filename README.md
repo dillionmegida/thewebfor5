@@ -31,4 +31,4 @@ Check [http://localhost:9000]() in your browser to see the built site
 [Dillion Megida](https://dillionmegida.com/about)
 
 ### License
-This project is open source and available under the [MIT License]().
+This project is open source and available under the [MIT License](https://github.com/dillionmegida/dillionmegida.com/blob/master/LICENSE).
