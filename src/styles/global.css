@@ -58,18 +58,20 @@
     color: white;
     z-index: 10;
   }
-  .Harmburger {
+  .Hamburger {
     height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-  }
-  .Harmburger div {
+    background: none;
+    border: none;
+  } 
+  .Hamburger div {
     width: 30px;
-    height: 3px;
+    height: 2px;
     background-color: white;
-    margin: 2px 0;
+    margin: 3px 0;
     border-radius: 10px;
   }
   .NavSection {
