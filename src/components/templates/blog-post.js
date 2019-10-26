@@ -16,6 +16,10 @@ export default ({ data }) => {
         PageKeywords={post.frontmatter.pageKeywords}
         TwitterBlogImage={post.frontmatter.cover ? post.frontmatter.cover : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567646950/images/website/favicon2-card.png'}
         LargeTwitterCard = {post.frontmatter.cover ? true : false}
+
+        //The copyright only shows on the blog page and on each blog for mobile
+        // ...But it always shows for large screens
+        ShowMobileCopyright
       >
         <main className={Styles.BlogPost}>
           <article>

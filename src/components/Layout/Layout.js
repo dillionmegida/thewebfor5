@@ -45,11 +45,11 @@ class Layout extends Component {
                         <Dp imgDivClass={Styles.ImgDivSmall}/>
                     </Link>
                     <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h3>
-                    <div onClick={this.openNavDrawer} className='Harmburger'>
+                    <button onClick={this.openNavDrawer} className='Hamburger'>
                         <div></div>
                         <div></div>
                         <div></div>
-                    </div>
+                    </button>
                 </header>
                 {this.state.drawerStatus ? 
                     <nav className={['NavSection', this.state.class].join(' ')}>
@@ -74,9 +74,16 @@ class Layout extends Component {
                 <MainLeft />
                 <Mainright>
                     {this.props.children}    
-                    <footer className='mobile-copyright'>
-                        <Copyright color='grey'/>
-                    </footer>
+                    {
+                        //The copyright only shows on the blog page and on each blog for mobile
+                        // ...But it always shows for large screens
+                        this.props.ShowMobileCopyright ?
+                        <footer className='mobile-copyright'>
+                            <Copyright color='grey'/>
+                        </footer>
+                        : 
+                        <p style={{textAlign: 'center', color: 'grey'}}>Copyright {new Date().getFullYear()} - Dillion Megida</p>
+                    }
                 </Mainright>
             </App>  
         )
