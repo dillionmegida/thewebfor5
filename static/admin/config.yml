@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: dillionmegida/Blog
+  repo: dillionmegida/dillionmegida.com
 media_folder: "static/img/uploads"
 public_folder: "img/uploads"
 collections:
@@ -15,6 +15,7 @@ collections:
       - { name: readTime, label: Read Time }
       - { name: pageDescription, label: Page Description }
       - { name: pageKeywords, label: SEO Keywords }
+      - { name: tags, label: Blog Tags }
       - { name: cover, label: Blog Cover Link }
       - { name: body, label: Body, widget: markdown }
 publish_mode: editorial_workflow
