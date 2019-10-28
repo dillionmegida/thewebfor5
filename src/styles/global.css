@@ -113,6 +113,17 @@
   .Blog p {
     color: var(--mainColor1);
   }
+  .TagsSection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .TagsSection .Tag {
+    border: 1px solid #333;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+  }
   .Blog:hover, .Blog:focus {
     border-radius: 20px;
   }
@@ -121,6 +132,12 @@
   }
   .Blog:hover h2, .Blog:focus h2 {
     color: var(--mainColor1);
+  }
+
+  .TagHeader {
+    color: var(--mainColor1);
+    text-decoration: underline;
+    margin: 20px 10px 0;
   }
 
   .mobile-copyright {

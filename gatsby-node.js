@@ -1,4 +1,5 @@
 const path = require(`path`)
+const _ = require("lodash");
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -13,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
@@ -23,11 +24,24 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              tags
+            }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
   `)
+
+  if(result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
@@ -37,6 +51,16 @@ exports.createPages = async ({ graphql, actions }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
+      },
+    })
+  })
+
+  result.data.tagsGroup.group.forEach(tag => {
+    createPage({
+      path: `tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: path.resolve(`./src/components/templates/tags.js`),
+      context: {
+        tag: tag.fieldValue,
       },
     })
   })

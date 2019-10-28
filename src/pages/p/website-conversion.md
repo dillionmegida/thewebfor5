@@ -4,6 +4,7 @@ date: "08-31-2019"
 readTime: "4 mins"
 pageDescription: "I converted my website from PHP to Gatsby. In this article, I explain the reasons behind the conversion and the methods I used to achieve it."
 pageKeywords: "Website Conversion, Dillion, Megida, Convert Website"
+tags: ["php", "gatsby"]
 ---
 
 Welcome to my Blog &#128519;

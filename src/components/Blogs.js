@@ -16,6 +16,21 @@
             <p style={{lineHeight: '25px'}}>
                 {props.content}
             </p>
+            {
+                props.tags ?
+                
+                <p className="TagsSection">
+                    {
+                       props.tags.map((tag, index) =>
+                            <Link key={`${tag}_${index}`} to={`/tags/${tag}`} title={`Posts tagged with ${tag}`} className="Tag">
+                                #{tag}
+                            </Link>
+                       )
+                    }
+                </p>
+
+                : null
+            }
         </Link>
     )
 
@@ -34,6 +49,7 @@ export default () => (
                                 title
                                 date
                                 readTime
+                                tags
                             }
 
                             fields {
@@ -60,6 +76,7 @@ export default () => (
                                     title={node.frontmatter.title} 
                                     readTime={node.frontmatter.readTime}
                                     date={node.frontmatter.date}
+                                    tags={node.frontmatter.tags}
                                     content={node.excerpt}
                                 />
                             </article>
@@ -70,3 +87,6 @@ export default () => (
         }
     />
 )
+
+// I made use of this component in the tag template
+export { Blog };

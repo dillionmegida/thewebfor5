@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Layout from '../Layout/Layout';
 import Disqus from './disqus';
 import { formatBlogDate } from '../common/functions';
@@ -26,6 +26,19 @@ export default ({ data }) => {
             <div className={Styles.BlogInfo}>
               <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
               <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {post.frontmatter.readTime} read</p>
+              {
+                post.frontmatter.tags ?
+                <p>
+                  {
+                    post.frontmatter.tags.map((tag, index) => (
+                      <Link key={`${tag}_${index}`} to={`/tags/${tag}`}>
+                        #{tag}
+                      </Link>
+                    ))
+                  }
+                </p>
+                : null
+              }
             </div>
             {
               post.frontmatter.cover && post.frontmatter.cover !== '' ?
@@ -66,6 +79,7 @@ export const query = graphql`
         pageDescription
         pageKeywords
         cover
+        tags
       }
     }
   }

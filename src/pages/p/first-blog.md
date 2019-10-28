@@ -4,6 +4,7 @@ date: "06-18-2019"
 readTime: "2 mins"
 pageDescription: "The first blog on my website"
 pageKeywords: "Dillion First Blog"
+tags: ["first-blog"]
 ---
 
 My name is <b>Dillion Megida</b>.
