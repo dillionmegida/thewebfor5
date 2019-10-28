@@ -1,0 +1,179 @@
+.AboutSection {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.AboutSection a:not(.Resume):not(.Contact) {
+    color: var(--mainColor1);
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 2px;
+}
+.Resume {
+	color: var(--mainColor1);
+    padding: 2px;
+	font-size: 20px;
+	outline: 1px solid var(--mainColor1);
+	text-decoration: none;
+	padding: 5px;
+}
+.Resume:hover, .Resume:focus {
+	background-color: var(--mainColor1);
+	color: white;
+}
+.AboutSection a:not(.Resume):hover, .AboutSection a:not(.Resume):focus {
+    text-decoration: none;
+    outline: 1px solid var(--mainColor1);
+}
+.Bio {
+	max-width: 500px;
+	padding: 20px;
+}
+.ImgDiv {
+	max-width: 300px;
+	max-height: 300px;
+	overflow: hidden;
+    margin: 0;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+	border-radius: 80px 20px;
+	animation: ImgAnim 5s linear infinite alternate;
+}
+@keyframes ImgAnim {
+	25% {
+		border-radius: 20px 80px;
+	}
+	50% {
+		border-radius: 80px 20px;
+	}
+	75% {
+		border-radius: 20px 80px;
+	}
+	100% {
+		border-radius: 80px 20px;
+	}
+}
+.Dp {
+	text-align: center;
+}
+.Contact {
+	color: black;
+	padding: 5px;
+	display: block;
+}
+.ProjectsSection {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 20px;
+}
+.Projects {
+	width: 100%;
+	display:  flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.Projects > div {
+	height: 300px;
+	width: 300px;
+	background-color: white;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 5px 5px 10px rgb(0,0,0,.1);
+	cursor: pointer;
+}
+.ProjectTitle {
+	font-size: 20px;
+	height: 20px;
+	margin: 0;
+	padding: 10px;
+}
+.ProjectCover {
+	margin-top: 40px;
+	height: 80%;
+	overflow: hidden;
+}
+.ProjectDesc{
+	display: none;
+	position: absolute;
+	width: 300px;
+	height: 240px;
+	background-color: white;
+	margin: 40px 0 0;
+	padding: 30px 10px;
+	transition: display 300ms;
+}
+.ProjectCover img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.Projects > div:hover .ProjectDesc,
+.Projects > div:focus .ProjectDesc  {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+}
+.ProjectDesc a {
+	display: block;
+	color: var(--mainColor1);
+	border: 1px solid var(--mainColor1);
+	padding: 5px;
+	margin: 5px 0 0;
+}
+.ProjectDesc a:hover, .ProjectDesc a:focus {
+	background-color: var(--mainColor1);
+	color: white;
+}
+
+.CheckGitHub {
+    display: block;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--mainColor1);
+    padding: 10px;
+    font-size: 18px;
+    flex: 100% 100% 100%;
+}
+.CheckGitHub:hover, .CheckGitHub:focus {
+    text-decoration: none;
+    outline: 1px solid var(--mainColor1);
+}
+
+
+
+.ServicesSection {
+	text-align: center;
+}
+.Services {
+	display: flex;
+	justify-content: center;
+}
+.Services > section div {
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 0.1px 0 5px rgba(0,0,0,0.1);
+	min-height: 100px;
+}
+.Services > section div h4 {
+	margin: 0;
+}
+.Services img {
+	width: 30%;
+}
+
+@media only screen and (max-width: 650px) {
+	.Projects > div, .ProjectDesc{
+		width: 250px;
+	}
+}
+
+@media only screen and (max-width: 560px) {
+	.Projects > div, .ProjectDesc{
+		width: 300px;
+	}
+}

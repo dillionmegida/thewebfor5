@@ -1,0 +1,158 @@
+@import url(https://fonts.googleapis.com/css?family=Antic);
+
+  :root {
+    --mainColor1: #130327;
+    --mainColor2: #e7f6ba;
+    --mainColor3: #c1d950;
+    --lightBlue: #319ac1;
+  }
+
+  ::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--mainColor1); 
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--mainColor2);
+    border-radius: 10px;
+  }
+
+  body {
+      margin: 0;
+      font-family: 'Antic', 'Helvetica';
+  }
+  .App {
+      text-align: center;
+      display: flex;
+      min-height: 100vh;
+      flex-wrap: wrap;
+  }
+  * {
+      box-sizing: border-box;
+      transition: 300ms;
+      outline: 0;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  .TopSection {
+    visibility: hidden;
+  }
+  .TopSection {
+    position: fixed;
+    width: 100%;
+    background-color: var(--mainColor1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: 70px;
+    color: white;
+    z-index: 10;
+  }
+  .Hamburger {
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: none;
+    border: none;
+  } 
+  .Hamburger div {
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 10px;
+  }
+  .NavSection {
+    position: fixed;
+    width: 100%;
+    background-color: var(--mainColor1);
+    height: 100%;
+    transition: transform 300ms ease-out;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    z-index: 20;
+  }
+  .CloseDrawer {
+    position: fixed;
+    right: 40px;
+    top: 0;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+  }
+
+  .NavDrawerOpened {
+    transform: translateX(0);
+  }
+  .NavDrawerClosed {
+    transform: translateX(100vw);
+  }
+
+  .Blog {
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--mainColor1);
+  }
+  .Blog h2 {
+    color: var(--lightBlue);
+    margin-bottom: 0;
+  }
+  .Blog p {
+    color: var(--mainColor1);
+  }
+  .TagsSection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .TagsSection .Tag {
+    border: 1px solid #333;
+    color: #333;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px;
+  }
+  .Blog:hover, .Blog:focus {
+    border-radius: 20px;
+  }
+  .Blog h2 {
+    font-weight: bold;
+  }
+  .Blog:hover h2, .Blog:focus h2 {
+    color: var(--mainColor1);
+  }
+
+  .TagHeader {
+    color: var(--mainColor1);
+    text-decoration: underline;
+    margin: 20px 10px 0;
+  }
+
+  .mobile-copyright {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .TopSection {
+      visibility: visible;
+    }
+    .mobile-copyright {
+      display: block;
+    }
+  }
+
+  

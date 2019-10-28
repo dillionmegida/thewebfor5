@@ -1,0 +1,18 @@
+.Mainright {
+    width: 80%;
+    padding: 0 50px;
+    background-color: var(--mainColor2);
+    text-align: left;
+    min-height: 100%;
+    margin-left: 20%;
+
+}
+
+@media (max-width: 900px) {
+    .Mainright {
+      width: 100%;
+      margin-top: 70px;
+      padding: 0 10px;
+      margin-left: 0;
+    }
+}

@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: dillionmegida/Blog
+media_folder: "static/img/uploads"
+public_folder: "img/uploads"
+collections:
+  - name: "blogs"
+    label: "Blogs"
+    description: "Blog posts"
+    folder: "src/pages/p"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date }
+      - { name: readTime, label: Read Time }
+      - { name: pageDescription, label: Page Description }
+      - { name: pageKeywords, label: SEO Keywords }
+      - { name: cover, label: Blog Cover Link }
+      - { name: body, label: Body, widget: markdown }
+publish_mode: editorial_workflow
