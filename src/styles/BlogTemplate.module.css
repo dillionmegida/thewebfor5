@@ -38,3 +38,10 @@
 .BlogContent ul li {
     list-style-type: initial;
 }
+
+.BlogContent code[class=language-text] {
+    color: var(--mainColor1);
+    background-color: pink;
+    padding: 3px;
+    border-radius: 3px;
+}
