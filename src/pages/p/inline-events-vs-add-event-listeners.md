@@ -148,7 +148,7 @@ An inline event with a function can be overwritten whereas, many functions can b
 
 When button 1 and button 2 is clicked, we have these results at console;
 
-```console
+```shell
 Function2
 Function3
 Function4
