@@ -31,3 +31,5 @@ In javascript, variables can store two major data types - `primitive` and `refer
 Primitive values are stored directly in the location that the variable accesses
 
 Reference values are stored in the variable location  which is a pointer to a location in memory where the object is stored
+
+
