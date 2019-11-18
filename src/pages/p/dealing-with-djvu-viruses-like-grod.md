@@ -7,7 +7,9 @@ pageDescription: >-
   with certain ciphers. The virus usually leaves a note in several locations of
   the user's system which contains the requirements on recovering the encrypted
   files
-pageKeywords: s
+pageKeywords: >-
+  djvu, ransomware, virus, djvu virus, virus attack, photorec, shadow explorer,
+  recover .grod files
 ---
 **Disclaimer:** This is not a front-end article neither is it about a programming language. It's a little not-so-exciting experience I had recently and thought it right to share.
 
@@ -28,11 +30,11 @@ pageKeywords: s
 On 14th November, 2019, my personal computer got infected by the 'best' (in the negative) virus I've ever heard of. Other infections I've heard of would limit things you can do in your system or wouldn't allow you turn it on but you could still gain access to your files.
 This virus - DJVU Ransomware, encrypted almost all files in my system and also added a .grod extension to them but surprisingly allowed me to use my system with installed applications. At first, I removed the .grod extension hoping my files would restore but I discovered it was more than that.
 
-It also left a _readme.txt file in several locations of my system which contained the requirement for recovering my files. The requirement was paying a ransom of $980 (or $490 if response was withini 72hrs) to get all my files decrypted. Where would I get such amount from?
+It also left a _readme.txt file in several locations of my system which contained the requirement for recovering my files. The requirement was paying a ransom of $980 (or $490 if response was within 72hrs) to get all my files decrypted. Where would I get such amount from?
 
-This prompted my research and the following informations.
+This prompted my research and the following information.
 
-### DJVU Ransomeware
+### DJVU Ransomware
 #### What it is,
 DJVU ransomware is a virus which encrypts files stored in a user's computer with the use of certain ciphers. The virus usually leaves a note in several locations of the user's system which contains the requirements on recovering the encrypted files.
 
