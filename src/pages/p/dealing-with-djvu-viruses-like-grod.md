@@ -58,4 +58,11 @@ _From the first article above_
 - I also installed [Emsisoft Emergency Kit](https://malwaretips.com/download-emsisoft) to scan for malware and unwanted programs
 - Lastly, I installed [Emsisoft Decryptor for STOP Djvu](https://www.emsisoft.com/ransomware-decryption-tools/stop-djvu) which decrypts files which were encrypted with an offline key. This tool didn't aid any solution as all my files were encrypted with an online key. You could try your luck nonetheless.
 
+_From the second article above_
+- I installed [Shadow Explorer](https://www.myantispyware.com/download/shadowexplorer). This tool recovers shadow copies of files saved on a computer system. <br/>
+From the article,
+> Shadow Volume Copies are copies of files and folders that Windows 10 (8, 7 and Vista) automatically saved as part of system protection. This feature is fantastic at rescuing photos, documents and music that were encrypted by Grod virus. The guide below will give you all the details.
 
+I was able to recover my files but almost none of them were still accessible. My images were displaying a brown skin and my files couldn't be opened. This tool didn't work for me but you could give it a try
+
+- I also installed [PhotoRec](https://www.myantispyware.com/download/photorec) which also helps in restoring files. This tool was a life-saver for me. I didn't retrieve all files but the amount I could recover were encouraging.
