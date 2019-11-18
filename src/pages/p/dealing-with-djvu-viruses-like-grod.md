@@ -76,3 +76,20 @@ I was able to recover my files but almost none of them were still accessible. My
 - For Windows Users, always try to update your Windows Defender. My excuse to not updating my Windows Defender regularly is as a result of the poor network in my place of residence. But, always try to. If mine was updated, high chances are that windows would have alerted me and prevented me from installing the downloaded application.
 - Avoid suspicious attachments in mails most especially, spams. These attacks come in different fancy ways. Please be guided.
 - Also, be careful of the external devices you connect to your computer.
+
+#### Tips on Good File Management
+##### - Cloud Storage
+Peradventure you're a google fan and you have a google account, always ensure to make use of the free storage provided. An alternative to this is DropBox, Onedrive to mention a few.<br/>
+I didn't feel much hurt knowing that some of my files were recently uploaded to Google Drive.
+##### - External Hard Drive
+Added to cloud storage, you could use an external hard drive to store your important files
+
+#### Conclusion
+To be honest, I'm sad when I remember some files I lost but this is also an opportunity to start afresh and taking the above advice into more considerations. Another new start is I'd be migrating to Linux : ) <br/>
+It's actually going to cost me some windows applications like my precious Adobe Tools but I read on [Proton Wine](https://github.com/ValveSoftware/Proton) which could be a manageable solution to running such applications on Linux.
+
+You may have experienced this, you probably haven't, but please take the prevention curing means into consideration.
+
+Thanks for reading : )
+
+Kindly share comments on your experiences with DJVU Ransomware. I would love to read your stories : )
