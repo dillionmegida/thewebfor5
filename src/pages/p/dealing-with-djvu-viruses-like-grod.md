@@ -37,7 +37,7 @@ This prompted my research and the following informations.
 DJVU ransomware is a virus which encrypts files stored in a user's computer with the use of certain ciphers. The virus usually leaves a note in several locations of the user's system which contains the requirements on recovering the encrypted files.
 
 #### Examples
-Examples include .grod, .peet, .toec, .nakw, derp, .coot.
+Examples include .grod, .peet, .toec, .nakw, derp, .coot to name a few.
 
 #### How does it get into a system
 It usually gains access through malicious mail attachments, application cracks, keygens and few other suspicious means.<br/>
@@ -51,5 +51,11 @@ I came across many solutions while going through websites and articles, some of 
 Two major articles I read are:
 - [How To Remove GROD Ransomware (Virus Removal Guide)](https://malwaretips.com/blogs/remove-grod-virus/)
 - [Grod file extension. Remove Grod virus. Restore, Decrypt .grod files](https://www.myantispyware.com/2019/11/14/grod-file-extension-remove-grod-virus-restore-decrypt-grod-files/)
+
+##### Solutions I applied:
+_From the first article above_
+- I installed [Malwarebytes Free](https://malwaretips.com/download-malwarebytes) to remove the GROD Ransomware
+- I also installed [Emsisoft Emergency Kit](https://malwaretips.com/download-emsisoft) to scan for malware and unwanted programs
+- Lastly, I installed [Emsisoft Decryptor for STOP Djvu](https://www.emsisoft.com/ransomware-decryption-tools/stop-djvu) which decrypts files which were encrypted with an offline key. This tool didn't aid any solution as all my files were encrypted with an online key. You could try your luck nonetheless.
 
 
