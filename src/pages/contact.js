@@ -6,6 +6,7 @@ let Contact = () => {
     return(
         <Layout 
             PageTitle='Contact Me - Dillion Megida'
+            PageLink='/contact'
             PageDescription='Contact Dillion Megida'
             PageKeywords='Contact Dillion Megida'
             TwitterCardTtitle='Dillion Megida'
