@@ -12,6 +12,12 @@ pageKeywords: s
 **Disclaimer:** This is not a front-end article neither is it about a programming language. It's a little not-so-exciting experience I had recently and thought it right to share.
 
 ## Table of Contents
+- My little story
 - DJVU Ransomware: What it is, examples
+- Guides on preventing virus attacks
 - Dealing with .grod virus
 - Tips on Good File Management
+- Conclusion
+
+### My Little Story
+On 14th November, 2019, my personal computer got infected by the 'best' (in the negative) virus I've ever heard of.
