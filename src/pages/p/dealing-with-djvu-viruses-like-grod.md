@@ -20,4 +20,5 @@ pageKeywords: s
 - Conclusion
 
 ### My Little Story
-On 14th November, 2019, my personal computer got infected by the 'best' (in the negative) virus I've ever heard of.
+On 14th November, 2019, my personal computer got infected by the 'best' (in the negative) virus I've ever heard of. Other infections I've heard of would limit things you can do in your system or wouldn't allow you turn it on but you could still gain access to your files.
+This virus - DJVU Ransomware, encrypted almost all files in my system but surprisingly allowed me to use my system with installed applications.
