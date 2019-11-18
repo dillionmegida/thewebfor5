@@ -66,3 +66,13 @@ From the article,
 I was able to recover my files but almost none of them were still accessible. My images were displaying a brown skin and my files couldn't be opened. This tool didn't work for me but you could give it a try
 
 - I also installed [PhotoRec](https://www.myantispyware.com/download/photorec) which also helps in restoring files. This tool was a life-saver for me. I didn't retrieve all files but the amount I could recover were encouraging.
+
+- I also discovered that the virus didn't have access to my Recycle Bin. There was nothing worth restoring from there, but you could check if you're infected.
+
+- Lastly, I discovered that there was a limit of folder levels which the virus could access. I was able to easily recover files stored in deeply nested folders.
+
+#### Guides on preventing virus attacks
+- **STOP DOWNLOADING CRACK APPLICATIONS!!!** I wouldn't even need anyone to repeat this to me. I understand that some of us may be trying to enjoy the full benefits of an application without having to pay a dime (which may be huge) but if you are unlucky, an application could cost you your computer system and possibly, your life.
+- For Windows Users, always try to update your Windows Defender. My excuse to not updating my Windows Defender regularly is as a result of the poor network in my place of residence. But, always try to. If mine was updated, high chances are that windows would have alerted me and prevented me from installing the downloaded application.
+- Avoid suspicious attachments in mails most especially, spams. These attacks come in different fancy ways. Please be guided.
+- Also, be careful of the external devices you connect to your computer.
