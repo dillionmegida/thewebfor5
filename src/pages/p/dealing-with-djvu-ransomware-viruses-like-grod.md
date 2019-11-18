@@ -36,7 +36,7 @@ It also left a _readme.txt file in several locations of my system which containe
 This prompted my research and the following information.
 
 ### DJVU Ransomware
-#### What it is,
+#### What it is
 DJVU ransomware is a virus which encrypts files stored in a user's computer with the use of certain ciphers. The virus usually leaves a note in several locations of the user's system which contains the requirements on recovering the encrypted files.
 
 #### Examples
@@ -66,12 +66,9 @@ _From the second article above_
 From the article,
 > Shadow Volume Copies are copies of files and folders that Windows 10 (8, 7 and Vista) automatically saved as part of system protection. This feature is fantastic at rescuing photos, documents and music that were encrypted by Grod virus. The guide below will give you all the details.
 
-I was able to recover my files but almost none of them were still accessible. My images were displaying a brown skin and my files couldn't be opened. This tool didn't work for me but you could give it a try
-
+I was able to recover my files but almost none of them were still accessible. My images were displaying a brown skin and my files couldn't be opened. This tool didn't work for me but you could give it a try.
 - I also installed [PhotoRec](https://www.myantispyware.com/download/photorec) which also helps in restoring files. This tool was a life-saver for me. I didn't retrieve all files but the amount I could recover were encouraging.
-
 - I also discovered that the virus didn't have access to my Recycle Bin. There was nothing worth restoring from there, but you could check if you're infected.
-
 - Lastly, I discovered that there was a limit of folder levels which the virus could access. I was able to easily recover files stored in deeply nested folders.
 
 #### Guides on preventing virus attacks
