@@ -1,6 +1,6 @@
 ---
 title: Dealing with DJVU ransomware viruses like .grod
-date: 26-10-2019
+date: 11-10-2019
 readTime: 3 mins
 pageDescription: >-
   DJVU ransomware is a virus which encrypts files stored in a user's computer
