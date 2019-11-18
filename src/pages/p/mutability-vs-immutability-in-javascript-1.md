@@ -12,7 +12,8 @@ pageKeywords: >-
   mutable objects, mutable objects in javascript
 tags:
   - javascript
-cover: 'null'
+  - mutability
+cover: ''
 ---
 ### What is Immutability
 Immutability is an attribute which stands for unchangeable. When an object is immutable, it is either unable to change or would never be changed in it's existence.
