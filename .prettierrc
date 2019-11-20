@@ -1,3 +1,4 @@
+// An opinionated code formatter
 {
   "endOfLine": "lf",
   "semi": false,
