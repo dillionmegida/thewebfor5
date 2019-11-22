@@ -25,7 +25,7 @@ Check [http://localhost:8000]() in your browser to see the site
 ```shell
 gatsby build
 ```
-Check [http://localhost:9000]() in your browser to see the built site
+Check [http://localhost:9000]() in your browser to see the built site.
 
 ### Author
 [Dillion Megida](https://dillionmegida.com/about)
