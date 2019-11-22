@@ -8,7 +8,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
 
     // Automatic sitemaps when built
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: ["/tags/*]
+      }
+    },
+   
 
     // React Helmet for populating thehead tag
     `gatsby-plugin-react-helmet`,
