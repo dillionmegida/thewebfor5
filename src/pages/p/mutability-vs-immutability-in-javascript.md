@@ -103,7 +103,9 @@ console.log(b);
 // ['first'];
 ```
 **Note that** you can add more arrays as parameters to the concat method. This has assigned a new location to `b` while retaining all values in `a`.<br/>
-This used to be the usual way of creating new objects from previous ones but ES6 introduced a new method which solves the mutability problem - the `spread` operator. Usage:
+This used to be the usual way of creating new objects from previous ones but ES6 introduced a new method which solves the mutability problem.
+#### the `spread` operator
+Usage:
 ```javascript
 let a = ['first', 'second'];
 let b = [...a, 'third'];
@@ -131,7 +133,7 @@ console.log(d);
 // {first: 'react', second: 'language'}
 ```
 This method (as used above) creates a new object, but assigns the values of `c` to included in it. With this, we get a new location in memory for `d` contents.
-#### Using the `rest` operator
+#### Using the `spread` operator
 This operator can also be used for objects.
 ```javascript
 let c = {
