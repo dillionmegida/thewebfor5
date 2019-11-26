@@ -41,23 +41,23 @@ export default () => (
             graphql`
                 query {
                     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-                    totalCount
-                    edges {
-                        node {
-                            id
-                            frontmatter {
-                                title
-                                date
-                                readTime
-                                tags
-                            }
+                        totalCount
+                        edges {
+                            node {
+                                id
+                                frontmatter {
+                                    title
+                                    date
+                                    readTime
+                                    pageDescription
+                                    tags
+                                }
 
-                            fields {
-                                slug
+                                fields {
+                                    slug
+                                }
                             }
-                            excerpt(pruneLength: 150)
                         }
-                    }
                     }
                 }           
             `
@@ -77,7 +77,7 @@ export default () => (
                                     readTime={node.frontmatter.readTime}
                                     date={node.frontmatter.date}
                                     tags={node.frontmatter.tags}
-                                    content={node.excerpt}
+                                    content={node.frontmatter.pageDescription}
                                 />
                             </article>
                     ))}
