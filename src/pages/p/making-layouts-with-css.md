@@ -4,7 +4,7 @@ date: "09-03-2019"
 readTime: "5 mins"
 pageDescription: "CSS has the ability to control how elements are displayed in a browser. Layouts of elements in a webpage gives attractive presentation and logic means to that page."
 pageKeywords: "css layouts, layouts, layouts in css, css, css stylesheet, css properties, layout property, css display, css position, css float, css box model, css styles."
-tags: ["css", "layouts"]
+tags: ["css"]
 ---
 
 CSS gives beauty to our webpage by giving it styles. There are a lot of libraries out there such as Bootstrap which has already made layouts designed for you, but I'd advise that before going into such libraries, understand how they work. They work with the same CSS rules.

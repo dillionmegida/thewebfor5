@@ -88,6 +88,9 @@ Added to cloud storage, you could use an external hard drive to store your impor
 To be honest, I'm sad when I remember some files I lost but this is also an opportunity to start afresh and taking the above advice into more considerations. Another new start is I'd be migrating to Linux : ) <br/>
 It's actually going to cost me some windows applications like my precious Adobe Tools but I read on [Proton Wine](https://github.com/ValveSoftware/Proton) which could be a manageable solution to running such applications on Linux.
 
+**_Edit on 20th November, 2019_**
+> I weighed the advantages and disadvantages of migrating and discovered that there were precious tools in Windows which Linux's alternatives could never replace. I decided to stick with Windows and opt for Windows Subsystem for Linux (WSL) if I need to perform an operation suitable or convenient with Linux.
+
 You may have experienced this, you probably haven't, but please take the prevention curing means into consideration.
 
 Thanks for reading : )

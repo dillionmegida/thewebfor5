@@ -5,7 +5,7 @@ readTime: 3 mins
 cover: https://res.cloudinary.com/dillionmegida/image/upload/v1570399382/images/blogs_cover/gatsby-with-cms.jpg
 pageDescription: Managing contents in Gatsby site with Netlify Content Management System (CMS)
 pageKeywords: 'gatsby, cms, netlify, netlify cms, gatsby blog, gatsby netlify'
-tags: ["gatsby", "netlify", "cms"]
+tags: ["gatsby", "netlify"]
 ---
 In this article, I'd be explaining how to manage contents (which are published continuously) with Netlify CMS.
 

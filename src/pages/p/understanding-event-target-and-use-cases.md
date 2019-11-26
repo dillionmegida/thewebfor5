@@ -7,7 +7,7 @@ pageDescription: >-
 pageKeywords: 'javascript, event, event.target, target, events, javascript events'
 cover: >-
   https://res.cloudinary.com/dillionmegida/image/upload/v1571097103/images/blogs_cover/understanding-event.target_o5l0cq.jpg
-tags: ["events", "javascript"]
+tags: ["javascript"]
 ---
 Before explaining the target property itself, let's get to understand the Event Interface in Javascript
 
