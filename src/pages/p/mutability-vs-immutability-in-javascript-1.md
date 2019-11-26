@@ -13,7 +13,8 @@ pageKeywords: >-
 tags:
   - javascript
   - objects
-cover: ''
+cover: >-
+  https://res.cloudinary.com/dillionmegida/image/upload/v1574789582/images/blogs_cover/mutability-vs-immitability_puajjl.jpg
 ---
 ### What is Immutability
 
