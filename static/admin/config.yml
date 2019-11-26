@@ -13,7 +13,7 @@ collections:
       - { name: title, label: Title }
       - { name: date, label: Date }
       - { name: readTime, label: Read Time }
-      - { name: pageDescription, label: Page Description }
+      - { name: pageDescription, label: Excerpt / Page Description }
       - { name: pageKeywords, label: SEO Keywords }
       - { name: tags, label: Blog Tags, widget: list, required: false }
       - { name: cover, label: Blog Cover Link, required: false }
