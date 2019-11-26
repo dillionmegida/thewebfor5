@@ -1,7 +1,7 @@
 ---
 title: Mutability vs Immutability in Javascript
-date: 26-10-2019
-readTime: 3 mins
+date: 11-26-2019
+readTime: 2 mins
 pageDescription: >-
   Objects in Javascript can be classified as mutable and immutable depending on
   the ability to change over time. The best and usual advice is to always work
