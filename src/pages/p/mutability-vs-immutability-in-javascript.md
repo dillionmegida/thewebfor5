@@ -108,15 +108,15 @@ This used to be the usual way of creating new objects from previous ones but ES6
 Usage:
 ```javascript
 let a = ['first', 'second'];
-let b = [...a, 'third'];
+let b = [...a, 'third', 'fourth'];
 b.pop();
 console.log(a);
 console.log(b);
 // Output
 // ['first', 'second'];
-// ['first'];
+// ['first', 'second', 'third'];
 ```
-`b` simply steals the values in `a` and adds a new value but uses a new location in memory.
+`b` simply steals the values in `a` and adds new values but uses a new location in memory.
 ### Object Solution
 #### `Object.assign()`
 ```javascript
