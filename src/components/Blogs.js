@@ -77,7 +77,9 @@ export default () => (
                                     readTime={node.frontmatter.readTime}
                                     date={node.frontmatter.date}
                                     tags={node.frontmatter.tags}
-                                    content={node.frontmatter.pageDescription}
+                                    content={
+                                        node.frontmatter.pageDescription.length > 150 ? `${node.frontmatter.pageDescription.substr(0,150)}...` : node.frontmatter.pageDescription
+                                    }
                                 />
                             </article>
                     ))}
