@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout';
+import Newsletter from '../components/common/Newsletter';
 import Styles from '../styles/Contact.module.css';
 
 let Contact = () => {
@@ -37,6 +38,7 @@ let Contact = () => {
                     </form>
                 </section>
             </section>
+            <Newsletter />
         </Layout>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout/Layout'
 import Blogs from  '../components/Blogs'
+import Newsletter from '../components/common/Newsletter';
 
 
 let Index = () => (
@@ -16,6 +17,7 @@ let Index = () => (
         ShowMobileCopyright
     >
         <Blogs/>
+        <Newsletter/>
     </Layout>
 );
 

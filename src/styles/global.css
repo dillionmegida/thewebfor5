@@ -26,6 +26,7 @@
       margin: 0;
       font-family: 'Antic', 'Helvetica';
   }
+
   .App {
       text-align: center;
       display: flex;
@@ -144,6 +145,26 @@
     display: none;
     width: 100%;
     text-align: center;
+  }
+
+  .Newsletter {
+    text-align: center;
+  }
+  
+
+  /* The use of !important is not advisable, but I had to found my way through 😔 */
+  .Newsletter a {
+    background-color: var(--mainColor1);
+    padding: 5px !important;
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none !important;
+    color: white !important;
+  }
+  
+  .Newsletter a:hover {
+    background: none;
+    color: var(--mainColor1) !important;
   }
 
   @media (max-width: 900px) {

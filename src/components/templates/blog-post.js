@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from '../Layout/Layout';
+import Newsletter from '../common/Newsletter';
 import Disqus from './disqus';
 import { formatBlogDate } from '../common/functions';
 
@@ -58,7 +59,11 @@ export default ({ data }) => {
             </a>
             </p>
           <hr/>
+
+          <Newsletter />
+
           <Disqus Url={post.fileAbsolutePath} PostId={post.id} PostTitle={post.frontmatter.title}/>
+
         </main>
       </Layout>
   )
