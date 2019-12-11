@@ -141,6 +141,39 @@
     margin: 20px 10px 0;
   }
 
+  .SearchSection {
+    width: 100%;
+    height: 50px;
+  }
+
+  .SearchSection a {
+    color: var(--mainColor1);
+    border: 1px solid var(--mainColor1);
+    padding: 5px;
+    float: right;
+    margin: 30px;
+  }
+
+  .SearchSection span {
+    display: none;
+  }
+
+  .SearchSection a:hover span, .SearchSection a:focus span {
+    display: inline-block;
+  }
+
+  .Search {
+    width: 100%;
+    margin: 100px auto 20px;
+  }
+
+  .Search input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--mainColor1);
+  }
+
   .mobile-copyright {
     display: none;
     width: 100%;
