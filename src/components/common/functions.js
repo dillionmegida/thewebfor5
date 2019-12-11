@@ -75,6 +75,17 @@ const formatBlogDate = date => {
         default:
             daySuffix = 'th';
     }
+
+    // exceptions for 11 to 19
+    switch(day) {
+        case 11:
+        case 12:
+        case 13:
+            daySuffix = 'th'
+            break;
+        default:
+            break;
+    }
     
     let fullDate = `${monthName} ${day}${daySuffix}, ${year}`;
     return fullDate;
