@@ -1,38 +1,41 @@
-    import React from 'react';
-    import { StaticQuery, graphql, Link } from 'gatsby';
+import React from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
 
-    import { formatBlogDate } from '../components/common/functions';
+import { formatBlogDate } from '../components/common/functions';
 
-    let Blog = (props) => (
-        <Link
-            to={props.href}
-            title={props.title}
-            style={{
-                fontFamily: 'Antic, helvetica'
-            }}
-        >
-            <h2>{props.title}</h2>
-            <p style={{color: 'purple'}}>{formatBlogDate(props.date)} | {props.readTime} read</p>
-            <p style={{lineHeight: '25px'}}>
-                {props.content}
+let Blog = (props) => (
+    <Link
+        to={props.href}
+        title={props.title}
+        style={{
+            fontFamily: 'Antic, helvetica'
+        }}
+    >
+        <h2>{props.title}</h2>
+        <p style={{color: 'purple'}}>{formatBlogDate(props.date)} | {props.readTime} read</p>
+        <p style={{lineHeight: '25px'}}>
+            {props.content}
+        </p>
+        {
+            props.tags ?
+            
+            <p className="TagsSection">
+                {
+                    props.tags.map((tag, index) =>
+                        // <Link key={`${tag}_${index}`} to={`/tags/${tag}`} title={`Posts tagged with ${tag}`} className="Tag">
+                        //     #{tag}
+                        // </Link>
+                        <span className='Tag' key={`${tag}_${index}`}>
+                            #{tag}
+                        </span>
+                    )
+                }
             </p>
-            {
-                props.tags ?
-                
-                <p className="TagsSection">
-                    {
-                       props.tags.map((tag, index) =>
-                            <Link key={`${tag}_${index}`} to={`/tags/${tag}`} title={`Posts tagged with ${tag}`} className="Tag">
-                                #{tag}
-                            </Link>
-                       )
-                    }
-                </p>
 
-                : null
-            }
-        </Link>
-    )
+            : null
+        }
+    </Link>
+)
 
 
 export default () => (
@@ -48,11 +51,10 @@ export default () => (
                                 frontmatter {
                                     title
                                     date
-                                    readTime
                                     pageDescription
                                     tags
                                 }
-
+                                timeToRead
                                 fields {
                                     slug
                                 }
@@ -65,16 +67,13 @@ export default () => (
         render={data => {
             return (
                 <section className='Blogs'>
-                    {/* Number of articles written
-                        <p className='numArticles'>{data.allMarkdownRemark.totalCount} Articles Written</p>
-                    */}
                     {
                         data.allMarkdownRemark.edges.map(({ node }) => (
                             <article key={node.id} className='Blog'>
                                 <Blog
                                     href={node.fields.slug}
                                     title={node.frontmatter.title} 
-                                    readTime={node.frontmatter.readTime}
+                                    readTime={`${node.timeToRead} min${node.timeToRead > 1 ? 's' : ''}`}
                                     date={node.frontmatter.date}
                                     tags={node.frontmatter.tags}
                                     content={
@@ -90,5 +89,5 @@ export default () => (
     />
 )
 
-// I made use of this component in the tag template
+// I made use of this component in the tag template and search page
 export { Blog };

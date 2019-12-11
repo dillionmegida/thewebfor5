@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from '../Layout/Layout';
+import Layout from '../../containers/Layout/Layout';
 import Newsletter from '../common/Newsletter';
 import Disqus from './disqus';
 import { formatBlogDate } from '../common/functions';
@@ -26,7 +26,7 @@ export default ({ data }) => {
           <article>
             <div className={Styles.BlogInfo}>
               <h1 className={Styles.BlogTitle}>{post.frontmatter.title}</h1>
-              <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {post.frontmatter.readTime} read</p>
+              <p className={Styles.BlogDate}>{formatBlogDate(post.frontmatter.date)} | {`${post.timeToRead} min${post.timeToRead > 1 ? 's' : ''} read`}</p>
               {
                 post.frontmatter.tags ?
                 <p>
@@ -77,6 +77,7 @@ export const query = graphql`
         slug
       }
       html
+      timeToRead
       frontmatter {
         title
         date

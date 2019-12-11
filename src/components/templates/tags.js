@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 
 import { Blog } from '../Blogs';
 
-import Layout from '../Layout/Layout';
+import Layout from '../../containers/Layout/Layout';
 
 const Tags = ({ pageContext, data }) => {
     const { tag } =  pageContext;
