@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout'
+import Layout from '../containers/Layout/Layout'
 import Blogs from  '../components/Blogs'
 import Newsletter from '../components/common/Newsletter';
+import { Link } from 'gatsby';
 
 
 let Index = () => (
@@ -16,6 +17,11 @@ let Index = () => (
         // ...But it always shows for large screens
         ShowMobileCopyright
     >
+        <div className='SearchSection'>
+            <Link to='/search' title='Search articles'>
+                <i className='fa fa-search'></i> <span>Search Articles</span>
+            </Link>
+        </div>
         <Blogs/>
         <Newsletter/>
     </Layout>

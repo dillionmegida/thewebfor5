@@ -1,6 +1,6 @@
 import React from 'react';
 import Dp from '../components//common/Dp';
-import Layout from '../components/Layout/Layout';
+import Layout from '../containers/Layout/Layout';
 import Styles from '../styles/About.module.css';
 import { Link } from 'gatsby';
 
