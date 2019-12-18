@@ -41,6 +41,7 @@ Reference values are stored in the variable location  which is a pointer to a lo
 
 ### Examples
 - Immutability
+
 ```javascript
 let a = 15;
 let b = a;
@@ -53,6 +54,7 @@ console.log(b);
 ```
 Variable `a` remains immutable, same as `b`. This is the same for other primitive type of variables.
 - Mutability
+
 ```javascript
 let a = ['first', 'second'];
 let b = a;
