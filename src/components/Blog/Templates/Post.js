@@ -1,9 +1,10 @@
 import React from 'react';
 import Styles from '../Styles/Post.module.scss';
 
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-export default props => {
+const Post = props => {
     let PostPosition = props.PostPosition
     let FirstPostSpecialStyle = props.FirstPostSpecialStyle;
     return (
@@ -38,3 +39,16 @@ export default props => {
         </article>
     )
 }
+
+Post.propTypes = {
+    PostPosition: PropTypes.number,
+    FirstPostSpecialStyle: PropTypes.bool,
+    CoverSource: PropTypes.string,
+    CoverAlt: PropTypes.string,
+    href: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+    extraInfo: PropTypes.string.isRequired
+}
+
+export default Post;
