@@ -11,7 +11,13 @@ const NavLists = [
         title: `${Brand.name} - ${Brand.motto}`
     },
     {
-        // name: 'Sections',
+        // name: 'Search',
+        name: 'fa fa-search',
+        href: '/search',
+        title: `Search Topics`
+    },
+    {
+        // name: 'Categories',
         name: 'fa fa-th-large',
         href: '/categories',
         title: `Web Development Categories`
