@@ -1,0 +1,161 @@
+.Header {
+
+    width: 100%;
+
+    & > h1 {
+        font-size: 30px;
+        color: var(--color2);
+        margin-bottom: 3px;
+        word-wrap: break-word;
+    }
+
+    & > p {
+        color: var(--color3); 
+        margin: 4px 0 10px;  
+        font-size: 15px;
+    }
+
+    & > button {
+        margin: 0 0 10px;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        padding: 3px;
+        font-size: 15px;
+        display: block;
+
+        &.Unsave {
+            color: var(--color2);
+        }
+
+        &.Save {
+            color: var(--color4);
+        }
+    }
+
+    & > span {
+        font-size: 14px;
+        overflow-wrap: break-word;
+
+        & a {
+            color: var(--color4);
+            padding: 3px;
+            width: 100%;
+
+            &:hover, &:focus {
+                outline: 1px solid var(--color4);
+            }
+        }
+    }
+}
+
+.LeftContents {
+    border: 1px solid var(--color2);
+    padding: 10px;
+    border-radius: 5px;
+    position: fixed;
+    width: 200px;
+
+    & > * {
+        margin: 0;
+    }
+
+    & > h1 {
+        font-size: 20px;
+        margin: 0 0 15px;
+    }
+}
+
+.PageHeader {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    color: var(--color3);
+}
+
+.PostSection {
+    width: 100%;
+    margin: 20px auto 0;
+
+    & .PostCover {
+        width: 100%;
+        height: 300px;
+
+        & img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+    & .PostContent {
+        color: var(--color3);
+        line-height: 25px;
+
+        & h1 {
+            /* This is essential to control every h1 tags from markdowns as there is already an initial h1 tag */
+            font-size: 25px;
+            color: var(--color3);
+        }
+    }
+
+    & a {
+        color: var(--color4);
+        padding: 3px;
+
+        &:hover, &:focus {
+            outline: 1px solid var(--color4);
+        }
+    }
+
+    & ul {
+        margin: 0;
+
+        & li {
+            list-style-type: disc;
+            padding-left: 10px;
+        }
+    }
+
+    & code[class='language-text'] {
+        border-radius: 0%;
+        padding: 3px; 
+    }
+
+    & blockquote {
+        margin: 0;
+        padding: 5px 20px;
+        border: 1px solid var(--color2);
+        border-radius: 10px;
+        border-left-width: 20px;
+    }
+}
+
+.Others {
+    height: 300px;
+    width: 95%;
+    margin: 0 auto;
+    background-color: pink;
+    z-index: 30;
+}
+
+.RelatedArticles {
+    border-top: 1px solid var(--color5);
+
+    & > h2 {
+        background-color: var(--color2);
+        padding: 5px;
+        // display: inl
+        width: 170px;
+        color: var(--color1);
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .PageHeader {
+        display: block;
+    }
+}

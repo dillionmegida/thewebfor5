@@ -1,19 +1,10 @@
 import React from 'react';
-import  { Link } from 'gatsby';
-import Styles from '../../styles/NavLink.module.css';
+import { Link } from 'gatsby';
 
-const navLink = (props) => {
-    return (
-        <Link
-            className={Styles.Link}
-            to={`/${props.href}`}
-            activeClassName={Styles.ActiveLink}
-            title={props.title}
-        >
-            {props.nav.toUpperCase()}
+export default props => (
+    <li>
+        <Link to={props.Link} title={props.Title} activeClassName={props.ActiveClassName}>
+            {props.Nav}
         </Link>
-       
-    )
-}
-
-export default navLink;
+    </li>
+)

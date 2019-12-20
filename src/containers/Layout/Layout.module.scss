@@ -1,0 +1,67 @@
+.Layout {
+    background-color: var(--color1);
+
+    & .OtherMenus {
+        position: relative;
+        background-color: var(--color1);
+        width: 100%;
+        min-height: 50px;
+        padding: 0 20px;
+        position: fixed;
+        top: 50px;
+        // border-bottom: 1px solid var(--color3);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        & > * {
+            margin: 0 10px;
+        }
+
+        & > .Saved {
+            font-size: 30px;
+            color: var(--color4);
+
+            &:hover, & .SavedActive {
+                color: var(--color2);
+            }
+        }
+    }
+
+    & .BodyContent {
+        width: 95%;
+        margin: 100px auto 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        /* 60px - size of header and other menus in comparison with margin-top, 50px - size of other menus, 150px - size of footer */
+        min-height: calc(100vh - 80px - 50px - 50px);
+        
+        & .FirstSection {
+            width: 200px;
+            max-height: 100vh;
+            margin: 40px 10px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+    
+        & .SecondSection {
+            width: 60%;
+            margin: 20px auto 0;
+        }
+    
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .Layout .BodyContent .FirstSection {
+        display: none;
+    }
+    .Layout .BodyContent .SecondSection {
+        width: 90%;
+    }
+    // .Layout .BodyContent .ThirdSection {
+    //     display: none;
+    // }
+}

@@ -1,0 +1,16 @@
+.ErrorSection {
+
+    & h1 {
+        font-size: 30px;
+        color: var(--color3);
+    }
+
+    & a {
+        color: var(--color2);
+        padding: 5px;
+
+        &:hover {
+            outline: 1px solid var(--color2);
+        }
+    }
+}

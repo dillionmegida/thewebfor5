@@ -1,20 +1,69 @@
 backend:
   name: github
-  repo: dillionmegida/dillionmegida.com
+  repo: dillionmegida/thewebfor5
 media_folder: "static/img/uploads"
 public_folder: "img/uploads"
 collections:
-  - name: "blogs"
-    label: "Blogs"
-    description: "Blog posts"
-    folder: "src/pages/p"
+  - name: "webPosts"
+    label: "Web Posts"
+    description: "Blog posts for General"
+    folder: "src/pages/p/general"
     create: true
     fields:
       - { name: title, label: Title }
       - { name: date, label: Date }
-      - { name: pageDescription, label: Excerpt / Page Description }
+      - { name: category, widget: hidden, default: general, editable: false }
+      - { name: pageDescription, label: Page Description }
       - { name: pageKeywords, label: SEO Keywords }
       - { name: tags, label: Blog Tags, widget: list, required: false }
       - { name: cover, label: Blog Cover Link, required: false }
       - { name: body, label: Body, widget: markdown }
+
+  - name: "htmlPosts"
+    label: "HTML Posts"
+    description: "Blog posts for HTML"
+    folder: "src/pages/p/html"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date }
+      - { name: category, widget: hidden, default: html, editable: false }
+      - { name: pageDescription, label: Page Description }
+      - { name: pageKeywords, label: SEO Keywords }
+      - { name: tags, label: Blog Tags, widget: list, required: false }
+      - { name: cover, label: Blog Cover Link, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: "cssPosts"
+    label: "CSS Posts"
+    description: "Blog posts for CSS"
+    folder: "src/pages/p/css"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date }
+      - { name: category, widget: hidden, default: css, editable: false }
+      - { name: pageDescription, label: Page Description }
+      - { name: pageKeywords, label: SEO Keywords }
+      - { name: tags, label: Blog Tags, widget: list, required: false }
+      - { name: cover, label: Blog Cover Link, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+  - name: "jsPosts"
+    label: "JS Posts"
+    description: "Blog posts for Javascript"
+    folder: "src/pages/p/javascript"
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date }
+      - { name: category, widget: hidden, default: javascript, editable: false }
+      - { name: pageDescription, label: Page Description }
+      - { name: pageKeywords, label: SEO Keywords }
+      - { name: tags, label: Blog Tags, widget: list, required: false }
+      - { name: cover, label: Blog Cover Link, required: false }
+      - { name: body, label: Body, widget: markdown }
+
+
+
 publish_mode: editorial_workflow

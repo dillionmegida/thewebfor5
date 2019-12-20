@@ -1,6 +1,0 @@
-.sm:hover, .sm:focus {
-    /* Using important is not advisable, but I used it because
-    color is already set according to props in the component.
-    !important is the only way i can change the color */
-    color: var(--lightBlue) !important;
-}

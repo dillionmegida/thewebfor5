@@ -1,94 +1,96 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Styles from './Layout.module.scss';
+
+import PageTheme from '../Theme/Theme';
 import { Link } from 'gatsby';
-import App from '../../components/App';
-import MainLeft from '../../components/containers/Mainleft';
-import Mainright from '../../components/containers/Mainright';
-import NavLinks from '../../components/Nav/NavLinks';
-import Dp from '../../components/common/Dp';
-import Copyright from '../../components/common/Copyright';
-import Styles from '../../styles/Mainleft.module.css';
+import Helmet from '../../components/Helmet';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import Drawer from '../../components/Nav/Drawer/Drawer';
 
-class Layout extends Component {
+
+// let savedTheme = window.localStorage.getItem(`${Brand.name}_12345`);
+// if(savedTheme === null) {
+//     savedTheme = 'default';
+//     window.localStorage.setItem(`${Brand.name}_12345`, savedTheme);
+// }
+
+export default class Layout extends React.Component {
     state = {
-        drawerStatus: false,
-        class: 'drawerClosed'
+        // drawerStatus: 'closed',
+        articleSaved: true
     }
-    openNavDrawer = () => {
-        this.setState({
-            drawerStatus: true,
-            class: 'NavDrawerOpened'
-        })
-    }
-    closeNavDrawer = () => {
-        this.setState({
-            drawerStatus: false,
-            class: 'NavDrawerClosed'
-        })
-    }
-    render() {
-        return (
-            <App
-                PageTitle={this.props.PageTitle}
-                PageLink={this.props.PageLink}
-                PageDescription={this.props.PageDescription}
-                PageKeywords={this.props.PageKeywords}
-                TwitterCardTtitle={this.props.TwitterCardTtitle ? this.props.TwitterCardTtitle : this.props.PageTitle}
-                TwitterCardDescription={this.props.PageDescription}
-                TwitterBlogImage={this.props.TwitterBlogImage ? this.props.TwitterBlogImage : 'https://res.cloudinary.com/dillionmegida/image/upload/v1567211823/images/website/deee.jpg'}
-                LargeTwitterCard = {this.props.LargeTwitterCard}
-            >
-                <header className='TopSection'>
-                    <Link
-                        to='/'
-                        title='Dillion Megida'
-                    >
-                        <Dp imgDivClass={Styles.ImgDivSmall}/>
-                    </Link>
-                    {/* <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h3> */}
-                    <h3>Dillion Megida <span role='img' aria-label='Rocket Emoji'>&#127876;</span></h3>
-                    <button onClick={this.openNavDrawer} className='Hamburger'>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </button>
-                </header>
-                {this.state.drawerStatus ? 
-                    <nav className={['NavSection', this.state.class].join(' ')}>
-                        <p onClick={this.closeNavDrawer} className='CloseDrawer'>X</p>
-                        <section style={{
-                                height: '400px',
-                                display: 'flex',
-                                justifyContent: 'space-around',
-                                flexDirection: 'column',
-                                alignitems: 'center',
-                                minWidth: '300px'
-                            }}>
-                            <NavLinks/>
-                            <div style={{height: '1px', width: '100%', backgroundColor: '#eee'}}>
 
-                            </div>
-                            <Copyright color='white' />
-                        </section>
-                    </nav> :
-                    null
+    OpenDrawer = () => {
+        this.setState({
+            drawerStatus: 'opened'
+        })
+    }
+
+    CloseDrawer = () => {
+        this.setState({
+            drawerStatus: 'closed'
+        })
+    }
+    
+    render() {
+
+        return (
+            <div
+                style={{
+                    transition: 'color 0.2s ease-out, background 0.2s ease-out',
+                }}
+                className={Styles.Layout}
+            >
+
+                <Helmet
+                    PageTitle = {this.props.PageTitle}
+                    PageLink = {this.props.PageLink}
+                    PageDescription = {this.props.PageDescription}
+                    PageKeywords = {this.props.PageKeywords}
+                />
+
+                <Header DrawerBtnClicked={this.OpenDrawer}/>
+                
+                {
+                    this.state.drawerStatus === 'opened' ?
+                        <Drawer CloseDrawerBtnClicked={this.CloseDrawer}/>
+                    : null
+
                 }
-                <MainLeft />
-                <Mainright>
-                    {this.props.children}    
+
+                <div className={Styles.OtherMenus}>
+                    <Link to='/saved' title='Saved Articles' className={Styles.Saved} activeClassName={Styles.SavedActive}>
+                        <i className='fa fa-bookmark'></i>
+                    </Link>
+                    <PageTheme />
+                </div>
+
+                <main className={Styles.BodyContent}>
+                    {this.props.children}
+
                     {
-                        //The copyright only shows on the blog page and on each blog for mobile
-                        // ...But it always shows for large screens
-                        this.props.ShowMobileCopyright ?
-                        <footer className='mobile-copyright'>
-                            <Copyright color='grey'/>
-                        </footer>
-                        : 
-                        <p style={{textAlign: 'center', color: 'grey'}}>Copyright {new Date().getFullYear()} - Dillion Megida</p>
+                        /* This checks if first section is stated so it doesn't add to the DOM */
+                        this.props.FirstSection ?
+                            <section className={Styles.FirstSection}>
+                                {this.props.FirstSection}
+                            </section>
+                        : null
                     }
-                </Mainright>
-            </App>  
+
+                    {
+                        /* This checks if second section is stated so it doesn't add to the DOM */
+                        this.props.SecondSection ?
+                            <section  className={Styles.SecondSection}>
+                                {this.props.SecondSection}
+                            </section>
+                        : null
+                    }
+
+                </main>
+                <Footer />
+            </div>
+            
         )
     }
-};
-
-export default Layout;
+}

@@ -1,0 +1,59 @@
+Brand
+
+    - Details
+        - Name: TheWebFor5
+        - Motto: Simplifying web topics like teaching a five year old
+    - Logo
+
+Pages
+
+    - Home
+        - Features
+            - All articles in descending order of date
+
+    - About
+        - A platform for making web topics easier to understanding
+        - Founder, Dillion Megida
+
+    - Writers Pages
+        - When writers are more than one
+
+    - Contact Us
+        - Apply for writing
+        - Greetings
+
+    Blog
+        - Markdowns
+            - Details   
+                - Date, Section, Tags, Page Description, ReadTime
+            - Styles
+                - Special boxes for codes
+                - Custom style for blockquotes
+
+        - Features
+            - Dark and Light Mode
+            - Each blog has related articles
+            - Save option an articles
+
+        - Sections
+
+            - Web
+                - Explaining general topics about the web
+            - HTML
+                - Explaining topics related to HTML
+            - CSS
+                - Explaining topics related to CSS
+            - Javascript
+                - Explaining topics related to Javascript
+
+
+- Newsletters
+    - Tinyletter for start
+
+- Disqus
+    - For interaction
+
+
+Pages to remove from sitemaps
+tag Pages
+saved pages
