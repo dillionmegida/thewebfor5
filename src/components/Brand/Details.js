@@ -2,6 +2,8 @@ import Logo from '../../assets/img/logo.png';
 
 export default {
     name: "TheWebFor5",
+    twitter: "thewebfor5",
+    domain: 'https://thewebfor5.com',
     repo: "https://github.com/dillionmegida/thewebfor5",
     logo: Logo,
     founder: "Dillion Megida",
