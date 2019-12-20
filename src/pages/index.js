@@ -19,7 +19,7 @@ export default () => {
 
                 FirstSection={
                     <div className={Styles.TagsSection}>
-                        <h3>Top #tags</h3>
+                        <h3>#tags</h3>
                         <Tags />
                     </div>
                 }
