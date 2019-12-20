@@ -7,7 +7,7 @@ module.exports = {
     plugins: [
 
         // Theming
-        // 'gatsby-plugin-dark-mode',
+        'gatsby-plugin-dark-mode',
 
         // Sass
         `gatsby-plugin-sass`,
