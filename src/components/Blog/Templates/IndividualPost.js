@@ -6,7 +6,8 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
 import formatBlogDate from '../../../functions/dateFormatter';
-import { saveArticle, isArticleSaved, unSaveArticle } from '../Saved/Saved';
+import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Saved';
+import { Twitter } from '../SocialMedia/ShareArticle';
 
 export default ({ data }, props) => {
   
@@ -22,8 +23,12 @@ export default ({ data }, props) => {
     }
 
     const save = id => {
-      saveArticle(id);
-      saveState(true);
+      if(saveArticle(id) === false) {
+        saveState(false);
+      } else {
+        saveArticle(id);
+        saveState(true);
+      }
     }
 
     const Header = props => (
@@ -56,6 +61,7 @@ export default ({ data }, props) => {
               <i className='fa fa-bookmark'></i> Save
             </button>
         }
+        <SaveMsg />
       </div>
     )
 
@@ -87,6 +93,13 @@ export default ({ data }, props) => {
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
                 </article>
+                <div className={Styles.ShareArticle}>
+                  <p>Kindly share this article 😃</p>
+                  <Twitter
+                    articleTitle={frontmatter.title}
+                    href={post.fields.slug}
+                  />
+                </div>
                 <RelatedArticles
                   tags={frontmatter.tags}
                   articleID={post.id}

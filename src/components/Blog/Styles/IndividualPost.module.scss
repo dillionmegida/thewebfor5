@@ -140,6 +140,17 @@
     z-index: 30;
 }
 
+.ShareArticle {
+    margin: 10px 0 0;
+    border-top: 1px solid var(--color5);
+    padding: 10px;
+
+    & p {
+        font-size: 20px;
+        margin: 5px 0;
+    }
+}
+
 .RelatedArticles {
     border-top: 1px solid var(--color5);
 
