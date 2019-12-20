@@ -7,13 +7,18 @@ import { StaticQuery, graphql } from 'gatsby';
 import Post from '../Templates/Post.js';
 import formatBlogDate from '../../../functions/dateFormatter';
 
-const storageKey = `${Brand.name}_12345`;
+const storageKey = `${Brand.name}_123456`;
 
 // necessary to check because server side rendering does not have global objects
 // if not checked, global objects like 'window' will be undefined
 const checkGlobal = () => (
     typeof window !== `undefined`
 )
+
+if(checkGlobal()) {
+	// this was the initial key, had to remove it for users who visited the site before final launch
+	window.localStorage.removeItem('TheWebFor5_12345');
+}
 
 let savedArticlesArray_Prev;
 
@@ -30,18 +35,20 @@ if(checkGlobal()) {
 	window.localStorage.setItem(storageKey, JSON.stringify(savedArticlesArray));
 }
 
-// const isSavedMoreThan = (arr, max) => {
-//     if(arr.length > max) {
-//         return true;
-//     }
-// }
+const isSavedMoreThan = (arr, max) => {
+    if(arr.length === max) {
+        return true;
+    }
+}
+
+const savedArticlesLimit = 20;
 
 const saveArticle = id => {
     let prevArr = savedArticlesArray;
-    // if(isSavedMoreThan(prevArr, 2)) {
-    //     alert(`Saved Articles are more than 2. Kindly unsave some to add more.`);
-    //     return;
-    // }
+    if(isSavedMoreThan(prevArr, savedArticlesLimit)) {
+        alert(`You can't save more than ${savedArticlesLimit} articles. Kindly unsave some to add more.`);
+        return false;
+    }
 	let newArr = prevArr;
 	if(!newArr.includes(id))
 		newArr.push(id);
@@ -66,6 +73,12 @@ const isArticleSaved = id => {
 	let savedArr = savedArticlesArray;
 	return savedArr.includes(id);
 }
+
+const SaveMsg = () => (
+	<p style={{fontSize: '15px', margin: '5px 0'}}>
+		<i>Maximum of {savedArticlesLimit} articles can be saved!</i>
+	</p>
+)
 
 export default () => (
 	<StaticQuery
@@ -109,6 +122,7 @@ export default () => (
 						<p className={Styles.HeaderExtraDetails}>
 							{savedArticlesArray.length} post{savedArticlesArray.length === 1 ? "": "s"} saved
 						</p>
+						<SaveMsg />
 					</React.Fragment>
 				)
 
@@ -162,4 +176,4 @@ export default () => (
 	/>
 )
 
-export { saveArticle, isArticleSaved, unSaveArticle };
+export { saveArticle, isArticleSaved, unSaveArticle, SaveMsg };
