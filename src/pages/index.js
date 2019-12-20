@@ -1,30 +1,35 @@
-import React from 'react';
-import Layout from '../containers/Layout/Layout'
-import Blogs from  '../components/Blogs'
-import Newsletter from '../components/common/Newsletter';
-import { Link } from 'gatsby';
+import React from "react";      
+import Styles from '../styles/index.module.scss';
 
+import Layout from '../containers/Layout/Layout';
+import Tags from '../components/Blog/Tags/Tags';
+import AllPosts from '../components/Blog/Categories/All';
+import Brand from '../components/Brand/Details';
 
-let Index = () => (
-    <Layout
-        PageTitle='Dillion Megida &#128640; - Technical Writer and Front End Developer'
-        PageLink='/'
-        PageDescription="Dillion is a front end developer, a technical writer and a graphics designer."
-        PageKeywords='branding, design, dillion megida, dillion, megida, web developer, web development, frontend'
-        TwitterCardTtitle='Dillion Megida'
+export default () => {
 
-        //The copyright only shows on the blog page and on each blog for mobile
-        // ...But it always shows for large screens
-        ShowMobileCopyright
-    >
-        <div className='SearchSection'>
-            <Link to='/search' title='Search articles'>
-                <i className='fa fa-search'></i> <span>Search Articles</span>
-            </Link>
-        </div>
-        <Blogs/>
-        <Newsletter/>
-    </Layout>
-);
+    return (
+        <React.Fragment>
+            <Layout
 
-export default Index;
+                PageTitle = {`${Brand.name} - Simplifying web topics like teaching a five year old.`}
+                PageLink = '/'
+                PageDescription = {`${Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old.`}
+                PageKeywords= 'home'
+
+                FirstSection={
+                    <div className={Styles.TagsSection}>
+                        <h3>Top #tags</h3>
+                        <Tags />
+                    </div>
+                }
+                SecondSection={
+                    <AllPosts FirstPostSpecialStyle/>
+                }
+                ThirdSection={
+                    <p>Hi</p>
+                }
+            />
+        </React.Fragment>
+    )
+}

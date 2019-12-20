@@ -1,114 +1,74 @@
 import React from 'react';
-import Dp from '../components//common/Dp';
+import Styles from '../styles/about.module.scss';
+
+import { graphql } from 'gatsby';
 import Layout from '../containers/Layout/Layout';
-import Styles from '../styles/About.module.css';
-import { Link } from 'gatsby';
+import Brand from '../components/Brand/Details';
+import Founder from '../assets/img/dillion.jpg';
 
-const ProjectList = [
-    {
-        title: 'CSS Flex Generator',
-        desc: 'A playground built with React for helping web developers understand how flex containers work.',
-        cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1570444392/images/website/flex-generator-site-cover.jpg',
-        link: 'https://cssflex-generator.netlify.com'
-    },
-    {
-        title: 'Burger Builder App',
-        desc: 'First application built with React. It was inspired by a course on Udemy on React and most parts of the application were directed by the course. I also added personal features, built it from scratch again and hosted on Heroku.',
-        cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1570445060/images/website/burger-app-cover.jpg',
-        link: 'https://deee-burger-app.herokuapp.com/'
-    }
-    
-];
+export default ({ data }) => {
 
-let Porfolio = () => (
-    <Layout
-        PageTitle='About Me - Dillion Megida'
-        PageLink='/about'
-        PageDescription='Dillion is a Frontend Developer, a Tecnical Writer and a Graphics Designer. He founded Deeesigns Studios which deals in Web Development and Graphics Designing.'
-        PageKeywords='Dillion Megida, Dillion, Megida, web accessibility, DevCommunity, Front-end Developer, Technical Writer, Freelancer, Web Developer, Web Designer, Software Developer, Nigerian, Developer'
-        TwitterCardTtitle='DILLION MEGIDA'
-    >
-    	<h1 style={{textAlign: 'center'}}>About Me</h1>
-    	<section className={Styles.AboutSection}>
-    		<section className={Styles.Bio}>
-    			<h3 align='left'>Front End Developer, Technical Writer and Graphics Deeesigner</h3>
-                <p align='justify'>
-                    I'm passionate about Web Accessibility and JAMstack applications.<br/><br/>
-	                I write mostly about front-end web development topics on my blog here, <a href='https://blog.soshace.com/author/dillionmegida/' title='Soshace Blog'>Soshace</a> and <a href='https://dev.to/dillionmegida' title='DEV Blog'>Dev.to</a><br/><br/>
-                    Proficient in HTML, CSS, JS, ReactJS and GatsbyJS.<br/><br/>
-	                Efficient use of Adobe Photoshop and Adobe Illustrator for graphics designing. These include photo editing, logo designing and advertisement cards. <br/><br/>
-	                Average use of Adobe After Effects and Adobe Premiere Pro for video editing and motion graphics.<br/><br/>
-	                {/* Founder, <b>Deeesigns Studios</b>, which deals in Web Development and Graphics Designing.
-                    <br/>
-                    <br/> */}
-                    <a className={Styles.Resume} href='/resume.pdf' title='My Resume' target='_blank'>
-                        Resume
-                    </a>
-                </p>
-    		</section>
-    		<section className={Styles.Dp}>
-    			<Dp imgDivClass={Styles.ImgDiv}/>
-    			<h1>DILLION MEGIDA <span role='img' aria-label='Rocket Emoji'>&#128640;</span></h1>
-                <p>
-                	<a className={Styles.Contact} href='mailto:dillionmegida@gmail.com'><i className="fa fa-envelope"></i> dillionmegida@gmail.com</a>
-	                <a className={Styles.Contact} href="tel:+2349058961095"><i className="fa fa-phone"></i> +234 905 896 1095</a>
-                    <Link to='/contact' title='Contact Me'>
-                        Contact Me
-                    </Link>
-                </p>
-    		</section>
-    	</section>
+    const { totalCount: noOfArticles } = data.allMarkdownRemark;
 
-        <section className={Styles.ProjectsSection}>
-            <h2>Projects I've Worked On</h2>
-            <p><b>Click/Hover For More Info</b></p>
-            <section className={Styles.Projects}>
-                {
-                    ProjectList.map((project, index) =>
-                        <div key={index}>
-                            <p className={Styles.ProjectTitle}>{project.title}</p>
-                            <p className={Styles.ProjectDesc}>
-                                {project.desc}
-                                <a href={project.link} title='View Project Live' target='_blank' rel='noopener noreferrer'>View Live</a>
-                            </p>
-                            <div className={Styles.ProjectCover}>
-                                <img src={project.cover} alt='Project Cover' />
-                            </div>
+    return (
+        <Layout
+            PageTitle={`About ${Brand.name}`}
+            PageLink = '/about'
+            PageDescription = {`${Brand.name} founded by ${Brand.founder} is a blog platform for demystifying web topics as assumed to be teaching a five year old. This platform hopes to be different from other platforms such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand.`}
+            PageKeywords='about'
+        >
+            <section className={Styles.AboutSection}>
+                <div className={Styles.Brand}>
+                    <h1>{Brand.name}</h1>
+                    <p>{Brand.motto}</p>
+                </div>
+                <div className={Styles.About}>
+                    <h2>About</h2>
+                    <p>{Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old. It was founded by {Brand.founder} on January 1st, 2020 (more details on him below).</p>
+                    <p>So far, there are <b>{noOfArticles}</b> articles already written.</p>
+                    <p>There are undeniably numerous platforms already built for teaching web topics but this hopes to be different such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand. Also note that despite the means used in explanation, the technicalities involved in such topics would not be left behind.</p>
+                    <p>The little requirement for five year olds (lol) hoping to learn from this platform is that they should have the appetite for reading. This is stated because literally, five year olds wouldn't actually like reading. Illustrations would be used. Stories would also be used.</p>
+                    <p>We hope to give you the best in this platform : )</p>
+                </div>
+
+                <div className={Styles.Founder}>
+                    <div className={Styles.Image}>
+                        <img src={Founder} alt={`${Brand.founder}, founder of ${Brand.name}`} />
+                    </div>
+                    <div className={Styles.Details}>
+                        <p><b>{Brand.founder}</b></p>
+                        <p>
+                            A front-end developer, graphics designer and technical writer. He founded this site with the purpose of breaking down topics in web development into its simplest pieces.
+                        </p>
+                        <div className={Styles.Links}>
+                            <a href='https://dillionmegida.com' title={`${Brand.founder}'s Website`}>
+                                <i className='fa fa-link'></i>
+                            </a> &nbsp;
+                            <a href='https://twitter.com/iamdillion' title={`${Brand.founder}'s Twitter handle`}>
+                                <i className='fa fa-twitter'></i>
+                            </a>
                         </div>
-                    )
-                }
+                    </div>
+                </div>
+
+                <div className={Styles.OtherDetails}>
+                    <h2>About This Site</h2>
+                    <p>This site is built with <a href='https://gatsbyjs.org' title='GatsbyJS website'>GatsbyJS</a> and hosted on <a href='https://netlify.com' title='Netlify website'>Netlify</a>. With this <a href='https://gatsbyjs.org' title='GatsbyJS Tutorial documentation'>tutorial on GatsbyJS</a>, you would get to understand how to work with the framework if you have no prior understanding.</p>
+                    <p>It is also open sourced on <a href='https://github.com' title='GitHub website'>GitHub</a> and contributions are welcome. You can also suggest articles to be written in the <a href='https://github.com'>ideas file of the repository</a>.</p>
+                    <a className={Styles.GitHub} href={Brand.repo} title={`GitHub repository for ${Brand.name}`}>
+                        Contribute on GitHub <i className='fa fa-github'></i>
+                    </a>
+                </div>
             </section>
-            <a className={Styles.CheckGitHub} href='https://github.com/dillionmegida' title='GitHub Profile'>Check More on GitHub</a>
-        </section>
+            
+        </Layout>
+    )
+}
 
-    	{/* <section className={Styles.ServicesSection}>
-             <h2>What I do</h2>
-             <section className={Styles.Services}>
-                <section>
-                    <div>
-                        <img src={require('../img/web.png')} alt='Web Development Illustration'/>
-                        <h4>Web Development</h4>
-                    </div>
-                    <div>
-                        <img src={require('../img/brand.png')} alt='Branding Identity Illustration'/>
-                        <h4>Branding Identity</h4>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <img src={require('../img/motion.png')} alt='Motion Graphics Illustration'/>
-                        <h4>Motion Graphics</h4>
-                    </div>
-                    <div>
-                        <img src={require('../img/flyer.png')} alt='Flyer and Banners Illustration'/>
-                        <h4>Flyers / Banners</h4>
-                    </div>
-                </section>
-
-            </section>
-        </section> */}
-    </Layout>
-);
-
-export default Porfolio;
+export const query = graphql`
+    query {
+        allMarkdownRemark {
+            totalCount
+        }
+    }
+`
