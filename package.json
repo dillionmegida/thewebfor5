@@ -15,7 +15,10 @@
   "dependencies": {
     "gatsby": "^2.18.11",
     "gatsby-plugin-dark-mode": "^1.1.0",
+    "gatsby-plugin-manifest": "^2.2.22",
     "gatsby-plugin-netlify-cms": "^4.1.33",
+    "gatsby-plugin-offline": "^3.0.15",
+    "gatsby-plugin-sitemap": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
     "gatsby-remark-prismjs": "^3.3.27",
