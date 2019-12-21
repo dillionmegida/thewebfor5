@@ -6,7 +6,7 @@ const TwitterMedia = props => (
     </a>
 )
 
-const WebsiteMedia = props =(
+const WebsiteMedia = props => (
     <a href={props.href} title={props.title}>
         <i className='fa fa-link'></i>
     </a>
