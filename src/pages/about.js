@@ -6,6 +6,7 @@ import Layout from '../containers/Layout/Layout';
 import Brand from '../components/Brand/Details';
 import Founder from '../assets/img/dillion.jpg';
 import MainImg from '../assets/img/main.jpg';
+import SuggestArticles from '../components/Blog/SuggestArticles/SuggestArticles';
 
 export default ({ data }) => {
 
@@ -54,6 +55,8 @@ export default ({ data }) => {
                         </div>
                     </div>
                 </div>
+
+                <SuggestArticles />
 
                 <div className={Styles.OtherDetails}>
                     <h2>About This Site</h2>
