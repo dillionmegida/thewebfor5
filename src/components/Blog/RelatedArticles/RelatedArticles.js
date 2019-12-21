@@ -52,28 +52,35 @@ export default props => (
                 })
 
                 return (
-                    <section className={props.sectionClassName}>
+                    <React.Fragment>
                         {
-                            RelatedArr.length > 0 && <h2>Related Articles</h2>
+                            RelatedArr.length > 0 ? 
+                                <section className={props.sectionClassName}>
+                                    {
+                                        RelatedArr.length > 0 && <h2>Related Articles</h2>
+                                    }
+                                    {
+                                        RelatedArr.map(post =>
+                                            <Post
+                                                key={post.id}
+
+                                                href={post.fields.slug}
+
+                                                title={post.frontmatter.title}
+
+                                                CoverSource={post.frontmatter.cover}
+                                                CoverAlt=''
+
+                                                excerpt={post.frontmatter.pageDescription}
+                                                extraInfo={`${formatBlogDate(post.frontmatter.date)} | ${post.timeToRead} min${post.timeToRead > 1 ? 's' : ''} read`}
+                                            />
+                                        )
+                                    
+                                    }
+                                </section>
+                            : null
                         }
-                        {
-                            RelatedArr.map(post =>
-                                <Post
-                                    key={post.id}
-
-                                    href={post.fields.slug}
-
-                                    title={post.frontmatter.title}
-
-                                    CoverSource={post.frontmatter.cover}
-                                    CoverAlt=''
-
-                                    excerpt={post.frontmatter.pageDescription}
-                                    extraInfo={`${formatBlogDate(post.frontmatter.date)} | ${post.timeToRead} min${post.timeToRead > 1 ? 's' : ''} read`}
-                                />
-                            )
-                        }
-                    </section>
+                    </React.Fragment>
                 )
 
             }
