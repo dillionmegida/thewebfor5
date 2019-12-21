@@ -17,7 +17,7 @@ export default ({ data }) => {
         <Layout
             PageTitle={`About ${Brand.name}`}
             PageLink = '/about'
-            PageDescription = {`${Brand.name} founded by ${Brand.founder} is a blog platform for demystifying web topics as assumed to be teaching a five year old. This platform hopes to be different from other platforms such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand.`}
+            PageDescription = {`${Brand.name} founded by ${Brand.founder.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old. This platform hopes to be different from other platforms such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand.`}
             PageKeywords='about'
         >
             <section className={Styles.AboutSection}>
@@ -30,7 +30,7 @@ export default ({ data }) => {
                 </div>
                 <div className={Styles.About}>
                     <h2>About</h2>
-                    <p>{Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old. It was launched by {Brand.founder} on January 1st, 2020 (more details on him below).</p>
+                    <p>{Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old. It was launched by {Brand.founder.name} on January 1st, 2020 (more details on him below).</p>
                     <p>So far, there are <b>{noOfArticles}</b> articles already written.</p>
                     <p>There are undeniably numerous platforms already built for teaching web topics but this hopes to be different such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand. Also note that despite the means used in explanation, the technicalities involved in such topics would not be left behind.</p>
                     <p>The little requirement for five year olds (lol) hoping to learn from this platform is that they should have the appetite for reading. This is stated because literally, five year olds wouldn't actually like reading. Right? Illustrations would be used. Stories would also be used.</p>
@@ -39,10 +39,10 @@ export default ({ data }) => {
 
                 <div className={Styles.Founder}>
                     <div className={Styles.Image}>
-                        <img src={Founder} alt={`${Brand.founder}, founder of ${Brand.name}`} />
+                        <img src={Founder} alt={`${Brand.founder.name}, founder of ${Brand.name}`} />
                     </div>
                     <div className={Styles.Details}>
-                        <p><b>{Brand.founder}</b></p>
+                        <p><b>{Brand.founder.name}</b></p>
                         <p>
                             A front-end developer, graphics designer and technical writer. He founded this site with the purpose of breaking down topics in web development into its simplest pieces.
                         </p>
