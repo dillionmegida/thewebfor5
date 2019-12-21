@@ -64,7 +64,7 @@ export default ({ data }) => {
                 <div className={Styles.OtherDetails}>
                     <h2>About This Site</h2>
                     <p>This site is built with <a href='https://gatsbyjs.org' title='GatsbyJS website'>GatsbyJS</a> and hosted on <a href='https://netlify.com' title='Netlify website'>Netlify</a>. With this <a href='https://gatsbyjs.org' title='GatsbyJS Tutorial documentation'>tutorial on GatsbyJS</a>, you would get to understand how to work with the framework if you have no prior understanding.</p>
-                    <p>It is also open sourced on <a href='https://github.com' title='GitHub website'>GitHub</a> and contributions are welcome. You can also suggest articles to be written in the <a href='https://github.com'>ideas file of the repository</a>.</p>
+                    <p>It is also open sourced on GitHub and contributions are welcome.</p>
                     <a className={Styles.GitHub} href={Brand.repo} title={`GitHub repository for ${Brand.name}`}>
                         Contribute on GitHub <i className='fa fa-github'></i>
                     </a>
