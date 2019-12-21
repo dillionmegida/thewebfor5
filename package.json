@@ -15,6 +15,8 @@
   "dependencies": {
     "gatsby": "^2.18.11",
     "gatsby-plugin-dark-mode": "^1.1.0",
+    "gatsby-plugin-google-analytics": "^2.1.17",
+    "gatsby-plugin-gtag": "^1.0.11",
     "gatsby-plugin-manifest": "^2.2.22",
     "gatsby-plugin-netlify-cms": "^4.1.33",
     "gatsby-plugin-offline": "^3.0.15",
