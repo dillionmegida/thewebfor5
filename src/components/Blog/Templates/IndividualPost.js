@@ -7,7 +7,7 @@ import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
 import formatBlogDate from '../../../functions/dateFormatter';
 import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Saved';
-import { Twitter } from '../../SocialMedia/ShareArticle';
+import { ShareTwitter } from '../../SocialMedia/ShareArticle';
 import Newsletter from '../../Newsletter/Newsletter';
 import SuggestArticles from '../SuggestArticles/SuggestArticles';
 
@@ -97,7 +97,7 @@ export default ({ data }, props) => {
                 </article>
                 <div className={Styles.ShareArticle}>
                   <p>Kindly share this article 😃</p>
-                  <Twitter
+                  <ShareTwitter
                     articleTitle={frontmatter.title}
                     href={post.fields.slug}
                   />
