@@ -7,7 +7,9 @@ import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
 import formatBlogDate from '../../../functions/dateFormatter';
 import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Saved';
-import { Twitter } from '../SocialMedia/ShareArticle';
+import { Twitter } from '../../SocialMedia/ShareArticle';
+import Newsletter from '../../Newsletter/Newsletter';
+import SuggestArticles from '../SuggestArticles/SuggestArticles';
 
 export default ({ data }, props) => {
   
@@ -89,7 +91,7 @@ export default ({ data }, props) => {
                         </div>
                       : null
                     }
-                    <div className={Styles.PostContent}>
+                    <div style={{borderTop: frontmatter.cover ? '0' : '1px solid var(--color5)'}} className={Styles.PostContent}>
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
                 </article>
@@ -100,6 +102,8 @@ export default ({ data }, props) => {
                     href={post.fields.slug}
                   />
                 </div>
+                <Newsletter />
+                <SuggestArticles />
                 <RelatedArticles
                   tags={frontmatter.tags}
                   articleID={post.id}
