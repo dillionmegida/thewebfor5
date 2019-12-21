@@ -1,0 +1,16 @@
+.Suggest {
+    width: 100%;
+    border: 1px solid var(--color5);
+    border-left: 5px solid var(--color5);
+    padding: 0 20px;
+    margin: 20px 0;
+
+    & a {
+        color: var(--color2);
+        padding: 3px;
+
+        &:hover, &:focus {
+            outline: 1px solid var(--color2);
+        }
+    }
+}
