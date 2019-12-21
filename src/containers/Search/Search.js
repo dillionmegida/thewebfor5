@@ -73,7 +73,7 @@ export default class Search extends React.Component {
                     return (
                         <React.Fragment>
                             <div className={Styles.Search}>
-                                <input type='text' placeholder='Search articles by keywords or phrase...' onChange={(event) => {this.handleInput(allPosts, event)}}/>
+                                <input autoFocus type='text' placeholder='Search articles by keywords or phrase...' onChange={(event) => {this.handleInput(allPosts, event)}}/>
                                 <p>{arrLength}</p>
                             </div>
                             {
