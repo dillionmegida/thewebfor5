@@ -5,6 +5,8 @@ import Layout from '../containers/Layout/Layout';
 import Tags from '../components/Blog/Tags/Tags';
 import AllPosts from '../components/Blog/Categories/All';
 import Brand from '../components/Brand/Details';
+import Newsletter from '../components/Newsletter/Newsletter';
+import SuggestArticles from '../components/Blog/SuggestArticles/SuggestArticles';
 
 export default () => {
 
@@ -24,7 +26,11 @@ export default () => {
                     </div>
                 }
                 SecondSection={
-                    <AllPosts FirstPostSpecialStyle/>
+                    <React.Fragment>
+                        <AllPosts FirstPostSpecialStyle/>
+                        <Newsletter />
+                        <SuggestArticles />
+                    </React.Fragment>
                 }
                 ThirdSection={
                     <p>Hi</p>
