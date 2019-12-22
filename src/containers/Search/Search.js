@@ -67,11 +67,13 @@ export default class Search extends React.Component {
                 }
                 render={data => {
 
-                    const { allPosts } = data; 
+                    const { allPosts } = data;
+                    const { totalCount: noOfArticles } = allPosts;
                     const arrLength = this.state.filteredArr.length;
 
                     return (
                         <React.Fragment>
+                            <p style={{textAlign: 'center', color: 'var(--color3)'}}><b>{noOfArticles}</b> articles published</p>
                             <div className={Styles.Search}>
                                 <input autoFocus type='text' placeholder='Search articles by keywords or phrase...' onChange={(event) => {this.handleInput(allPosts, event)}}/>
                                 <p>{arrLength}</p>
