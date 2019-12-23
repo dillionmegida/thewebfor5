@@ -20,7 +20,7 @@ export default class Layout extends React.Component {
         showTheme: false
     }
 
-    componentDidMount (){
+    componentDidMount(){
         setTimeOut(() => {
             this.setState({
                 showTheme: true
