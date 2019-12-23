@@ -6,8 +6,6 @@ import { Link } from 'gatsby';
 import Helmet from '../../components/Helmet';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Drawer from '../../components/Nav/Drawer/Drawer';
-
 
 // let savedTheme = window.localStorage.getItem(`${Brand.name}_12345`);
 // if(savedTheme === null) {
@@ -32,15 +30,6 @@ export default class Layout extends React.Component {
                     PageDescription = {this.props.PageDescription}
                     PageKeywords = {this.props.PageKeywords}
                 />
-
-                <Header DrawerBtnClicked={this.OpenDrawer}/>
-                
-                {
-                    this.state.drawerStatus === 'opened' ?
-                        <Drawer CloseDrawerBtnClicked={this.CloseDrawer}/>
-                    : null
-
-                }
 
                 <div className={Styles.OtherMenus}>
                     <Link to='/saved' title='Saved Articles' className={Styles.Saved} activeClassName={Styles.SavedActive}>
