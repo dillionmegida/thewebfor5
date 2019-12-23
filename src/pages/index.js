@@ -14,7 +14,7 @@ export default () => {
         <React.Fragment>
             <Layout
 
-                PageTitle = {`${Brand.name} - Simplifying web topics like teaching a five year old.`}
+                PageTitle = {`${Brand.nameWithSpace} - Simplifying web topics like teaching a five year old.`}
                 PageLink = '/'
                 PageDescription = {`${Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old.`}
                 PageKeywords= 'home, The Web For Five, The Web For 5, simplified web topics, javascript'
