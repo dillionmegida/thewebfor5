@@ -31,6 +31,8 @@ export default class Layout extends React.Component {
                     PageKeywords = {this.props.PageKeywords}
                 />
 
+                <Header />
+
                 <div className={Styles.OtherMenus}>
                     <Link to='/saved' title='Saved Articles' className={Styles.Saved} activeClassName={Styles.SavedActive}>
                         <i className='fa fa-bookmark'></i>
