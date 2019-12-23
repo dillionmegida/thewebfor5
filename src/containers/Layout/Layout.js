@@ -17,20 +17,15 @@ import Drawer from '../../components/Nav/Drawer/Drawer';
 
 export default class Layout extends React.Component {
     state = {
-        // drawerStatus: 'closed',
-        articleSaved: true
+        showTheme: false
     }
 
-    OpenDrawer = () => {
-        this.setState({
-            drawerStatus: 'opened'
-        })
-    }
-
-    CloseDrawer = () => {
-        this.setState({
-            drawerStatus: 'closed'
-        })
+    componentDidMount (){
+        setTimeOut(() => {
+            this.setState({
+                showTheme: true
+            })
+        }, 500)
     }
     
     render() {
@@ -63,7 +58,11 @@ export default class Layout extends React.Component {
                     <Link to='/saved' title='Saved Articles' className={Styles.Saved} activeClassName={Styles.SavedActive}>
                         <i className='fa fa-bookmark'></i>
                     </Link>
-                    <PageTheme />
+                    {/* The theme handler is always checked before transiting to uncheck when light theme is chosen
+                     so I chose to show it when the component mounts - few seconds later, so the transition doesn't show */}
+                    <span style={{visibility: this.state.showTheme ? 'visible' : 'hidden'}}>
+                        <PageTheme />
+                    </span>
                 </div>
 
                 <main className={Styles.BodyContent}>
