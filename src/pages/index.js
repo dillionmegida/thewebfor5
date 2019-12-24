@@ -1,6 +1,7 @@
 import React from "react";      
 import Styles from '../styles/index.module.scss';
 
+import MainBg from '../assets/img/main.jpg';
 import Layout from '../containers/Layout/Layout';
 import Tags from '../components/Blog/Tags/Tags';
 import AllPosts from '../components/Blog/Categories/All';
@@ -35,7 +36,11 @@ export default () => {
                 ThirdSection={
                     <p>Hi</p>
                 }
-            />
+            >
+                <div className={Styles.MainBg}>
+                    <img src={MainBg} alt={`Illustrating purpose of ${Brand.nameWithSpace}`} />
+                </div>
+            </Layout>
         </React.Fragment>
     )
 }
