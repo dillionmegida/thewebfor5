@@ -10,6 +10,8 @@ import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Sa
 import { ShareTwitter } from '../../SocialMedia/ShareArticle';
 import Newsletter from '../../Newsletter/Newsletter';
 import SuggestArticles from '../SuggestArticles/SuggestArticles';
+import EditArticle from '../Common/EditArticle';
+import DiscussArticle from '../Common/DiscussArticle';
 
 export default ({ data }, props) => {
   
@@ -95,6 +97,14 @@ export default ({ data }, props) => {
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
                     </div>
                 </article>
+                <div className={Styles.EditDiscuss}>
+                  <EditArticle
+                    href={post.fields.slug}
+                  />
+                  <DiscussArticle
+                    href={post.fields.slug}
+                  />
+                </div>
                 <div className={Styles.ShareArticle}>
                   <p>Kindly share this article 😃</p>
                   <ShareTwitter
