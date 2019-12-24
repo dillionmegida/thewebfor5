@@ -32,16 +32,6 @@
         color: var(--color3);
         text-align: center;
     }
-
-    & > .Img {
-        width: 100%;
-        height: auto;
-
-        & > img {
-            height: 100%;
-            width: 100%;
-        }
-    }
 }
 
 .About {
