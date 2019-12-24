@@ -7,12 +7,6 @@ import Helmet from '../../components/Helmet';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 
-// let savedTheme = window.localStorage.getItem(`${Brand.name}_12345`);
-// if(savedTheme === null) {
-//     savedTheme = 'default';
-//     window.localStorage.setItem(`${Brand.name}_12345`, savedTheme);
-// }
-
 export default class Layout extends React.Component {
     render() {
 
