@@ -6,7 +6,6 @@ import Layout from '../containers/Layout/Layout';
 import Brand from '../components/Brand/Details';
 import Founder from '../assets/img/dillion.jpg';
 import { TwitterMedia, WebsiteMedia } from '../components/SocialMedia/Media';
-import MainImg from '../assets/img/main.jpg';
 import SuggestArticles from '../components/Blog/SuggestArticles/SuggestArticles';
 
 export default ({ data }) => {
@@ -24,9 +23,6 @@ export default ({ data }) => {
                 <div className={Styles.Brand}>
                     <h1>{Brand.name}</h1>
                     <p>{Brand.motto}</p>
-                    <div className={Styles.Img}>
-                        <img src={MainImg} alt='Illustrating the web' />
-                    </div>
                 </div>
                 <div className={Styles.About}>
                     <h2>About</h2>
