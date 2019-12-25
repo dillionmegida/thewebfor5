@@ -1,16 +1,64 @@
-.ErrorSection {
+.ErrorImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    & img {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
 
-    & h1 {
-        font-size: 30px;
-        color: var(--color3);
+.Contents {
+    margin: 0;
+
+    & .HomeLink {
+        display: none;
+    }
+}
+
+.LeftContents, .MobileHeader {
+    width: 100%;
+    text-align: center;
+    // border: solid;
+
+    & > * {
+        margin: 5px 0;
     }
 
-    & a {
-        color: var(--color2);
-        padding: 5px;
+    & > h1 {
+        font-size: 60px;
+    }
+}
 
-        &:hover {
-            outline: 1px solid var(--color2);
-        }
+.MobileHeader {
+    display: none;
+}
+
+.HomeLink {
+    display: block;
+    margin: 20px auto;
+    color: var(--color1);
+    padding: 10px;
+    width: 189px;
+    text-align: center;
+    background-color: var(--color2);
+
+    &:hover, &:focus {
+        background-color: var(--color1);
+        color: var(--color2);
+        outline: 1px solid var(--color2);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .LeftContents {
+        display: none;
+    }
+    .MobileHeader {
+        display: block;
+    }
+    .Contents .HomeLink {
+        display: block;
     }
 }

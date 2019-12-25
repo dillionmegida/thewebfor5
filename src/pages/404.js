@@ -3,19 +3,43 @@ import Styles from '../styles/404.module.scss';
 
 import Layout from '../containers/Layout/Layout';
 import { Link } from 'gatsby';
+import ErrorImg from '../assets/img/404.png';
 
-export default () => (
-    <Layout
-        SecondSection = {
-            <React.Fragment>
-                <div className={Styles.ErrorSection}>
-                    <h1>404!!! Page Not Found</h1>
-                    <Link to='/' title='Go to Homepage'>
-                        Go To Homepage
-                    </Link>
+export default () => {
+
+    const Header = () => (
+        <>
+            <h1>404!</h1>
+            <p>Page Not Found!!</p>
+        </>
+    )
+
+    const HomepageLink = () => (
+        <Link className={Styles.HomeLink} to='/' title='Go to Homepage'>
+            &lt; Go To Homepage
+        </Link>
+    )
+
+    return (
+        <Layout
+            FirstSection = {
+                <div className={Styles.LeftContents}>
+                    <Header />
+                    <HomepageLink />
                 </div>
-            </React.Fragment>
-        }
+            }
+            SecondSection = {
+                <section className={Styles.Contents}>
+                    <div className={Styles.MobileHeader}>
+                        <Header />
+                    </div>
+                    <div className={Styles.ErrorImg}>
+                        <img src={ErrorImg} alt='A boy with a map looking for his way' />
+                    </div>
+                    <HomepageLink />
+                </section>
+            }
 
-    />
-)
+        />
+    )
+}
