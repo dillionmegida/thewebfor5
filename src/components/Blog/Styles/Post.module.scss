@@ -15,7 +15,7 @@
     
     &.FirstPost {
         flex-flow: column;
-        height: 450px;
+        max-height: 450px;
         padding: 10px;
 
         & .PostCover {
