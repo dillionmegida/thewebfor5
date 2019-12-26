@@ -1,5 +1,5 @@
 ---
-title: How Websites are Accessed by Domain Names?
+title: How Websites are Accessed by Domain Names
 category: general
 date: 12-19-2019
 pageDescription: >-

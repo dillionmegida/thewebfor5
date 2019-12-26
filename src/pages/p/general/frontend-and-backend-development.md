@@ -1,5 +1,5 @@
 ---
-title: Front-end and Back-end Development?
+title: Front-end and Back-end Development
 category: general
 date: 10-19-2019
 pageDescription: >-
