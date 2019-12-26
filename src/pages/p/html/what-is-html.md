@@ -6,7 +6,7 @@ pageDescription: >-
   HTML stands for HyperText Markup Language which is a standard markup language for building webpages. It defines the contents of web pages.
 pageKeywords: 'html, what is html, hypertext markup language, html and css'
 cover: >-
-  https://res.cloudinary.com/dillionmegida/image/upload/v1571097103/images/blogs_cover/understanding-event.target_o5l0cq.jpg
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577393768/images/thewebfor5/what-is-html_svt0ol.jpg
 tags: ["html"]
 ---
 ## What is HTML?
