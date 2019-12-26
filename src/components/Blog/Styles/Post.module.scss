@@ -8,13 +8,14 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    
     flex-wrap: wrap;
     color: var(--color3);
     box-shadow: 10px 10px 0 var(--color5);
     
     &.FirstPost {
         flex-flow: column;
-        height: 400px;
+        height: 450px;
         padding: 10px;
 
         & .PostCover {
@@ -36,13 +37,17 @@
 
         & h2 {
             color: var(--color2);
-            margin: 0;
+            margin: 3px 0;
             font-size: 30px;
             border-bottom: 1px solid var(--color1);
 
             &:hover, &:focus {
                 border-bottom: 1px solid var(--color2);
             }
+        }
+
+        & p {
+            margin: 5px 0;
         }
 
         & p.SavedArticle {
@@ -55,4 +60,10 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 800px) {
+    .Post .PostDetails h2 {
+        font-size: 20px;
+    }
 }
