@@ -31,10 +31,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    height: 50vh;
     // height: 70vh;
     
     & img {
         width: 100%;
         object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .MainBg {
+        height: auto;
     }
 }
