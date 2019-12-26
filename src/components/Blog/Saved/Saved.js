@@ -55,7 +55,6 @@ const saveArticle = id => {
 	if(checkGlobal()) {
 		window.localStorage.setItem(storageKey, JSON.stringify(newArr));
 	}
-	// setItem(storageKey, JSON.stringify(newArr));
 }
 
 const unSaveArticle = id => {
@@ -66,7 +65,6 @@ const unSaveArticle = id => {
 	if(checkGlobal()) {
 		window.localStorage.setItem(storageKey, JSON.stringify(newArr));
 	}
-	// setItem(storageKey, JSON.stringify(newArr));
 }
 
 const isArticleSaved = id => {
@@ -163,7 +161,7 @@ export default () => (
 
 											/>
 										)
-									: <h2 align='center'>Oops : ( ... You have no saved articles</h2>
+									: <h2 style={{textAlign: 'center', color: 'var(--color3)'}}>Oops : ( ... You have no saved articles</h2>
 								}
 							</React.Fragment>
 						}
