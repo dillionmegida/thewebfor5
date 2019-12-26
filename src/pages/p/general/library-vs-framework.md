@@ -6,7 +6,7 @@ pageDescription: >-
   A library is a collection of modules for ease in development while a framework is a standard foundation from which programs and applications are built.
 pageKeywords: 'library, framework, fundamentals'
 cover: >-
-  https://res.cloudinary.com/dillionmegida/image/upload/v1571097103/images/blogs_cover/understanding-event.target_o5l0cq.jpg
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577323116/images/thewebfor5/library-framework_fzafjj.jpg
 tags: ["framework", "library"]
 ---
 ## Table of Contents

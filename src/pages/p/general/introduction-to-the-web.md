@@ -6,7 +6,7 @@ pageDescription: >-
   The web is a general term for the World Wide Web (WWW) which consists of websites containing numerous related web pages.
 pageKeywords: 'web, what is web, what is a website, types of websites, static and dynamic, static and dynamic websites, introduction to the web, www'
 cover: >-
-  
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577323476/images/thewebfor5/intro-web_quxdzx.jpg
 tags: ["web", "basics"]
 ---
 

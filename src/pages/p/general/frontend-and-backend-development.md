@@ -1,13 +1,13 @@
 ---
 title: Front-end and Back-end Development?
 category: general
-date: 10-15-2019
+date: 10-19-2019
 pageDescription: >-
   Front-end development is a part of web development process which deals with how a website looks while the back-end deals with how it the website works.
 pageKeywords: 'frontend, backend, frontend and backend, difference between frontend and backend, frontend development, backend development, difference between frontend development and backend development'
 cover: >-
-  https://res.cloudinary.com/dillionmegida/image/upload/v1571097103/images/blogs_cover/understanding-event.target_o5l0cq.jpg
-tags: ["frontend", "development", "web"]
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577323976/images/thewebfor5/frontend-backend_waxudi.jpg
+tags: ["web"]
 ---
 ## What is web development?
 Web development consists of the means by which [websites or web applications]() are built. These includes languages, resources and so on. However, there are different parts of this process of which focus can be placed on. These include the front-end and the back-end part.

@@ -6,7 +6,7 @@ pageDescription: >-
   The browser searches for the DNS of the domain name the user requests. The DNS provides information such as the IP address to the browser thereby given the browser access to the contents of the website.
 pageKeywords: 'web, what is web, what is a website, types of websites, static and dynamic, static and dynamic websites, introduction to the web, www'
 cover: >-
-  
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577323119/images/thewebfor5/access-websites_nmvsgp.jpg
 tags: ["web", "dns"]
 ---
 
