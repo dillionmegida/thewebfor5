@@ -34,7 +34,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        /* 60px - size of header and other menus in comparison with margin-top, 50px - size of other menus, 150px - size of footer */
+        /* calculated to be the height of the page */
         min-height: calc(100vh - 80px - 50px - 50px);
         
         & .FirstSection {
