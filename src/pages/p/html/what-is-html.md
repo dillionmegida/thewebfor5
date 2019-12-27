@@ -52,3 +52,17 @@ For example, let's look at a header element with the `align` attribute used for 
 The element above would be placed at the center of the available width of the container.
 
 These are not all the terms in HTML. We'd explore more in future articles. Stay tuned!
+
+#### A building construction example with HTML, CSS and Javascript
+***This illustration for building a house was from Intro to Web Development in Frontend Masters. I also used the in an [Introduction to web development](https://docs.google.com/presentation/d/1FQYRiO8JR1Rgo11PiM5F43KgViuhBsYkftXPRoIAofE/edit#slide=id.g60460f161e_0_36) presentation I made and in other articles on this website***
+
+**HTML** consist of the blocks, wood, roof, basically the contents of the building. Without CSS, the blocks of the building are just placed on themselves as you keep adding.
+
+**CSS** determines the different styles which are applied to the contents to make the building firm and attractive. i.e CSS accurately determines the position and width of each blocks, the color of the roof, the particular way a content should be displayed and so much more.
+With HTML and CSS, you already have a building. Javascript may not be necessary.
+
+**Javascript** comes in when you need interaction in your building. What does interaction mean?
+When the user opens the door with a key, what should the door do? Open right? Interaction.
+The HTML and CSS just defines the structure of the building, but there's no response to action. Javascript enables the actions.
+
+Learn more on HTML in this article - [What is CSS?](/p/css/what-is-css) and Javascript in this article - [What is Javascript?](/p/javascript/what-is-javascript).
