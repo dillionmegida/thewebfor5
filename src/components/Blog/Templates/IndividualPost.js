@@ -108,7 +108,7 @@ export default ({ data }, props) => {
                   />
                 </div>
                 <div className={Styles.ShareArticle}>
-                  <p>Kindly share this article 😃</p>
+                  <p>Kindly share this article <span role='img' aria-label='Happy Emoji'>😃</span></p>
                   <ShareTwitter
                     articleTitle={frontmatter.title}
                     href={post.fields.slug}
