@@ -1,7 +1,6 @@
 import React from 'react';
 import Styles from './Footer.module.scss';
 
-import { Link } from 'gatsby';
 import Brand from '../Brand/Details';
 import { TwitterMedia } from '../SocialMedia/Media';
 
