@@ -174,4 +174,4 @@ export default () => (
 	/>
 )
 
-export { saveArticle, isArticleSaved, unSaveArticle, SaveMsg };
+export { saveArticle, isArticleSaved, unSaveArticle, SaveMsg, checkGlobal };

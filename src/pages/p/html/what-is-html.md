@@ -51,4 +51,53 @@ For example, let's look at a header element with the `align` attribute used for 
 ```
 The element above would be placed at the center of the available width of the container.
 
-These are not all the terms in HTML. We'd explore more in future articles. Stay tuned!
+### Parent and Children
+
+## Structure of a HTML Document
+```html
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Document Title</title>
+    </head>
+    <body>
+        <h1>A header element</h1>
+        <p>A paragraph element</p>
+    </body>
+</html>
+
+```
+The structure is in the following order
+### 1. **Definition** - `<!DOCTYPE html>`
+**What kind of HTML document is this?**
+<br/>
+This declaration defines the document. **.html** is enough to define our document as a HTML document, but this definition (stated at the top of the document) tells the browser how to render our HTML contents. This definition is for **HTML5** - the latest version of HTML. In other versions, you'd begin the document with the html tag.
+### 2. **The Container** - `<html>`
+This is where our HTML page starts from. It is referred to as the root element of the page. Everything between this tag and it's closing tag **</html>** is what the browser will render.
+The extra `lang` attribute defines the language of the document - in this case, english (`en`)
+### 3. **The Head** - `<head>`
+**"Does this do the brain work?"... _something like that_**
+<br/>
+This part of the program specifies properties and features of our page. The contents here are not displayed on the browser. For example, the **title** of the document is stated here with the `title` tag, the theme color is also stated here and so much more.
+### 4. **The Body**
+**Well, the user has to see something. Maybe, the body, right?**
+<br/>
+This part of the program contains what will be displayed in the browser. It consist of the contents which in our case is a header element, a paragraph element.
+---
+There's more to HTML than the above. We'd explore more in future articles. Stay tuned!
+<br/>
+
+-----
+#### A building construction example with HTML, CSS and Javascript
+***This illustration for building a house was from Intro to Web Development in Frontend Masters. I also used the in an [Introduction to web development](https://docs.google.com/presentation/d/1FQYRiO8JR1Rgo11PiM5F43KgViuhBsYkftXPRoIAofE/edit#slide=id.g60460f161e_0_36) presentation I made and in other articles on this website***
+
+**HTML** consist of the blocks, wood, roof, basically the contents of the building. Without CSS, the blocks of the building are just placed on themselves as you keep adding.
+
+**CSS** determines the different styles which are applied to the contents to make the building firm and attractive. i.e CSS accurately determines the position and width of each blocks, the color of the roof, the particular way a content should be displayed and so much more.
+With HTML and CSS, you already have a building. Javascript may not be necessary.
+
+**Javascript** comes in when you need interaction in your building. What does interaction mean?
+When the user opens the door with a key, what should the door do? Open right? Interaction.
+The HTML and CSS just defines the structure of the building, but there's no response to action. Javascript enables the actions.
+
+Learn more on HTML in this article - [What is CSS?](/p/css/what-is-css) and Javascript in this article - [What is Javascript?](/p/javascript/what-is-javascript).

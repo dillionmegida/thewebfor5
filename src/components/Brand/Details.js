@@ -3,7 +3,7 @@ import Logo from '../../assets/img/logo.png';
 export default {
     name: "TheWebFor5",
     nameWithSpace: "The Web For 5",
-    twitter: "https://twitter.com/thewebfor5",
+    twitter: "thewebfor5",
     domain: 'https://thewebfor5.com',
     repo: "https://github.com/dillionmegida/thewebfor5",
     logo: Logo,

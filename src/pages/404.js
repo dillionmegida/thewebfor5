@@ -4,6 +4,7 @@ import Styles from '../styles/404.module.scss';
 import Layout from '../containers/Layout/Layout';
 import { Link } from 'gatsby';
 import ErrorImg from '../assets/img/404.png';
+import { BackArrow } from '../components/UI/Icons';
 
 export default () => {
 
@@ -16,7 +17,7 @@ export default () => {
 
     const HomepageLink = () => (
         <Link className={Styles.HomeLink} to='/' title='Go to Homepage'>
-            &lt; Go To Homepage
+            <BackArrow/> Go To Homepage
         </Link>
     )
 

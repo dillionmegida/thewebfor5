@@ -1,7 +1,6 @@
 import React from 'react';
 import Styles from './Footer.module.scss';
 
-import { Link } from 'gatsby';
 import Brand from '../Brand/Details';
 import { TwitterMedia } from '../SocialMedia/Media';
 
@@ -13,7 +12,7 @@ export default () => {
             </p>
             | <span className={Styles.SocialMedia}>
                 <TwitterMedia
-                    href={Brand.twitter}
+                    href={`https://twitter.com/${Brand.twitter}`}
                     title={`${Brand.name} Titter Handle`}
                 />
             </span>

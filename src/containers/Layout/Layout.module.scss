@@ -1,4 +1,31 @@
 .Layout {
+
+    /* Themes */
+    /* color1 - header, page and footer background color
+       color2 - navlinks and headers
+       color 3 - text color
+       color 4 - bloglinks
+       color 5 - boxshadow 
+    */
+    --color1: white;
+    --color2: #a52a2a;
+    --color3: #333;
+    --color4: green;
+    --color5: #ddd;
+    // background-color: var(--color1);
+}
+
+.Layout.Dark {
+    -webkit-font-smoothing: antialiased;
+    --color1: #262625;
+    --color2: #90ee90;
+    --color3: white;
+    --color4: #8ce21c;
+    --color5: #234850;
+}
+
+.Layout {
+    transition: color 0.2s ease-out, background 0.2s ease-out;
     background-color: var(--color1);
 
     & .OtherMenus {
@@ -19,7 +46,7 @@
         }
 
         & > .Saved {
-            font-size: 30px;
+            font-size: 25px;
             color: var(--color4);
 
             &:hover, & .SavedActive {
@@ -35,7 +62,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         /* calculated to be the height of the page */
-        min-height: calc(100vh - 80px - 50px - 50px);
+        min-height: calc(100vh - 70px - 50px - 50px);
         
         & .FirstSection {
             width: 200px;

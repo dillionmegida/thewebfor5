@@ -1,14 +1,15 @@
 import React from 'react';
+import { Twitter, Link } from '../UI/Icons';
 
 const TwitterMedia = props => (
     <a href={props.href} title={props.title}>
-        <i className='fa fa-twitter'></i>
+        <Twitter />
     </a>
 )
 
 const WebsiteMedia = props => (
     <a href={props.href} title={props.title}>
-        <i className='fa fa-link'></i>
+        <Link />
     </a>
 )
 

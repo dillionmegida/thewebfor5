@@ -31,7 +31,7 @@ const AppHelmet = props => (
         <meta name="twitter:site" content="@thewebfor5" />
         <meta name="twitter:title" content={props.PageTitle} /> {/* edit */}
         <meta name="twitter:description" content={props.PageDescription} /> {/* edit */}
-        <meta name="twitter:image" content={props.TwitterImage ? props.TwitterImage : MainImg} />
+        <meta name="twitter:image" content={props.TwitterImage ? props.TwitterImage : `https://thewebfor5.com${MainImg}`} /> {/* edit */}
         <meta name="twitter:creator" content="iamdillion" />
 
         <meta name="referrer" content="origin-when-crossorigin" />
