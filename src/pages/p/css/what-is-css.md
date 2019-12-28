@@ -106,53 +106,13 @@ To reference the css file in the html, the `<link>` tag which contains a void el
   </body>
 </html>
 ```
-However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css co) thereby providing easy in code editing and contributions.
-<br/>
-## Selector methods
-In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on that page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible.
+The `rel` attribute shows the relationship between the linked and the current document. The value used is stylesheet, which means the file is a css file.
 
-There are several methods for selecting elements, but we'd be looking at only 3.
-- The cascade method (Parent and children)
-- By the class attribute
-- By the id attribute
+`href` is an attirbute which specifies the location of the file which is referenced. Relative or absolute links can be used as long as you can reach the file.
 
-#### Notes.
-- ids are usually used by Javascript to target elements. It is advisable to use only classes for styles as only one id can be used in a document.
-- When two values are declared for a property in a selector, the last one has the highest priority.
-<br/>
-e.g
-```css
-p {
-    color: red;
-    color: green;
-}
-```
-All paragraphs would be green
-- The parent and children method can also be mixed with the class method or id method.
-<br/>
-e.g
-```css
-.container div {
-  /* Some styles */
-}
-```
-The styles declared here only affect divs which are children (or grandchildren) of elements with the 'container' class.
-- You can declare the same style for multiple selectors. The selectors are seperated with commas.
-<br/>
-e.g
-```css
-.container p, footer p {
-    font-size: 50px;
-    color: purple;
-}
-.container p {
-    text-decoration: none;
-}
-.footer p {
-    border: solid;
-}
-```
-What this style does, is that it defines the same values of font-size and color for the two selectors. Then, it individually defines the text-decoration of the first selector and the border of the second selector.
+However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css codes) thereby providing easy in code editing and contributions.
+
+In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css/css-selector-methods)
 
 ---
 There's more to CSS which we would be exploring in future articles. Stay tuned!

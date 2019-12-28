@@ -52,6 +52,23 @@ For example, let's look at a header element with the `align` attribute used for 
 The element above would be placed at the center of the available width of the container.
 
 ### Parent and Children
+Take a look at the following code;
+```html
+<main>
+  <div>
+    <h1>Heading</h1>
+    <p>Paragraph</p>
+  </div>
+  <h2>Another heading</h2>
+</main>
+```
+Just like a family, these tags are somewhat related.
+- `<h1>` and `<p>` are `siblings`, `children` of `<div>` and also `grandchildren` of `<main>`.
+- `<div>` is the parent of `<h1>` and `<p>`.
+- `<h2>` and `<div>` are children of `<main>`.
+- `<main>` is the parent of `<div>` and `<h2>` and also the grandparent of `<h1>` and `<p>`.
+
+This helps us in knowing how to address elements. This address also plays an important role in knowing which elements to style with CSS.
 
 ## Structure of a HTML Document
 ```html
@@ -79,7 +96,7 @@ The extra `lang` attribute defines the language of the document - in this case, 
 **"Does this do the brain work?"... _something like that_**
 <br/>
 This part of the program specifies properties and features of our page. The contents here are not displayed on the browser. For example, the **title** of the document is stated here with the `title` tag, the theme color is also stated here and so much more.
-### 4. **The Body**
+### 4. **The Body** - `<body>`
 **Well, the user has to see something. Maybe, the body, right?**
 <br/>
 This part of the program contains what will be displayed in the browser. It consist of the contents which in our case is a header element, a paragraph element.
