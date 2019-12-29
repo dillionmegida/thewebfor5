@@ -70,8 +70,9 @@ In this method, the style is also declared in the same html file but the declara
   }
 </style>
 ```
+This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). This is followed by a **semi-colon (;)** which terminates the line. If this character is missed no a line, CSS would not interpret it.
 
-This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). By translating our inline style above to this method, we would have;
+By translating our inline style above to this method, we would have;
 ```html
 <style>
   p {
@@ -81,6 +82,11 @@ This block is usually declared in the `<head>` section of a document but it can 
   }
 </style>
 ```
+**Note that** the spaces do not mean anything to the browser. We could have everything on one line with semicolons stated appropriately like this;
+```html
+<style> p { color: red; font-size: 35px; text-align: center; } </style>
+```
+but readability would be difficult. This is the same reason why HTML elements are arranged spaciously.
 
 ### External Styling
 Unlike the above methods, this involves using the css declarations in another file which is with an extension of **.css**. That file is then referenced by the html document for the styles to take effect. This file would be similar to the internal styling syntax above but without the style tag.
