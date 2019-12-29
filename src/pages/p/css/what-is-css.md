@@ -36,8 +36,8 @@ Different tags have their own properties. For example, text elements like header
 
 **Note that there is a range of values which can be set for any property.**
 
-## Using CSS in HTML
-CSS can be used in HTML in three ways:
+## Using CSS With HTML
+CSS can be used with HTML in three ways:
 * Inline Styling
 * Internal styling
 * External styling
@@ -117,6 +117,20 @@ The `rel` attribute shows the relationship between the linked and the current do
 `href` is an attirbute which specifies the location of the file which is referenced. Relative or absolute links can be used as long as you can reach the file.
 
 However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css codes) thereby providing easy in code editing and contributions.
+
+### Comments
+Comments help you locate certain areas of your codes easily. You have a 10-line code and feel its unnecessary to put any comments, but what if you like up to 500 lines of code or more. Comments can help you remember what elements you're styling or the purpose of your styles in some part of the CSS codes. They are ignored by the browser.
+
+Syntax for CSS comments is;
+```
+/* single-line comments */
+/*
+  multi
+  line
+  comments
+*/
+```
+The first is for single line comments while the second is for multi lines. In short, anything found between `/*` and `*/` is a comment.
 
 In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css/css-selector-methods)
 
