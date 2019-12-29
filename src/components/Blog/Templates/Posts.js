@@ -1,84 +1,68 @@
-import React from 'react';
-import Styles from '../Styles/Posts.module.scss';
+// import React from 'react'
+// import Styles from '../Styles/Posts.module.scss';
 
-import { StaticQuery, graphql } from 'gatsby';
-import Post from './Post';
-import formatBlogDate from '../../../functions/dateFormatter';
+// import { Link } from 'gatsby'
+// import Post from './Post';
+// import formatBlogDate from '../../../functions/dateFormatter';
 
-export default props => (
-    <StaticQuery
+// const BlogList = ({ pageContext }) => {
+//     const { index: pageIndex, pageCount } = pageContext
+//     const isFirst = pageIndex === 1
+//     const isLast = pageContext.last
+//     const prevPage = !isFirst && pageIndex - 1 === 1 ? '/' : pageIndex - 1
+//     const nextPage = !isLast && pageIndex+ 1
 
-        query={
-            graphql`
-                query {
-                    allPosts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-                        edges {
-                            node {
-                              id
-                              timeToRead
-                              frontmatter {
-                                  title
-                                  category
-                                  cover
-                                  date
-                                  pageDescription
-                              }
-                              fields {
-                                  slug
-                              }
-                            }
-                        }
-                    }
-                }
-            `
-        }
-        
-        render={
-            data => {
-                const { edges: AllPosts } = data.allPosts;
+//     return (
+//        /* your code to display a list of posts */
+//        <React.Fragment>
+//            <section className={Styles.Posts}>
+//                 {
+//                     pageContext.group.map(({ node }, index) => {
+//                         // return (
+//                         //     <Post
+//                         //         key={node.id}
+//                         //         PostPosition={index}
+                                
+//                         //         // FirstPostSpecialStyle is applied conditionally 
+//                         //         // FirstPostSpecialStyle={props.FirstPostSpecialStyle}
 
-                const category = props.CategoryName;
+//                         //         href={node.fields.slug}
 
-                let Posts;
+//                         //         title={node.frontmatter.title}
 
-                if(category === 'all') {
-                    // If category is all, display all posts
-                    Posts = AllPosts;  
+//                         //         CoverSource={node.frontmatter.cover}
+//                         //         CoverAlt=''
 
-                } else {    
-                    // else only the selected category should be chosen
-                    Posts = AllPosts.filter(({ node }) =>
-                        node.frontmatter.category === category
-                    );
+//                         //         excerpt={node.frontmatter.pageDescription}
+//                         //         extraInfo={`${formatBlogDate(node.frontmatter.date)} | ${node.timeToRead} min${node.timeToRead > 1 ? 's' : ''} read`}
+//                         //     />
+//                         // )
+//                         return (
+//                             <h1>hey</h1>
+//                         )
+//                     })
+//                 }
+//             </section>
 
-                }
+//       {!isFirst && (
+//         <Link to={`/${prevPage}`} rel="prev">
+//           ← Previous Page
+//         </Link>
+//       )}
+//       {
+//         Array.from({ length: pageCount }, (_, i) => (
+//             <Link key={`pagination-number${i + 1}`} to={`/${i === 0 ? "" : i + 1}`}>
+//                 {i + 1}
+//             </Link>
+//         ))}
+//       }
+//       {!isLast && (
+//             <Link to={`/${nextPage}`} rel="next">
+//                  Next Page →
+//             </Link>
+//       )}
+//       </React.Fragment>
+//     )
+// }
 
-                return (
-                    <section className={Styles.Posts}>
-                        {
-                            Posts.map(({ node }, index) =>
-                                <Post
-                                    key={node.id}
-                                    PostPosition={index}
-                                    
-                                    // FirstPostSpecialStyle is applied conditionally 
-                                    FirstPostSpecialStyle={props.FirstPostSpecialStyle}
-
-                                    href={node.fields.slug}
-
-                                    title={node.frontmatter.title}
-
-                                    CoverSource={node.frontmatter.cover}
-                                    CoverAlt=''
-
-                                    excerpt={node.frontmatter.pageDescription}
-                                    extraInfo={`${formatBlogDate(node.frontmatter.date)} | ${node.timeToRead} min${node.timeToRead > 1 ? 's' : ''} read`}
-                                />
-                            )    
-                        }
-                    </section>
-                )
-            }
-        }
-    />
-)
+// export default BlogList;

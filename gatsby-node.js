@@ -1,6 +1,7 @@
 const path = require('path');
 const _ = require("lodash");
 const { createFilePath } = require('gatsby-source-filesystem');
+const createPaginatedPages = require('gatsby-paginate');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -21,9 +22,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             allMarkdownRemark {
                 edges {
                     node {
-                        fields {
-                            slug
-                        }
+                      id
+                      timeToRead
+                      frontmatter {
+                          title
+                          category
+                          cover
+                          date
+                          pageDescription
+                      }
+                      fields {
+                          slug
+                      }
                     }
                 }
             }
@@ -40,10 +50,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return;
     }
 
+    createPaginatedPages({
+        edges: result.data.allMarkdownRemark.edges,
+        createPage: createPage,
+        pageTemplate: './src/components/Blog/Templates/IndexPage.js',
+        pageLength: 5, // This is optional and defaults to 10 if not used
+        pathPrefix: '', // This is optional and defaults to an empty string if not used
+        context: {}, // This is optional and defaults to an empty object if not used
+    })
+
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
             path: node.fields.slug,
-            component: path.resolve('./src/components/Blog/Templates/IndividualPost.js'),
+            component: path.resolve('./src/components/Blog/Templates/Posts.js'),
             context: {
                 // Data passed to context is available
                 // in page queries as GraphQL variables.

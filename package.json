@@ -20,6 +20,7 @@
     "gatsby-plugin-manifest": "^2.2.22",
     "gatsby-plugin-netlify-cms": "^4.1.33",
     "gatsby-plugin-offline": "^3.0.15",
+    "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-sitemap": "^2.2.10",
     "gatsby-plugin-react-helmet": "^3.1.18",
     "gatsby-plugin-sass": "^2.1.26",
