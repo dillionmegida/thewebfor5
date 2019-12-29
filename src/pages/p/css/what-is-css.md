@@ -36,8 +36,8 @@ Different tags have their own properties. For example, text elements like header
 
 **Note that there is a range of values which can be set for any property.**
 
-## Using CSS in HTML
-CSS can be used in HTML in three ways:
+## Using CSS With HTML
+CSS can be used with HTML in three ways:
 * Inline Styling
 * Internal styling
 * External styling
@@ -70,8 +70,9 @@ In this method, the style is also declared in the same html file but the declara
   }
 </style>
 ```
+This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). This is followed by a **semi-colon (;)** which terminates the line. If this character is missed no a line, CSS would not interpret it.
 
-This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). By translating our inline style above to this method, we would have;
+By translating our inline style above to this method, we would have;
 ```html
 <style>
   p {
@@ -81,6 +82,11 @@ This block is usually declared in the `<head>` section of a document but it can 
   }
 </style>
 ```
+**Note that** the spaces do not mean anything to the browser. We could have everything on one line with semicolons stated appropriately like this;
+```html
+<style> p { color: red; font-size: 35px; text-align: center; } </style>
+```
+but readability would be difficult. This is the same reason why HTML elements are arranged spaciously.
 
 ### External Styling
 Unlike the above methods, this involves using the css declarations in another file which is with an extension of **.css**. That file is then referenced by the html document for the styles to take effect. This file would be similar to the internal styling syntax above but without the style tag.
@@ -106,53 +112,27 @@ To reference the css file in the html, the `<link>` tag which contains a void el
   </body>
 </html>
 ```
-However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css co) thereby providing easy in code editing and contributions.
-<br/>
-## Selector methods
-In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on that page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible.
+The `rel` attribute shows the relationship between the linked and the current document. The value used is stylesheet, which means the file is a css file.
 
-There are several methods for selecting elements, but we'd be looking at only 3.
-- The cascade method (Parent and children)
-- By the class attribute
-- By the id attribute
+`href` is an attirbute which specifies the location of the file which is referenced. Relative or absolute links can be used as long as you can reach the file.
 
-#### Notes.
-- ids are usually used by Javascript to target elements. It is advisable to use only classes for styles as only one id can be used in a document.
-- When two values are declared for a property in a selector, the last one has the highest priority.
-<br/>
-e.g
-```css
-p {
-    color: red;
-    color: green;
-}
+However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css codes) thereby providing easy in code editing and contributions.
+
+### Comments
+Comments help you locate certain areas of your codes easily. You have a 10-line code and feel its unnecessary to put any comments, but what if you like up to 500 lines of code or more. Comments can help you remember what elements you're styling or the purpose of your styles in some part of the CSS codes. They are ignored by the browser.
+
+Syntax for CSS comments is;
 ```
-All paragraphs would be green
-- The parent and children method can also be mixed with the class method or id method.
-<br/>
-e.g
-```css
-.container div {
-  /* Some styles */
-}
+/* single-line comments */
+/*
+  multi
+  line
+  comments
+*/
 ```
-The styles declared here only affect divs which are children (or grandchildren) of elements with the 'container' class.
-- You can declare the same style for multiple selectors. The selectors are seperated with commas.
-<br/>
-e.g
-```css
-.container p, footer p {
-    font-size: 50px;
-    color: purple;
-}
-.container p {
-    text-decoration: none;
-}
-.footer p {
-    border: solid;
-}
-```
-What this style does, is that it defines the same values of font-size and color for the two selectors. Then, it individually defines the text-decoration of the first selector and the border of the second selector.
+The first is for single line comments while the second is for multi lines. In short, anything found between `/*` and `*/` is a comment.
+
+In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css/css-selector-methods)
 
 ---
 There's more to CSS which we would be exploring in future articles. Stay tuned!
