@@ -43,6 +43,12 @@ Some HTML tags possess attributes which can be used for advance definition of el
 ```
 **Note that** not all tags have attributes and not all attributes can be used for all tags. Popular attributes which can be used in almost all tags are `class`, `id`, and so on.
 
+**Also Note that** the spaces do not mean anything to the browser. We could have everything on one line like this;
+```html
+<tag attr1='value' attr2='value'>element</tag>
+```
+but readability would be difficult. This is the same reason why CSS stylings are arranged spaciously.
+
 For example, let's look at a header element with the `align` attribute used for positioning the element.
 ```html
 <h1 align='center'>
