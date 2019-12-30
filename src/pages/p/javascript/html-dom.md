@@ -7,7 +7,7 @@ pageDescription: >-
 pageKeywords: 'dom, the dom, document.getElementById(), document.createElement(), dom manipulation, dom api, api, html dom, html dom api'
 cover: >-
   https://res.cloudinary.com/dillionmegida/image/upload/v1577711058/images/thewebfor5/html-dom_mfmu1h.jpg
-tags: ["dom, javascript"]
+tags: ["dom", "javascript"]
 ---
 ## Introduction to the DOM
 ### What is the DOM?
