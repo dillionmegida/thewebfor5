@@ -6,6 +6,7 @@ pageDescription: >-
   CSS Specificity is a set of rules used by CSS in browsers to determine which style declaration (among other declarations) would be applied to an element. As expected, the higher the specificity of a selector method, the more prioritized it is.
 pageKeywords: 'css, css specificity, selector specificity, specificity, css selector specificity, !important'
 cover: >-
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577711058/images/thewebfor5/css-specificity_jtb1ub.jpg
 tags: ["css"]
 ---
 You may have set some style declarations in CSS but didn't get the desired result. After so many trials, you opt-in for the usage of almighty `!important`. It works but this isn't the best solution.
