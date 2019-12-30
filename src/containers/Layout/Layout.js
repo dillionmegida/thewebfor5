@@ -48,7 +48,6 @@ export default class Layout extends React.Component {
                     <Link to='/saved' title='Saved Articles' className={Styles.Saved} activeClassName={Styles.SavedActive}>
                         <i className='fa fa-bookmark'></i>
                     </Link>
-                    {/* <PageTheme /> */}
                     <Theme changeTheme={this.changeTheme}/>
                 </div>
 

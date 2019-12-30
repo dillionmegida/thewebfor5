@@ -14,6 +14,10 @@ const Link = () => (
     <Icon class='fa fa-link' />
 )
 
+const Share = () => (
+    <Icon class='fa fa-share' />
+)
+
 // Theme
 const Sun = () => (
     <Icon class='fa fa-sun-o' />
@@ -27,4 +31,4 @@ const Twitter = () => (
     <Icon class='fa fa-twitter' />
 )
 
-export { BackArrow, Link, Twitter, Sun, Moon };
+export { Share, BackArrow, Link, Twitter, Sun, Moon };

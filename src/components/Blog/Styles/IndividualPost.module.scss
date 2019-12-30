@@ -169,6 +169,31 @@
         margin: 5px 0;
         color: var(--color3);
     }
+
+    & .Methods {
+        display: flex;
+        align-items: center;
+        height: 60px;
+
+        & > * {
+            margin: 0 10px;
+        } 
+
+        & button {
+            background: var(--color2);
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            color: var(--color1);
+            border-radius: 5px;
+
+            &:hover, &:focus {
+                outline: 1px solid var(--color2);
+                background: var(--color1);
+                color: var(--color2);
+            }
+        }
+    }
 }
 
 .RelatedArticles {
