@@ -15,8 +15,6 @@ if(checkGlobal()) {
     }
 }
 
-console.log(window.localStorage.getItem(storageKey));
-
 const saveDark = () => {
     if(checkGlobal()) {
         window.localStorage.setItem(storageKey, 'dark');
