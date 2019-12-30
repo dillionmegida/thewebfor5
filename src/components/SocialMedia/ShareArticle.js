@@ -11,7 +11,7 @@ const checkNativeShare = () => (
 
 const nativeShare = (url, title, text) => {
     navigator.share({
-        title: `${title} - ${Brand.name} #${Brand.name.toLowerCase()}\n\n`,
+        title: `${title} on @${Brand.twitter} - ${Brand.domain}${url} %23${Brand.name.toLowerCase()}`,
         url,
         text
     }).then(() => {
