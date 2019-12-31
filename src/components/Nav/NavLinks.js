@@ -8,7 +8,7 @@ const NavLists = [
         // name: 'Home',
         name: 'fa fa-home',
         href: '/',
-        title: `${Brand.name} - ${Brand.motto}`
+        title: `${Brand.name} - Homepage`
     },
     {
         // name: 'Search',

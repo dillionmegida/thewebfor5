@@ -11,7 +11,7 @@ const checkNativeShare = () => (
 
 const nativeShare = (url, title, text) => {
     navigator.share({
-        title,
+        title: `${title} on @${Brand.twitter} - ${Brand.domain}${url} %23${Brand.name.toLowerCase()}`,
         url,
         text
     }).then(() => {
@@ -43,7 +43,6 @@ const ShareTwitter = props => {
     const text = `${props.articleTitle} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
     return (
         <a className={Styles.Link} target='_blank' rel='noopener noreferrer' href={`https://twitter.com/intent/tweet?text=${text}`} >
-            {/* <i style={{color: '#1DA1F2'}} className='fa fa-twitter'></i> */}
             <Twitter />
         </a>
     )
