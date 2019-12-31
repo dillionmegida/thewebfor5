@@ -83,23 +83,6 @@ The syntax for javascript comments is;
 */
 ```
 ### Variables
-### Expressions and Statements
-Think of statement as trying to do something while expressions to be you expressing yourself.
-
-"I want to go the market" - expression<br/>
-(Buying things in the market) - statement
-
-#### Expressions
-An expression is any code that can be evaluated to a value. With this, they can be used anywhere javascript expects a value especially as function arguements. Examples;
-```js
-// js file
-1;
-1 + 1;
-"I am not java";
-truth = "I am javascript";
-```
-The last line refers to an assignment expression. If you've surprised there is no `var` declaration at the beginning, don't worry. We'll look at it in the next section.
-### Variables
 Variables are like containers used for saving values. With variables, you wouldn't have to repeat a value for several cases where you need them. To declare a variable, the `var` keyword is used like so;
 ```js
 var ourNumber = 8;
@@ -117,6 +100,22 @@ age = 19;
 The re-assignment of another value to 'name' would not produce any eror but assigning 19 to age, will.
 
 The major difference between `var`, `let` and `const` is how they handle scoping. We'll look at that in a future article
+### Expressions and Statements
+Think of statement as trying to do something while expressions to be you expressing yourself.
+
+"I want to go the market" - expression<br/>
+(Buying things in the market) - statement
+
+#### Expressions
+An expression is any code that can be evaluated to a value. With this, they can be used anywhere javascript expects a value especially as function arguements. Examples;
+```js
+// js file
+1;
+1 + 1;
+"I am not java";
+truth = "I am javascript";
+```
+The last line refers to an assignment expression. If you've surprised there is no `var` declaration at the beginning, don't worry. We'll look at it in the next section.
 #### Statement
 This refers to an instruction which performs actions. e.g declaring variables, `loop` statements, `if` statements.
 ```js
