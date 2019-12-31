@@ -1,7 +1,7 @@
 ---
 title: CSS Specificity
 category: css
-date: 12-29-2019
+date: 12-31-2019
 pageDescription: >-
   CSS Specificity is a set of rules used by CSS in browsers to determine which style declaration (among other declarations) would be applied to an element. As expected, the higher the specificity of a selector method, the more prioritized it is.
 pageKeywords: 'css, css specificity, selector specificity, specificity, css selector specificity, !important'
