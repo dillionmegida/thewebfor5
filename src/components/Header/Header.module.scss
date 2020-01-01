@@ -60,7 +60,7 @@
     & li {
         margin: 0 5px;
         // width: 90px;
-        width: 40px;
+        width: 110px;
         height: 100%;
 
         & a {
@@ -70,7 +70,7 @@
             text-align: center;
             border-bottom: 1px solid var(--color1);
             padding: 5px;
-            font-size: 20px;
+            font-size: 15px;
             
             &:hover, &:focus {
                 background-color: var(--color2);
@@ -85,6 +85,16 @@
 //         display: none;
 //     }
 // }
+
+@media only screen and (max-width: 800px) {
+    .Header ul li {
+        width: 40px;
+        font-size: 16px;
+    }
+    .Header .LinkTitleClass {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 670px) {
     .Header .Brand a .Name {
