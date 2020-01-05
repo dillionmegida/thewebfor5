@@ -1,7 +1,7 @@
 ---
 title: Front-end and Back-end Development
 category: general
-date: 10-19-2019
+date: 2019-10-19
 pageDescription: >-
   Front-end development is a part of web development process which deals with how a website looks while the back-end deals with how it the website works.
 pageKeywords: 'frontend, backend, frontend and backend, difference between frontend and backend, frontend development, backend development, difference between frontend development and backend development'

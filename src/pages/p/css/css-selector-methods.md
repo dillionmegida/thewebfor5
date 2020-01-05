@@ -1,7 +1,7 @@
 ---
 title: Selector Methods in CSS
 category: css
-date: 12-29-2019
+date: 2019-12-29
 pageDescription: >-
   There a numerous methods for selecting elements which CSS styles can be applied to. In this article, we'd be looking at some of them.
 pageKeywords: 'css, css selector methods, by class, by id'

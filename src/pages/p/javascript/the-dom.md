@@ -1,7 +1,7 @@
 ---
 title: The DOM
 category: javascript
-date: 12-30-2019
+date: 2019-12-30
 pageDescription: >-
   DOM is an acronym for Document Object Model which refers to a logical representation of a document (HTML or XML) and it's contents on the web. The representation is a tree structure showing the document in the browser from the root to all branches.
 pageKeywords: 'dom, the dom, document.getElementById(), document.createElement(), dom manipulation, dom api, api, html dom, html dom api'
