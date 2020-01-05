@@ -13,7 +13,7 @@ const nativeShare = (url, title, text) => {
     navigator.share({
         title,
         url,
-        text: `${title} on @${Brand.twitter} - ${Brand.domain}${url} %23${Brand.name.toLowerCase()}`
+        text: `${title} on @${Brand.twitter}`
     }).then(() => {
         console.log("Successful shared article.")
     }).catch(err => (

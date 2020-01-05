@@ -15,12 +15,12 @@
     
     &.FirstPost {
         flex-flow: column;
-        height: 450px;
+        max-height: 450px;
         padding: 10px;
 
         & .PostCover {
             width: 100%;
-            height: 65%;
+            height: auto;
             background-color: var(--color3);
             overflow: hidden;
 
