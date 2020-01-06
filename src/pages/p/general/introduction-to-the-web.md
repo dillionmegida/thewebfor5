@@ -2,6 +2,7 @@
 title: Introduction to the web
 category: general
 date: 2019-12-19
+authorID: 1
 pageDescription: >-
   The web is a general term for the World Wide Web (WWW) which consists of websites containing numerous related web pages.
 pageKeywords: 'web, what is web, what is a website, types of websites, static and dynamic, static and dynamic websites, introduction to the web, www'

@@ -2,6 +2,7 @@
 title: What is CSS?
 category: css
 date: 2019-12-27
+authorID: 1
 pageDescription: >-
   CSS stands for Cascading Stylesheet which is used to define how elements on a page are displayed. Its duty is to add beauty to a website by creating layouts for contents, adding colors, creating animations, etc.
 pageKeywords: 'css, what is css, cascading stylesheet, html and css'

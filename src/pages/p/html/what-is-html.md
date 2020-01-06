@@ -2,6 +2,7 @@
 title: What is HTML?
 category: html
 date: 2019-12-26
+authorID: 1
 pageDescription: >-
   HTML stands for HyperText Markup Language which is a standard markup language for building webpages. It defines the contents of web pages.
 pageKeywords: 'html, what is html, hypertext markup language, html and css'

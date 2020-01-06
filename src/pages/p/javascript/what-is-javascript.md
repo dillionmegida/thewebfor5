@@ -2,6 +2,7 @@
 title: What is Javascript?
 category: javascript
 date: 2019-12-30
+authorID: 1
 pageDescription: >-
   Javascript is a scripting language which is dynamic in nature. It is popularly known for it's usage on the web. With this language, interactions and functionalities are added to webpages.
 pageKeywords: 'javascript, what is javascript, introduction to javascript, fundamentals, javascript fundamentals, expressions and statements, variables, javascript variables, js'

@@ -2,6 +2,7 @@
 title: CSS Measurement Units
 category: css
 date: 2019-12-31
+authorID: 1
 pageDescription: >-
   CSS Measurement units include px, pc, cm, em, rem, % and so much more. Knowing which one to use in order to achieve the result you want becomes of great importance. In this article, we'd look at those units.
 pageKeywords: 'css, px, pc, pixels, rem, em, root em, measurement, css units, units, css measurements, percentage, viewport, vw, vh, vmin, vmax, viewport height, viewport width, font, font size, root font-size, px and rem, css measurement units'
