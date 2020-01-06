@@ -13,7 +13,7 @@ export default ({ data }) => {
     
     // To get Post Counts
 
-    let GeneralArr, HTMLArr, CSSArr, JavascriptArr;
+    let GeneralArr, HTMLArr, CSSArr, JavascriptArr, GitArr;
                 
     GeneralArr = edges.filter(({ node }) =>
         node.frontmatter.category === 'general'
@@ -31,19 +31,36 @@ export default ({ data }) => {
         node.frontmatter.category === 'javascript'
     )
 
+    GitArr = edges.filter(({ node }) => (
+        node.frontmatter.category === 'git'
+    ))
+
     const NumOfPosts = {
         General: GeneralArr.length,
         HTML: HTMLArr.length,
         CSS: CSSArr.length,
-        Javascript: JavascriptArr.length
+        Javascript: JavascriptArr.length,
+        Git: GitArr.length
     }
 
     const categoryLists = [
         {
+            name: 'CSS',
+            excerpt: 'Cascading Stylesheet',
+            link: '/css',
+            numOfPosts: NumOfPosts.CSS
+        },
+        {
             name: 'General',
-            excerpt: 'HyperText Markup Language',
+            excerpt: 'General web topics',
             link: '/general',
             numOfPosts: NumOfPosts.General
+        },
+        {
+            name: 'Git',
+            excerpt: 'Distributed version control',
+            link: '/git',
+            numOfPosts: NumOfPosts.Git
         },
         {
             name: 'HTML',
@@ -52,14 +69,8 @@ export default ({ data }) => {
             numOfPosts: NumOfPosts.HTML
         },
         {
-            name: 'CSS',
-            excerpt: 'HyperText Markup Language',
-            link: '/css',
-            numOfPosts: NumOfPosts.CSS
-        },
-        {
             name: 'Javascript',
-            excerpt: 'HyperText Markup Language',
+            excerpt: 'Scripting language for the web',
             link: '/javascript',
             numOfPosts: NumOfPosts.Javascript
         }
