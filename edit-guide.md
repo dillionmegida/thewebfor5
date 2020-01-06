@@ -4,3 +4,8 @@
 2. Add category to Blog Categories - src/components/blog/categories/[category].js. Then, state the category name.
 3. Add category page to src/pages/category/[category].js
 4. Edit src/pages/categories.js. Set up the new category for getting the length and also add it to the category list
+
+## Add new Author
+1. Add the author details in the author list - /src/components/Author/AuthorList.js
+2. The slug which you'd use for the author should be used to create a new file in src/pages/author - [authorSlug].js
+3. In the new file, import the author component and pass a prop of the authorID
