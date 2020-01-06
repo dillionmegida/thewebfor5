@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Styles from '../Styles/IndividualPost.module.scss';
 
+import AllAuthors from '../../Author/AuthorList';
 import RelatedArticles from '../RelatedArticles/RelatedArticles';
 import { graphql, Link } from 'gatsby'; 
 import Layout from '../../../containers/Layout/Layout';
@@ -35,12 +36,40 @@ export default ({ data }, props) => {
       }
     }
 
+    const authorFilter = AllAuthors.filter(author => (
+      author.authorID === frontmatter.authorID
+    ))
+
+    // If the filter is more than one, use dillion megida
+    let author;
+    if(authorFilter.length > 1) {
+      author = {...AllAuthors[0]}
+    } else {
+      author = authorFilter[0];
+    }
+
     const Header = props => (
       <div className={`${Styles.Header} ${props.OtherClasses}`}>
         <h1>{frontmatter.title}</h1>
         <p>{formatBlogDate(frontmatter.date)}<br/>
           <em>{post.timeToRead} min{post.timeToRead > 1 ? 's' : null} read</em>
         </p>
+        {
+          frontmatter.authorID ? (
+              <p className={Styles.Author}>
+                by&nbsp;
+                <Link
+                  to={`/author/${author.slug}`}
+                  title={`${author.name}, Author at ${Brand.name}`}
+                >
+                  {author.name}
+                </Link>
+              </p>
+            )
+          : (
+            <p>Dillion Megida</p>
+          )
+        }
         <p>Category: {frontmatter.category.toUpperCase()}</p>
         <span>
           {
@@ -149,6 +178,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        authorID
         cover
         tags
         category

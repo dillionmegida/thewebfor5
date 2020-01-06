@@ -1,0 +1,63 @@
+.Author {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+
+    & h1 {
+        font-size: 30px;    
+        margin: 4px 0;
+        color: var(--color3);
+
+        & ~ p {
+            font-size: 14px;
+            margin: 4px 0;
+            color: var(--color3);
+        }
+    }
+
+    & .Img {
+        width: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid var(--color5);
+
+        & img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    & .Details {
+        text-align: center;
+        padding: 0 10px;
+        width: 100%;
+        border: 2px solid var(--color5);
+        margin: 5px 0;
+        color: var(--color3);
+
+        & a {
+            color: var(--color2);
+            padding: 2px;
+            margin: 0 4px;
+
+            &:hover, &:focus {
+                outline: 1px solid var(--color2);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Author {
+        
+        & h1 {
+            font-size: 20px;
+        }
+
+        & .Img {
+            width: 130px;
+        }
+
+    }
+}

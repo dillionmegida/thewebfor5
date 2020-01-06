@@ -2,6 +2,10 @@
 
     width: 100%;
 
+    // & .Author {
+    //     font-size: 14px;
+    // }
+
     & > h1 {
         font-size: 30px;
         color: var(--color2);
@@ -33,7 +37,7 @@
         }
     }
 
-    & > span {
+    & > span, & .Author {
         font-size: 14px;
         overflow-wrap: break-word;
 
