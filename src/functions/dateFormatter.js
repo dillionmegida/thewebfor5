@@ -7,7 +7,7 @@ const formatBlogDate = date => {
     // Slice the array to break the date
     let yearArr = dateArr.slice(0, 4);
     let monthArr = dateArr.slice(5, 7);
-    let dayArr = dateArr.slice(8);
+    let dayArr = dateArr.slice(8, 10);
 
     // parse the dates to integers and also get the last digit of the day for day suffixes
     let month = parseInt(monthArr.join(''));
