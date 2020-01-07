@@ -24,10 +24,8 @@ const AppHelmet = props => (
         <meta property="og:image" content={props.TwitterImage} />
         <meta property="og:url" content="https://thewebfor5.com" />
         <meta property="og:type" content="article" />
-
         
-        
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content={props.SummaryCard ? "summary" : "summary_large_image"} />
         <meta name="twitter:site" content="@thewebfor5" />
         <meta name="twitter:title" content={props.PageTitle} /> {/* edit */}
         <meta name="twitter:description" content={props.PageDescription} /> {/* edit */}
@@ -45,7 +43,8 @@ AppHelmet.propTypes = {
     PageTitle: PropTypes.string.isRequired,
     PageLink: PropTypes.string.isRequired,
     PageDescription: PropTypes.string.isRequired,
-    PageKeywords: PropTypes.string.isRequired
+    PageKeywords: PropTypes.string.isRequired,
+    SummaryCard: PropTypes.bool
 }
 
 export default AppHelmet;
