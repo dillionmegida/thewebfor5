@@ -78,6 +78,3 @@ Git commands are short pieces of instructions we use in git to perform certain f
 There are so many git commands available to use, these few listed are but a small portion of the many git commands available.
 
 Git is a very expansive topic and can easily get confusing, practicing using git will help your understanding. We would be looking at a step by step practical use of git in later articles
-
-If you have any questions or contributions regarding this article, kindly reach out to us on twitter - [@thewebfor5](https://twitter.com/thewebfor5).
-
