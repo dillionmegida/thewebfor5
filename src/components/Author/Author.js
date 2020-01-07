@@ -44,7 +44,6 @@ export default props => {
 
                     render = {
                         data => {
-                            console.log(data);
                             const authorArticles = data.allPosts.edges.filter(({ node }) => (
                                 node.frontmatter.authorID === author.authorID
                             ))  
