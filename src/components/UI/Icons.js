@@ -10,8 +10,8 @@ const BackArrow = () => (
     <Icon class='fa fa-chevron-left' />
 )
 
-const Link = () => (
-    <Icon class='fa fa-link' />
+const Web = () => (
+    <Icon class='fa fa-globe' />
 )
 
 const Share = () => (
@@ -31,4 +31,4 @@ const Twitter = () => (
     <Icon class='fa fa-twitter' />
 )
 
-export { Share, BackArrow, Link, Twitter, Sun, Moon };
+export { Share, BackArrow, Web, Twitter, Sun, Moon };

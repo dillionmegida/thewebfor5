@@ -4,7 +4,7 @@ import Styles from './Author.module.scss';
 import AllAuthors from './AuthorList';
 import Layout from '../../containers/Layout/Layout';
 import Brand from '../Brand/Details';
-import { Twitter, Link } from '../UI/Icons';
+import { Twitter, Web } from '../UI/Icons';
 import { StaticQuery, graphql } from 'gatsby';
 
 export default props => {
@@ -77,7 +77,7 @@ export default props => {
                                                 author.website ?
                                                     (
                                                         <a href={author.website} title={`${author.name}'s Website`}>
-                                                            <Link />
+                                                            <Web />
                                                         </a>
                                                     )
                                                 : null
