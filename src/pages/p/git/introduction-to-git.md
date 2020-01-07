@@ -1,13 +1,13 @@
 ---
 title: Introduction to git
 category: git
-date: 2020-01-7
+date: 2020-01-07
 authorID: 2
 pageDescription: >-
   Git, simply put is a tool which we use to track the changes we make in our code while developing software. git also allows multiple developers work on a single project together without overwriting each other’s code.
 pageKeywords: 'git, what is git, introduction to git, GitHub, git basics, bitbucket, repository, version control, js'
 cover: >- 
-tags: ["git"],["basics"]
+tags: ["git", "basics"]
 ---
 ## What is git?
 Git, simply put is a tool which we use to track the changes we make in our code while developing software.
@@ -24,7 +24,7 @@ Another thing git can do is act as a time machine, as your codebase gets bigger,
 
 Back to the soup story, the three chefs all add their portion of soup back to the pot but we notice something off, the soup is salty. How do we solve this? If we add more water, the soup becomes watery and loses taste so we can’t do that, but what if we could go back in time?
 
-What if we could go back in time to when the chef was seasoning his portion and reduce his salt? We would have a non-salty soup.
+What if we could go back in time to when the chef was seasoning his portion? At that point, we could reduce the salt thereby having a non-salty soup.
 
 With git we can go back in time and redo things.
 
@@ -36,13 +36,13 @@ Git makes use of something called repositories (repo for short). These are basic
 
 Git is used both locally and remotely by connecting the remote repo and the local repo through git.
 
-- If a git repository was created remotely (online), it would have to be cloned to the users PC. When it is cloned, every single file in the repo will be available locally and the two repos become linked. If a change is made locally, it would be pushed to the remote repo through the use of a command.
-Note: When pushing to a remote repo for the first time, you will have to log in to your account so that git knows which account it is working with.
+- If a git repository was created remotely (online), it would have to be cloned to the users PC. When it is cloned, every single file in the repo will be available locally and the two repos become linked. If a change is made locally, it would be pushed to the remote repo through the use of a command.<br/>
+**Note:** When pushing to a remote repo for the first time, you will have to log in to your account so that git knows which account it is working with.
 -	However, if the repo was created locally, you would have to go online and create a remote repo first (which you wouldn’t initialize because a git repo has already been created locally), then you would go back to your PC and push the local repo (again, using a git command) to the remote repo using the remote repo URL thereby linking the two repos.
 
 As long as they are linked, whatever changes made in any one of the changes will reflect in the other although the changes have to be added using a git command, it does not refresh automatically and reflect changes because that would be bad for business.
 
-When using Git, try not to use commands that you do not fully understand or you might get into a tangle you might not be able to come out of.
+When using Git, try not to use commands that you do not fully understand or you might get into a tangle you might not be able to come out of, for example, delecting your project on repository, or resetting all changes to the default.
 
 ## Branches
 How exactly does Git make it possible for multiple developers to work on the same project at the same time?
@@ -59,9 +59,11 @@ Another example is a mother and her child, she gives birth and her child takes a
 
 So, in Git, multiple developers who are working on one project can each create a branch of their own to hold the features they will be working on. Since they all have their branches, the main code will not be affected. When they are done with their part, they can merge their branch with the master branch.
 
-During merging, Git will compare the two branches and start to delete and update lines of code accordingly till it is merged properly.
+During merging, git will compare the two branches thereby deleting and updating the necessary parts. It has an algorithm for determining which change is to say, be updated or to be removed.
 
-Branches are used to avoid releasing bugs directly to software. The master branch is usually used as the production branch so it will hold the main source code of the application or site online. If the master branch is worked on directly, a lot of mistakes made in development will be visible to users using the software so it advisable to work on branches before merging changes.
+Also during merging, there could be **merge conflicts**. These occurs in situations where two changes look so right to be true. At that point,  the user would have to manually select the correct change.
+
+Branches are used to avoid releasing bugs directly to software. The master branch is usually used as the production branch so it will hold the main source code of the application or site online. If the master branch is worked on directly, a lot of mistakes made in development will be visible to users using the software so it advisable to work on branches, and test for errors before merging changes.
 
 It is also advisable to create a develop or development branch. This will be the branch that changes get merged to and then the develop gets merged to the master instead of merging with the master branch directly. 
 
