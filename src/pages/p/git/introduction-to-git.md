@@ -7,6 +7,7 @@ pageDescription: >-
   Git, simply put is a tool which we use to track the changes we make in our code while developing software. git also allows multiple developers work on a single project together without overwriting each other’s code.
 pageKeywords: 'git, what is git, introduction to git, GitHub, git basics, bitbucket, repository, version control, js'
 cover: >- 
+  https://res.cloudinary.com/dillionmegida/image/upload/v1578440183/images/thewebfor5/what-is-git_upwrww.jpg
 tags: ["git", "basics"]
 ---
 ## What is git?
