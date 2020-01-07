@@ -15,14 +15,14 @@ const authorList = [
     },
     {
         authorID: 2,
-        slug: "kingesther",
-        name: "King Esther",
+        slug: "esthercatheryn",
+        name: "Esther Catheryn",
         twitter: "lady_catheryn",
-        img: require('../../assets/img/dillion.jpg'),
+        img: require('../../assets/img/esther.jpg'),
         skills: [
-            "git", "HTML5"
+            "HTML5", "CSS", "Javascript", "Bootstrap", "Git", "Wordpress CMS"
         ],
-        bio: "..."
+        bio: "Front-end web developer. I listen to music or sometimes play chords on my guitar when I'm not coding. I also love teaching what I learn."
     }
 ]
 
