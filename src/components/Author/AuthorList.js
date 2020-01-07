@@ -15,8 +15,8 @@ const authorList = [
     },
     {
         authorID: 2,
-        slug: "esthercatheryn",
-        name: "Esther Catheryn",
+        slug: "ejidikeesther",
+        name: "Ejidike Esther",
         twitter: "lady_catheryn",
         img: require('../../assets/img/esther.jpg'),
         skills: [
