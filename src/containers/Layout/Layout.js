@@ -40,6 +40,7 @@ export default class Layout extends React.Component {
                     PageDescription = {this.props.PageDescription}
                     PageKeywords = {this.props.PageKeywords}
                     TwitterImage = {this.props.TwitterImage}
+                    SummaryCard = {this.props.SummaryCard}
                 />
 
                 <Header />
