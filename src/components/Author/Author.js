@@ -23,7 +23,7 @@ export default props => {
             PageLink = {`/author/${author.slug}`}
             PageDescription = {`${author.name} is an author at ${Brand.name} who writes on web development topics`}
             PageKeywords= {`${author.name}, ${author.slug}, ${author.name} ${Brand.name}`}
-            TwitterImage={author.img}
+            TwitterImage={`https://${Brand.domain}${author.img}`}
             SummaryCard
         
             SecondSection = {
