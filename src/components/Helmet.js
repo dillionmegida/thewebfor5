@@ -6,6 +6,7 @@ import MainImg from '../assets/img/main.jpg';
 
 const AppHelmet = props => (
     <Helmet>
+        <html lang="en" />
         <title>
             {props.PageTitle}
         </title>
