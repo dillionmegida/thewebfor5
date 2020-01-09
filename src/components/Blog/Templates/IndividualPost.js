@@ -104,7 +104,7 @@ export default ({ data }, props) => {
             PageLink = {fields.slug}
             PageDescription = {frontmatter.pageDescription}
             PageKeywords={frontmatter.pageKeywords}
-            TwitterImage={frontmatter.cover}
+            ImageCard={frontmatter.cover}
 
             FirstSection = {
               <Header OtherClasses={Styles.LeftContents}/>
