@@ -23,7 +23,7 @@ const AppHelmet = props => (
         <link rel='icon' href={Logo} />
 
         <meta property="og:image" content={props.ImageCard} />
-        <meta property="og:url" content="https://thewebfor5.com" />
+        <meta property="og:url" content={`https://thewebfor5.com${props.PageLink}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={props.PageTitle} />
         <meta property="og:description" content={props.PageDescription} />
