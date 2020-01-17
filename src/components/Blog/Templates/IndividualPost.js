@@ -143,10 +143,12 @@ export default ({ data }, props) => {
                       url = {post.fields.slug}
                       title = {frontmatter.title}
                       text = {frontmatter.title}
+                      author = {author.twitter}
                     />
                     <ShareTwitter
                       articleTitle={frontmatter.title}
                       href={post.fields.slug}
+                      author = {author.twitter}
                     />
                   </div>
                 </div>
