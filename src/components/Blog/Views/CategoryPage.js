@@ -3,18 +3,27 @@ import Styles from '../Styles/Posts.module.scss';
 
 import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
+import allCategories from '../../../hooks/allCategories';
 
 export default props => {
+    
+    const categories = allCategories();
+    const categoryPage = props.CategoryPage;
+
+    let category = categories.filter(cat => (
+        cat.name === categoryPage
+    ))
+
+    const numOfPosts = category[0]["numOfPosts"];
 
     const CategoryHeader = (
         <React.Fragment>
             <h2>
                 Category - {props.CategoryPage}
             </h2>
-            {/* Not working yet because I'm finding it hard rendering the numbers 
             <p className={Styles.HeaderExtraDetails}>
-                {NumOfPosts[props.SectionPage]} post{NumOfPosts[props.SectionPage] === 1 ? "": "s"} published
-            </p> */}
+                {numOfPosts} post{numOfPosts === 1 ? "": "s"} published
+            </p>
         </React.Fragment>
     )
 
