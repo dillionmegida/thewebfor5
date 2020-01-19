@@ -44,7 +44,7 @@ export default props => (
 
                 AllPosts.forEach(post => {
                     tags.forEach(tag => {
-                        if(post.node.frontmatter.tags.includes(tag)) {
+                        if(post.node.frontmatter.tags !== null && post.node.frontmatter.tags.includes(tag)) {
                             if(!RelatedArr.includes(post.node) && post.node.id !== articleID)
                                 RelatedArr.push(post.node);
                         }
