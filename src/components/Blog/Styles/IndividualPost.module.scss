@@ -95,6 +95,24 @@
         color: var(--color3);
         line-height: 25px;
 
+        & div[class=TOC] a {
+            color: var(--color3);
+            text-decoration: none;
+            font-weight: normal;
+
+            &:hover, :focus {
+                outline-color: var(--color3);
+            }
+        }
+        
+        /* Offset links are necessary because there is a top fixed section before the content */
+        & a[class='offset_link'] {
+            position: relative;
+            display: block;
+            visibility: hidden;
+            top: -100px;
+        }
+
         & h1 {
             /* This is essential to control every h1 tags from markdowns as there is already an initial h1 tag */
             font-size: 25px;
