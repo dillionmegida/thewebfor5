@@ -36,7 +36,7 @@ You can check response headers by navigating to network in Chrome Dev tools. Wit
 ### Ways to allow CORS 
 Below two of the most popular ways to allow cors are discussed extensively:
 
-1. #### CORS chrome extension
+#### 1. CORS chrome extension
 
 This is an extension created by chrome to allow cross origin resource sharing. You can [download it here](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en). This extension adds the ‘Access-Control-Allow-Origin’ to the response header automatically thereby allowing different origins communicate with each other. Using the people example, person B using a translator that translates all languages (CORS extension) not just English.
 
@@ -46,8 +46,9 @@ Another issue with this solution is since the extension automatically adds an Ac
 
 Always remember to turn off the extension after use to avoid this issue.
 
-2. #### 3rd Party Server
-You can make use of a third-party server like the [cors-anywhere app](https://cors-anywhere.herokuapp.com/) to enable cross-origin requests to anywhere. You can use this API by prepending it to the URL a response is expected from. E.g. if you were fetching an api from example.com/api with the `fetch api`, you would prepend it this way – `fetch("https://cors-anywhere.herokuapp.com/example.com/api")`.
+#### 2. 3rd Party Server
+
+You can make use of a third-party server like the [cors-anywhere app](https://cors-anywhere.herokuapp.com/) to enable cross-origin requests to anywhere. You can use this API by prepending it to the URL a response is expected from. E.g. if you were fetching an api from example.com/api with the `fetch api`, you would use the url this way – **fetch("https://cors-anywhere.herokuapp.com/example.com/api")**.
 
 By doing this, you would first be making a request to the cors-anywhere app which would in turn make a request on to example.com on your behalf, after adding the Access-Control-Allow-Origin header and then send the response back to us. Just like a human translator helping two people from different companies communicate with each other, so also the cors-anywhere app is like a middleman that makes our requests for us.
 
