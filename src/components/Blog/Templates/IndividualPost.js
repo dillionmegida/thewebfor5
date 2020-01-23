@@ -142,7 +142,6 @@ export default ({ data }, props) => {
                     <NativeShare
                       url = {post.fields.slug}
                       title = {frontmatter.title}
-                      text = {frontmatter.title}
                       author = {author.twitter}
                     />
                     <ShareTwitter
