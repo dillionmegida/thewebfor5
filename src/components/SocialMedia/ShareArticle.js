@@ -24,8 +24,8 @@ const nativeShare = (url, title) => {
 const NativeShare = props => {
     const url = props.url;
     const title = props.title;
-    const text = props.text;
     const author = props.author;
+    const text = `${title} by @${author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
     return (
         <React.Fragment>
             {
@@ -41,7 +41,7 @@ const NativeShare = props => {
 }
 
 const ShareTwitter = props => {
-    const text = `${props.articleTitle} by @${author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
+    const text = `${props.articleTitle} by @${props.author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
     return (
         <a className={Styles.Link} target='_blank' rel='noopener noreferrer' href={`https://twitter.com/intent/tweet?text=${text}`} >
             <Twitter />
