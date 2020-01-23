@@ -9,7 +9,7 @@ const checkNativeShare = () => (
     checkGlobal() && navigator.share
 )
 
-const nativeShare = (url, title, text) => {
+const nativeShare = (url, title) => {
     navigator.share({
         title,
         url,
@@ -41,7 +41,7 @@ const NativeShare = props => {
 }
 
 const ShareTwitter = props => {
-    const text = `${props.articleTitle} by @${props.author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
+    const text = `${props.articleTitle} by @${author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
     return (
         <a className={Styles.Link} target='_blank' rel='noopener noreferrer' href={`https://twitter.com/intent/tweet?text=${text}`} >
             <Twitter />
