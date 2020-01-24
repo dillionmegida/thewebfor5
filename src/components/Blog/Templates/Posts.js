@@ -59,6 +59,8 @@ export default props => (
                             Posts.map(({ node }, index) =>
                                 <Post
                                     key={node.id}
+                                    
+                                    PostID = {node.id}
                                     PostPosition={index}
                                     
                                     // FirstPostSpecialStyle is applied conditionally 

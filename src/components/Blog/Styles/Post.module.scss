@@ -50,13 +50,39 @@
             margin: 5px 0;
         }
 
-        & p.SavedArticle {
-            color: var(--color4);
-        }
+        
+        & .Extra {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
 
-        & p:last-child {
-            font-weight: bold;
-            font-size: 14px;
+                & p {
+                    font-weight: bold;
+                    font-size: 14px;
+                }
+
+                & button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    padding: 5px;
+
+                    &:hover, &:focus {
+                        text-decoration: underline;
+                    }
+
+                    &.Unsave {
+                        color: var(--color2);
+                    }
+
+                    &.Save {
+                        color: var(--color4);
+                    }
+                    
+                }
+
         }
     }
 
@@ -65,5 +91,11 @@
 @media only screen and (max-width: 800px) {
     .Post .PostDetails h2 {
         font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .Post .PostDetails .Extra > p {
+        font-size: 11px;
     }
 }
