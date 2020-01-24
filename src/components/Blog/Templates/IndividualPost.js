@@ -125,7 +125,7 @@ export default ({ data }, props) => {
                     }
                     <div style={{borderTop: frontmatter.cover ? '0' : '1px solid var(--color5)'}} className={Styles.PostContent}>
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                        <p>If you have any questions or contributions regarding this article, kindly reach us on twitter - <a href={`https://twitter.com/${Brand.twitter}`}>@{Brand.name.toLowerCase()}</a></p>
+                        <p>If you have any questions or contributions regarding this article, kindly reach {author.name} (<a href={`https://twitter.com${author.twitter}`}>@{author.twitter}</a>) or visit us on twitter - <a href={`https://twitter.com/${Brand.twitter}`}>@{Brand.name.toLowerCase()}</a></p>
                     </div>
                 </article>
                 <div className={Styles.EditDiscuss}>
