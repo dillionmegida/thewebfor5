@@ -44,9 +44,10 @@ const isSavedMoreThan = (arr, max) => {
 const savedArticlesLimit = 20;
 
 const saveArticle = id => {
-    let prevArr = savedArticlesArray;
+	let prevArr = savedArticlesArray;
     if(isSavedMoreThan(prevArr, savedArticlesLimit)) {
-        alert(`You can't save more than ${savedArticlesLimit} articles. Kindly unsave some to add more.`);
+		// Remove the alert for now
+        // alert(`You can't save more than ${savedArticlesLimit} articles. Kindly unsave some to add more.`);
         return false;
     }
 	let newArr = prevArr;
@@ -148,6 +149,8 @@ export default () => (
 										savedArticlesArray_Filtered.reverse().map(({ node }) =>
 											<Post
 												key={node.id}
+												PostID={node.id}
+												dontShowSaveButtons
 
 												href={node.fields.slug}
 
