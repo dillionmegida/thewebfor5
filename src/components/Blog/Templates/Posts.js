@@ -28,7 +28,7 @@ export default ({pageContext}) => {
       PageKeywords= 'home, The Web For Five, The Web For 5, simplified web topics, javascript'
       
       FirstSection = {
-        <div>
+        <div className={Styles.TagsSection}>
           <h3>#tags</h3>
           <Tags />
         </div>
