@@ -11,6 +11,7 @@ import Newsletter from '../../Newsletter/Newsletter';
 import SuggestArticles from '../SuggestArticles/SuggestArticles';
 
 export default ({pageContext}) => {
+  console.log(pageContext);
   const { pageCount }  = pageContext
   const { index: pageIndex } = pageContext
   const isFirst = pageContext.index === 1
