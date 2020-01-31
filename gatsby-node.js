@@ -55,6 +55,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         return;
     }
 
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        createPage({
+            path: node.fields.slug,
+            component: path.resolve('./src/components/Blog/Templates/IndividualPost.js'),
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.fields.slug,
+            }
+        })
+    })
+
     createPaginatedPages({
         edges: result.data.allMarkdownRemark.edges,
         createPage: createPage,
