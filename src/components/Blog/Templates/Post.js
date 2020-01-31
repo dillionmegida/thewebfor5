@@ -1,31 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Styles from '../Styles/Post.module.scss';
 
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import { saveArticle, isArticleSaved, unSaveArticle } from '../Saved/Saved';
 
 const Post = props => {
-
-    const postID=  props.PostID;
-    const dontShowSaveButtons = props.dontShowSaveButtons;
-
-    const [ isSaved, saveState ] = useState(isArticleSaved(postID));
-
-    const unSave = id => {
-      unSaveArticle(id);
-      saveState(false);
-    }
-
-    const save = id => {
-      if(saveArticle(id) === false) {
-        saveState(false);
-      } else {
-        saveArticle(id);
-        saveState(true);
-      }
-    }
-
     let PostPosition = props.PostPosition
     let FirstPostSpecialStyle = props.FirstPostSpecialStyle;
     return (
@@ -55,28 +34,13 @@ const Post = props => {
                         props.excerpt.length > 150 ? `${props.excerpt.substr(0,150)}...` : props.excerpt
                     }
                 </p>
-                <div className={Styles.Extra}>
-                    <p>{props.extraInfo}</p>
-                    {!dontShowSaveButtons ?
-                        isSaved ? (
-                            <button title='Unsave article' id='UnsaveButton' className={Styles.Unsave} onClick={() => {unSave(postID)}}>
-                                <i className='fa fa-bookmark'></i> Unsave
-                            </button>
-                        ) : (
-                            <button title='Save article' className={Styles.Save} onClick={() => {save(postID)}}>
-                                <i className='fa fa-bookmark'></i> Save
-                            </button>
-                        )
-                        : null
-                    }
-                </div>
+                <p>{props.extraInfo}</p>
             </div>
         </article>
     )
 }
 
 Post.propTypes = {
-    PostID: PropTypes.number.isRequired,
     PostPosition: PropTypes.number,
     FirstPostSpecialStyle: PropTypes.bool,
     CoverSource: PropTypes.string,

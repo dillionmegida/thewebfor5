@@ -1,86 +1,90 @@
-import React from 'react';
-import Styles from '../Styles/Posts.module.scss';
+import React, { useState } from 'react';
+import Styles from '../Styles/Post.module.scss';
 
-import { StaticQuery, graphql } from 'gatsby';
-import Post from './Post';
-import formatBlogDate from '../../../functions/dateFormatter';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { saveArticle, isArticleSaved, unSaveArticle } from '../Saved/Saved';
 
-export default props => { 
-        console.log(props);
+const Post = props => {
+
+    const postID=  props.PostID;
+    const dontShowSaveButtons = props.dontShowSaveButtons;
+
+    const [ isSaved, saveState ] = useState(isArticleSaved(postID));
+
+    const unSave = id => {
+      unSaveArticle(id);
+      saveState(false);
+    }
+
+    const save = id => {
+      if(saveArticle(id) === false) {
+        saveState(false);
+      } else {
+        saveArticle(id);
+        saveState(true);
+      }
+    }
+
+    let PostPosition = props.PostPosition
+    let FirstPostSpecialStyle = props.FirstPostSpecialStyle;
     return (
-    <StaticQuery
+        <article className={FirstPostSpecialStyle && props.CoverSource && PostPosition === 0 ? `${Styles.Post} ${Styles.FirstPost}` : `${Styles.Post}`}>
+            {/* The first post has a different style 
+            
+            // FirstPostSpecialStyle is applied conditionally*/}
 
-        query={
-            graphql`
-                query {
-                    allPosts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-                        edges {
-                            node {
-                              id
-                              timeToRead
-                              frontmatter {
-                                  title
-                                  category
-                                  cover
-                                  date
-                                  pageDescription
-                              }
-                              fields {
-                                  slug
-                              }
-                            }
-                        }
+            {/* The blog cover is only show for the first */}
+            {
+                props.CoverSource && FirstPostSpecialStyle && PostPosition === 0 ?
+                    <div className={Styles.PostCover}>
+                        <img src={props.CoverSource} alt={props.CoverAlt} />
+                    </div>
+                : null
+            }            
+            <div className={Styles.PostDetails}>
+                <Link
+                    to={props.href}
+                    title={props.title}
+                >
+                    <h2>{props.title}</h2>
+                </Link>
+                <p>
+                    {
+                        // This ensures that the characters are limited to 150 characters
+                        props.excerpt.length > 150 ? `${props.excerpt.substr(0,150)}...` : props.excerpt
                     }
-                }
-            `
-        }
-        
-        render={
-            data => {
-                const { edges: AllPosts } = data.allPosts;
+                </p>
+                <div className={Styles.Extra}>
+                    <p>{props.extraInfo}</p>
+                    {!dontShowSaveButtons ?
+                        isSaved ? (
+                            <button title='Unsave article' id='UnsaveButton' className={Styles.Unsave} onClick={() => {unSave(postID)}}>
+                                <i className='fa fa-bookmark'></i> Unsave
+                            </button>
+                        ) : (
+                            <button title='Save article' className={Styles.Save} onClick={() => {save(postID)}}>
+                                <i className='fa fa-bookmark'></i> Save
+                            </button>
+                        )
+                        : null
+                    }
+                </div>
+            </div>
+        </article>
+    )
+}
 
-                const category = props.CategoryName;
+Post.propTypes = {
+    PostID: PropTypes.number.isRequired,
+    PostPosition: PropTypes.number,
+    FirstPostSpecialStyle: PropTypes.bool,
+    CoverSource: PropTypes.string,
+    CoverAlt: PropTypes.string,
+    href: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    excerpt: PropTypes.string.isRequired,
+    extraInfo: PropTypes.string.isRequired
+}
 
-                let Posts;
-
-                if(category === 'all') {
-                    // If category is all, display all posts
-                    Posts = AllPosts;  
-
-                } else {    
-                    // else only the selected category should be chosen
-                    Posts = AllPosts.filter(({ node }) =>
-                        node.frontmatter.category === category
-                    );
-
-                }
-
-                return (
-                    <section className={Styles.Posts}>
-                        {
-                            Posts.map(({ node }, index) =>
-                                <Post
-                                    key={node.id}
-                                    PostPosition={index}
-                                    
-                                    // FirstPostSpecialStyle is applied conditionally 
-                                    FirstPostSpecialStyle={props.FirstPostSpecialStyle}
-
-                                    href={node.fields.slug}
-
-                                    title={node.frontmatter.title}
-
-                                    CoverSource={node.frontmatter.cover}
-                                    CoverAlt=''
-
-                                    excerpt={node.frontmatter.pageDescription}
-                                    extraInfo={`${formatBlogDate(node.frontmatter.date)} | ${node.timeToRead} min${node.timeToRead > 1 ? 's' : ''} read`}
-                                />
-                            )    
-                        }
-                    </section>
-                )
-            }
-        }
-    />
-)}
+export default Post;
