@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const { createPage } = actions;
     const result = await graphql(`
         query {
-            allMarkdownRemarksort: { fields: [frontmatter___date], order: DESC } {
+            allMarkdownRemark (sort: { fields: [frontmatter___date], order: DESC }) {
                 edges {
                     node {
                       id
@@ -39,6 +39,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             tagsGroup: allMarkdownRemark(limit: 2000) {
                 group(field: frontmatter___tags) {
+                    fieldValue
+                }
+            }
+            categoriesGroup: allMarkdownRemark {
+                group(field: frontmatter___category) {
                     fieldValue
                 }
             }
@@ -65,6 +70,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             component: path.resolve(`./src/components/Blog/Views/TagPage.js`),
             context: {
                 tag: tag.fieldValue,
+            },
+        })
+    })
+
+    result.data.categoriesGroup.group.forEach(category => {
+        createPage({
+            path: `category/${_.kebabCase(category.fieldValue)}/`,
+            component: path.resolve(`./src/components/Blog/Views/CategoryPage.js`),
+            context: {
+                category: category.fieldValue,
             },
         })
     })
