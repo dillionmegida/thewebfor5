@@ -14,7 +14,7 @@ export default ({ pageContext, data }) => {
     const CategoryHeader = (
         <React.Fragment>
             <h2>
-                Category - {category}
+                Category - {category.toUpperCase()}
             </h2>
             <p className={Styles.HeaderExtraDetails}>
                 {totalCount} post{totalCount === 1 ? "": "s"}  published
@@ -25,7 +25,7 @@ export default ({ pageContext, data }) => {
     return (
         <Layout
 
-        PageTitle={`${category} Category - ${Brand.name}`}
+        PageTitle={`${category.toUpperCase()} Category - ${Brand.name}`}
         PageDescription={`Group of topics under ${category} section in ${Brand.name}`}
         PageLink={`/category/${category}`}
         PageKeywords={`categories, ${category} category, ${category} topics`}
