@@ -8,7 +8,7 @@ import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
 import formatBlogDate from '../../../functions/dateFormatter';
 import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Saved';
-import NativeShare, { ShareTwitter } from '../../SocialMedia/ShareArticle';
+import ShareArticle from '../../SocialMedia/ShareArticle';
 import Newsletter from '../../Newsletter/Newsletter';
 import SuggestArticles from '../SuggestArticles/SuggestArticles';
 import EditArticle from '../Common/EditArticle';
@@ -136,21 +136,11 @@ export default ({ data }, props) => {
                     href={post.fields.slug}
                   />
                 </div>
-                <div className={Styles.ShareArticle}>
-                  <p>Kindly share this article <span role='img' aria-label='Happy Emoji'>😃</span></p>
-                  <div className={Styles.Methods}>
-                    <NativeShare
-                      url = {post.fields.slug}
-                      title = {frontmatter.title}
-                      author = {author.twitter}
-                    />
-                    <ShareTwitter
-                      articleTitle={frontmatter.title}
-                      href={post.fields.slug}
-                      author = {author.twitter}
-                    />
-                  </div>
-                </div>
+                <ShareArticle
+                  url = {post.fields.slug}
+                  title = {frontmatter.title}
+                  author = {author.twitter}
+                />
                 <Newsletter />
                 <SuggestArticles />
                 <RelatedArticles

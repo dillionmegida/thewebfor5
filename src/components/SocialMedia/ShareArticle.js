@@ -9,11 +9,15 @@ const checkNativeShare = () => (
     checkGlobal() && navigator.share
 )
 
-const nativeShare = (url, title) => {
+const sharedText = (url, title, author) => (
+    `${title} by @${author} on @${Brand.twitter} - ${Brand.domain}${url} %23${Brand.name.toLowerCase()}`
+)
+
+const nativeShare = (url, title, text) => {
     navigator.share({
         title,
         url,
-        text: `${title} on @${Brand.twitter}`
+        text
     }).then(() => {
         console.log("Successful shared article.")
     }).catch(err => (
@@ -21,32 +25,57 @@ const nativeShare = (url, title) => {
     ))
 }
 
-const NativeShare = props => {
+const ShareTwitter = props => {
+    const text = props.text;
+    return (
+        <a className={Styles.Link} target='_blank' rel='noopener noreferrer' href={`https://twitter.com/intent/tweet?text=${text}`} >
+            <Twitter /> 
+        </a>
+    )
+}
+
+const OtherShare = props => {
     const url = props.url;
     const title = props.title;
     const author = props.author;
-    const text = `${title} by @${author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
+    return (
+        <>
+            <ShareTwitter
+                text = {sharedText(url, title, author)}
+            />
+        </>
+    )
+}
+
+const ShareArticle = props => {
+    const url = props.url;
+    const title = props.title;
+    const author = props.author;
+
+    const text = sharedText(url, title, author);
+
     return (
         <React.Fragment>
-            {
-                checkNativeShare() !== undefined ?
-                    <button title='Share article via your applications' onClick={() => nativeShare(url, title, text)}>
-                        <Share /> Share
-                    </button>
-                :
-                    null
-            }
+            <div className={Styles.ShareArticle}>
+                <p>Kindly share this article <span role='img' aria-label='Happy Emoji'>😃</span></p>
+                <div className={Styles.Methods}>
+                    {
+                        checkNativeShare() !== undefined ?
+                            <button title='Share article via your applications' onClick={() => nativeShare(url, title, text)}>
+                                <Share /> Share
+                            </button>
+                        : (
+                            <OtherShare
+                                url = {url}
+                                title = {title}
+                                author = {author}
+                            />
+                        )
+                    }
+                </div>
+            </div>
         </React.Fragment>
     )
 }
 
-const ShareTwitter = props => {
-    const text = `${props.articleTitle} by @${props.author} on @${Brand.twitter} - ${Brand.domain}${props.href} %23${Brand.name.toLowerCase()}`;
-    return (
-        <a className={Styles.Link} target='_blank' rel='noopener noreferrer' href={`https://twitter.com/intent/tweet?text=${text}`} >
-            <Twitter />
-        </a>
-    )
-}
-export default NativeShare;
-export { ShareTwitter };
+export default ShareArticle;
