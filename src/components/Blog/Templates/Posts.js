@@ -5,6 +5,8 @@ import Post from './Post';
 import formatBlogDate from '../../../functions/dateFormatter';
 import { Link } from 'gatsby';
 import Layout from '../../../containers/Layout/Layout';
+import Brand from '../../Brand/Details';
+import Tags from '../Tags/Tags';
 
 export default ({pageContext}) => {
   const { pageCount }  = pageContext
@@ -17,6 +19,19 @@ export default ({pageContext}) => {
   
   return (
     <Layout
+    
+      PageTitle = {`${Brand.nameWithSpace} - Simplifying web topics like teaching a five year old.`}
+      PageLink = '/'
+      PageDescription = {`${Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old.`}
+      PageKeywords = "home, The Web For Five, The Web For 5, simplified web topics, javascript, html, css, explain like I'm five"
+      
+      FirstSection = {
+        <div>
+          <h3>#tags</h3>
+          <Tags />
+        </div>
+      }
+
       SecondSection = {
         <>
           <section className={Styles.Posts}>
