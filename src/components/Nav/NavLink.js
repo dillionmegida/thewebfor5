@@ -4,7 +4,8 @@ import { Link } from 'gatsby';
 export default props => (
     <li>
         <Link to={props.Link} title={props.Title} activeClassName={props.ActiveClassName}>
-            {props.Nav}
+            {/* The link title class is provided to remove the text (remaining the icon) on small screens */}
+            {props.Icon} <span className={props.LinkTitle}>&nbsp;{props.Nav}</span>
         </Link>
     </li>
 )

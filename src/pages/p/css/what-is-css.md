@@ -1,12 +1,13 @@
 ---
 title: What is CSS?
 category: css
-date: 12-27-2019
+date: 2019-12-27
+authorID: 1
 pageDescription: >-
   CSS stands for Cascading Stylesheet which is used to define how elements on a page are displayed. Its duty is to add beauty to a website by creating layouts for contents, adding colors, creating animations, etc.
 pageKeywords: 'css, what is css, cascading stylesheet, html and css'
 cover: >-
-  
+  https://res.cloudinary.com/dillionmegida/image/upload/v1577711060/images/thewebfor5/what-is-css_g8v05v.jpg
 tags: ["css"]
 ---
 ## What is CSS?
@@ -36,8 +37,8 @@ Different tags have their own properties. For example, text elements like header
 
 **Note that there is a range of values which can be set for any property.**
 
-## Using CSS in HTML
-CSS can be used in HTML in three ways:
+## Using CSS With HTML
+CSS can be used with HTML in three ways:
 * Inline Styling
 * Internal styling
 * External styling
@@ -70,8 +71,9 @@ In this method, the style is also declared in the same html file but the declara
   }
 </style>
 ```
+This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). This is followed by a **semi-colon (;)** which terminates the line. If this character is missed no a line, CSS would not interpret it.
 
-This block is usually declared in the `<head>` section of a document but it can be declared even in the `<body>`. It targets an `element` and sets a `property` with a desired `value` (from the range of values available for that property). By translating our inline style above to this method, we would have;
+By translating our inline style above to this method, we would have;
 ```html
 <style>
   p {
@@ -81,6 +83,11 @@ This block is usually declared in the `<head>` section of a document but it can 
   }
 </style>
 ```
+**Note that** the spaces do not mean anything to the browser. We could have everything on one line with semicolons stated appropriately like this;
+```html
+<style> p { color: red; font-size: 35px; text-align: center; } </style>
+```
+but readability would be difficult. This is the same reason why HTML elements are arranged spaciously.
 
 ### External Styling
 Unlike the above methods, this involves using the css declarations in another file which is with an extension of **.css**. That file is then referenced by the html document for the styles to take effect. This file would be similar to the internal styling syntax above but without the style tag.
@@ -111,6 +118,20 @@ The `rel` attribute shows the relationship between the linked and the current do
 `href` is an attirbute which specifies the location of the file which is referenced. Relative or absolute links can be used as long as you can reach the file.
 
 However, it is good practice to have stylings declared in another file. This aids readability (as there is a seperation between html codes and css codes) thereby providing easy in code editing and contributions.
+
+### Comments
+Comments help you locate certain areas of your codes easily. You have a 10-line code and feel its unnecessary to put any comments, but what if you like up to 500 lines of code or more. Comments can help you remember what elements you're styling or the purpose of your styles in some part of the CSS codes. They are ignored by the browser.
+
+Syntax for CSS comments is;
+```
+/* single-line comments */
+/*
+  multi
+  line
+  comments
+*/
+```
+The first is for single line comments while the second is for multi lines. In short, anything found between `/*` and `*/` is a comment.
 
 In the above codes, we selected the elements we wanted to style by their tag names. This means that every element on the page with that tag will be affected by the style declarations. On most occassions, this is not our intention. Sometimes, a developer may just want to select some paragraphs or some images to style. This is possible. Check out this article to know how - [Selector Methods in CSS](/p/css/css-selector-methods)
 

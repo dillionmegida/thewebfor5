@@ -1,7 +1,8 @@
 ---
 title: Websites and Web Applications - The Comparison
 category: general
-date: 12-26-2019
+date: 2019-12-26
+authorID: 1
 pageDescription: >-
   Websites and web applications are two terms which are often mistaken with the other. In this article, we'd look at them differently and compare to see the similarities and differences.
 pageKeywords: 'websites, web applications, difference between websites and web applications, websites and web applications, saas, software as a service'

@@ -1,7 +1,8 @@
 ---
 title: Library vs Framework
 category: general
-date: 12-20-2019
+date: 2019-12-20
+authorID: 1
 pageDescription: >-
   A library is a collection of modules for ease in development while a framework is a standard foundation from which programs and applications are built.
 pageKeywords: 'library, framework, fundamentals'

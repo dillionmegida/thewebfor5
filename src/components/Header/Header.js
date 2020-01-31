@@ -18,7 +18,7 @@ export default props => {
                 </Link>
             </div>
             <nav className={Styles.NavLinks}>
-                <NavLinks ActiveClassName={Styles.ActiveLink}/>
+                <NavLinks LinkTitleClass={Styles.LinkTitleClass} ActiveClassName={Styles.ActiveLink}/>
             </nav>
             <button onClick={props.DrawerBtnClicked} className={Styles.DrawerBtn}>
                 Draw

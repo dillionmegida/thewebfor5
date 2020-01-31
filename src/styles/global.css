@@ -8,13 +8,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--color5); 
+    background: #ddd; 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    /* background: var(--color2); */
-    background: var(--color2);
+    background: #333;
     border-radius: 10px;
 }
 

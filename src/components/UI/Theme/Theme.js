@@ -7,15 +7,14 @@ import { Sun, Moon } from '../Icons';
 
 const storageKey = `${Brand.name}_Theme`;
 
-// initialize theme
-if(checkGlobal()) {
-    let prevTheme = window.localStorage.getItem(storageKey);
-    if(prevTheme === null) {
-        window.localStorage.setItem(storageKey, 'light');
-    }
-}
-
-console.log(window.localStorage.getItem(storageKey));
+// initialize theme not working for some reasons
+// but the site is working fine. I would be expecting issue reports
+// if(checkGlobal()) {
+//     let prevTheme = window.localStorage.getItem(storageKey);
+//     if(!prevTheme === null) {
+//         window.localStorage.setItem(storageKey, 'light');
+//     }
+// }
 
 const saveDark = () => {
     if(checkGlobal()) {

@@ -1,7 +1,8 @@
 ---
 title: What is HTML?
 category: html
-date: 12-26-2019
+date: 2019-12-26
+authorID: 1
 pageDescription: >-
   HTML stands for HyperText Markup Language which is a standard markup language for building webpages. It defines the contents of web pages.
 pageKeywords: 'html, what is html, hypertext markup language, html and css'
@@ -28,6 +29,21 @@ HTML is a language which defines the contents of web pages. It tells a web brows
 Yes, you can!
 
 ## Terms used in HTML
+### Comments
+Comments help you locate certain areas of your codes easily. You have a 10-line code and feel its unnecessary to put any comments, but what if you like up to 500 lines of code or more - Comments. They are not part of the program itself when the program is running, but they are always in the source code.
+
+You would also need comments to remember the exact thing you did while writing your codes.
+
+Syntax for CSS HTML is;
+```
+<!-- single-line comments -->
+<!--
+  multi
+  line
+  comments
+-->
+```
+The first is for single line comments while the second is for multi lines. In short, anything found between `<!--` and `-->` is a comment.
 ### Tags
 Tags are used to define contents. For headings, HTML provides `h1, h2, ..., h6` tags, for paragraphs, we have `p` tags and so on for many different formats. These tags are placed betweem angle brackets.
 ### Elements
@@ -42,6 +58,12 @@ Some HTML tags possess attributes which can be used for advance definition of el
 </tag>
 ```
 **Note that** not all tags have attributes and not all attributes can be used for all tags. Popular attributes which can be used in almost all tags are `class`, `id`, and so on.
+
+**Also Note that** the spaces do not mean anything to the browser. We could have everything on one line like this;
+```html
+<tag attr1='value' attr2='value'>element</tag>
+```
+but readability would be difficult. This is the same reason why CSS stylings are arranged spaciously.
 
 For example, let's look at a header element with the `align` attribute used for positioning the element.
 ```html

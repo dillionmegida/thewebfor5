@@ -5,26 +5,26 @@ import Brand from '../Brand/Details';
 
 const NavLists = [
     {
-        // name: 'Home',
-        name: 'fa fa-home',
+        name: 'Home',
+        icon: 'fa fa-home',
         href: '/',
-        title: `${Brand.name} - ${Brand.motto}`
+        title: `${Brand.name} - Homepage`
     },
     {
-        // name: 'Search',
-        name: 'fa fa-search',
+        name: 'Search',
+        icon: 'fa fa-search',
         href: '/search',
         title: `Search Topics`
     },
     {
-        // name: 'Categories',
-        name: 'fa fa-th-large',
+        name: 'Categories',
+        icon: 'fa fa-th-large',
         href: '/categories',
         title: `Web Development Categories`
     },
     {
-        // name: 'About',
-        name: 'fa fa-copyright',
+        name: 'About',
+        icon: 'fa fa-copyright',
         href: '/about',
         title: `About ${Brand.name}`
     }
@@ -43,9 +43,11 @@ export default props => (
             NavLists.map((nav, index) =>
                 <NavLink
                     key={`${nav.name}_${index}`}
-                    Nav={<i className={nav.name}/>}
+                    Nav={nav.name}
+                    Icon={<i className={nav.icon}/>}
                     Link={nav.href}
                     Title={nav.title}
+                    LinkTitle={props.LinkTitleClass}
                     ActiveClassName={props.ActiveClassName}
                 />   
             )

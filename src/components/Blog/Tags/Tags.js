@@ -28,7 +28,7 @@ export default () => (
             const limit = 15;
 
             edges.forEach(post => {
-                post.node.frontmatter.tags.forEach(tag => {
+                post.node.frontmatter.tags && post.node.frontmatter.tags.forEach(tag => {
                     if(tagsArr.length < limit && !tagsArr.includes(tag)) {
                         tagsArr.push(tag);
                     }

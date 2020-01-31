@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import Styles from '../Styles/IndividualPost.module.scss';
 
+import AllAuthors from '../../Author/AuthorList';
 import RelatedArticles from '../RelatedArticles/RelatedArticles';
 import { graphql, Link } from 'gatsby'; 
 import Layout from '../../../containers/Layout/Layout';
 import Brand from '../../Brand/Details';
 import formatBlogDate from '../../../functions/dateFormatter';
 import { saveArticle, isArticleSaved, unSaveArticle, SaveMsg } from '../Saved/Saved';
-import { ShareTwitter } from '../../SocialMedia/ShareArticle';
+import NativeShare, { ShareTwitter } from '../../SocialMedia/ShareArticle';
 import Newsletter from '../../Newsletter/Newsletter';
 import SuggestArticles from '../SuggestArticles/SuggestArticles';
 import EditArticle from '../Common/EditArticle';
@@ -35,12 +36,40 @@ export default ({ data }, props) => {
       }
     }
 
+    const authorFilter = AllAuthors.filter(author => (
+      author.authorID === frontmatter.authorID
+    ))
+
+    // If the filter is more than one, use dillion megida
+    let author;
+    if(authorFilter.length > 1) {
+      author = {...AllAuthors[0]}
+    } else {
+      author = authorFilter[0];
+    }
+
     const Header = props => (
       <div className={`${Styles.Header} ${props.OtherClasses}`}>
         <h1>{frontmatter.title}</h1>
         <p>{formatBlogDate(frontmatter.date)}<br/>
           <em>{post.timeToRead} min{post.timeToRead > 1 ? 's' : null} read</em>
         </p>
+        {
+          frontmatter.authorID ? (
+              <p className={Styles.Author}>
+                by&nbsp;
+                <Link
+                  to={`/author/${author.slug}`}
+                  title={`${author.name}, Author at ${Brand.name}`}
+                >
+                  {author.name}
+                </Link>
+              </p>
+            )
+          : (
+            <p>Dillion Megida</p>
+          )
+        }
         <p>Category: {frontmatter.category.toUpperCase()}</p>
         <span>
           {
@@ -75,7 +104,7 @@ export default ({ data }, props) => {
             PageLink = {fields.slug}
             PageDescription = {frontmatter.pageDescription}
             PageKeywords={frontmatter.pageKeywords}
-            TwitterImage={frontmatter.cover}
+            ImageCard={frontmatter.cover}
 
             FirstSection = {
               <Header OtherClasses={Styles.LeftContents}/>
@@ -96,7 +125,7 @@ export default ({ data }, props) => {
                     }
                     <div style={{borderTop: frontmatter.cover ? '0' : '1px solid var(--color5)'}} className={Styles.PostContent}>
                         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                        <p>If you have any questions or contributions regarding this article, kindly reach us on twitter - <a href={`https://twitter.com/${Brand.twitter}`}>@{Brand.name.toLowerCase()}</a></p>
+                        <p>If you have any questions or contributions regarding this article, kindly reach {author.name} (<a href={`https://twitter.com${author.twitter}`}>@{author.twitter}</a>) or visit us on twitter - <a href={`https://twitter.com/${Brand.twitter}`}>@{Brand.name.toLowerCase()}</a></p>
                     </div>
                 </article>
                 <div className={Styles.EditDiscuss}>
@@ -109,10 +138,18 @@ export default ({ data }, props) => {
                 </div>
                 <div className={Styles.ShareArticle}>
                   <p>Kindly share this article <span role='img' aria-label='Happy Emoji'>😃</span></p>
-                  <ShareTwitter
-                    articleTitle={frontmatter.title}
-                    href={post.fields.slug}
-                  />
+                  <div className={Styles.Methods}>
+                    <NativeShare
+                      url = {post.fields.slug}
+                      title = {frontmatter.title}
+                      author = {author.twitter}
+                    />
+                    <ShareTwitter
+                      articleTitle={frontmatter.title}
+                      href={post.fields.slug}
+                      author = {author.twitter}
+                    />
+                  </div>
                 </div>
                 <Newsletter />
                 <SuggestArticles />
@@ -142,6 +179,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        authorID
         cover
         tags
         category

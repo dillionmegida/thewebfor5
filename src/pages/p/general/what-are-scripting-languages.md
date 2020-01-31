@@ -1,7 +1,8 @@
 ---
 title: What are Scripting Languages?
 category: general
-date: 12-26-2019
+date: 2019-12-26
+authorID: 1
 pageDescription: >-
   Scriting langauges are languages which need to be interpreted by interpreters rather than being compiled. They use interpreters (developed for them) to convert their source code into machine codes which the computer would understand.
 pageKeywords: 'script'
