@@ -10,7 +10,6 @@ export default props => (
             graphql`
                 query {
                     allPosts: allMarkdownRemark(
-                        limit: 3
                         sort: { fields: [frontmatter___date], order: DESC }) {
                         edges {
                             node {
@@ -41,11 +40,15 @@ export default props => (
 
                 // ID is necessary to avoid using the same article in related articles
                 let articleID = props.articleID
+                
+                // This provides a limit for the related articles
+                let counter = 0;
+                let limit = 3;
 
                 AllPosts.forEach(post => {
                     tags.forEach(tag => {
-                        if(post.node.frontmatter.tags !== null && post.node.frontmatter.tags.includes(tag)) {
-                            if(!RelatedArr.includes(post.node) && post.node.id !== articleID)
+                        if(post.node.frontmatter.tags !== null && post.node.frontmatter.tags.includes(tag) ) {
+                            if(!RelatedArr.includes(post.node) && post.node.id !== articleID && counter < limit)
                                 RelatedArr.push(post.node);
                         }
                     })
