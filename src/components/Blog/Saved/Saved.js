@@ -109,9 +109,18 @@ export default () => (
 			data => {
 				const { edges: allPosts } = data.allPosts;
 
-				let savedArticlesArray_Filtered = allPosts.filter(({ node }) =>
-					savedArticlesArray.includes(node.id)
-				)
+				let savedArticlesArray_Filtered = [];
+
+				// This method isn't too performant friendly But I had to opt for this because the saved article array,
+				// in local storage only stores the keys. I have to ensure that the order in which it is stored is maintained.
+				// Something I may do in the future is save the whole article object in storage rather than the keys alone.
+				savedArticlesArray.forEach(id => {
+					allPosts.forEach(({ node }) => {
+						if(node.id === id) {
+							savedArticlesArray_Filtered.push(node);
+						}
+					})
+				})
 
 				const savedPostsHeader = (
 					<React.Fragment>
@@ -146,21 +155,21 @@ export default () => (
 								</div>
 								{
 									savedArticlesArray_Filtered.length !== 0 ?
-										savedArticlesArray_Filtered.reverse().map(({ node }) =>
+										savedArticlesArray_Filtered.reverse().map(post =>
 											<Post
-												key={node.id}
-												PostID={node.id}
+												key={post.id}
+												PostID={post.id}
 												dontShowSaveButtons
 
-												href={node.fields.slug}
+												href={post.fields.slug}
 
-												title={node.frontmatter.title}
+												title={post.frontmatter.title}
 
-												CoverSource={node.frontmatter.cover}
+												CoverSource={post.frontmatter.cover}
 												CoverAlt=''
 
-												excerpt={node.excerpt}
-												extraInfo={`${formatBlogDate(node.frontmatter.date)} | ${node.timeToRead} min${node.timeToRead > 1 ? 's' : ''} read`}
+												excerpt={post.excerpt}
+												extraInfo={`${formatBlogDate(post.frontmatter.date)} | ${post.timeToRead} min${post.timeToRead > 1 ? 's' : ''} read`}
 
 											/>
 										)

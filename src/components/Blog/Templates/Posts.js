@@ -43,6 +43,7 @@ export default ({pageContext}) => {
                   return (
                       <Post
                           key={node.id}
+                          PostID={node.id}
                           PostPosition={index}
                           
                           // FirstPostSpecialStyle is applied conditionally 
