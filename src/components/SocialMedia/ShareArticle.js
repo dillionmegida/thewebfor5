@@ -13,11 +13,11 @@ const sharedText = (url, title, author) => (
     `${title} by @${author} on @${Brand.twitter} - ${Brand.domain}${url} %23${Brand.name.toLowerCase()}`
 )
 
-const nativeShare = (url, title, text) => {
+const nativeShare = (url, title, author) => {
     navigator.share({
         title,
         url,
-        text: `${title} on @${Brand.twitter} #${Brand.name.toLowerCase()}`
+        text: `${title} by @${author} on @${Brand.twitter} #${Brand.name.toLowerCase()}`
     }).then(() => {
         console.log("Successful shared article.")
     }).catch(err => (
@@ -59,7 +59,7 @@ const ShareArticle = props => {
                 <div className={Styles.Methods}>
                     {
                         checkNativeShare() !== undefined ?
-                            <button title='Share article via your applications' onClick={() => nativeShare(url, title)}>
+                            <button title='Share article via your applications' onClick={() => nativeShare(url, title, author)}>
                                 <Share /> Share
                             </button>
                         : (
