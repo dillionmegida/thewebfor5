@@ -17,7 +17,7 @@ const nativeShare = (url, title, text) => {
     navigator.share({
         title,
         url,
-        text
+        text: `${title} on @${Brand.twitter} #${Brand.name.toLowerCase()}`
     }).then(() => {
         console.log("Successful shared article.")
     }).catch(err => (
@@ -52,8 +52,6 @@ const ShareArticle = props => {
     const title = props.title;
     const author = props.author;
 
-    const text = sharedText(url, title, author);
-
     return (
         <React.Fragment>
             <div className={Styles.ShareArticle}>
@@ -61,7 +59,7 @@ const ShareArticle = props => {
                 <div className={Styles.Methods}>
                     {
                         checkNativeShare() !== undefined ?
-                            <button title='Share article via your applications' onClick={() => nativeShare(url, title, text)}>
+                            <button title='Share article via your applications' onClick={() => nativeShare(url, title)}>
                                 <Share /> Share
                             </button>
                         : (
