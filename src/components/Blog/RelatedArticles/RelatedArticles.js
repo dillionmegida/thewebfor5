@@ -66,6 +66,7 @@ export default props => (
                                         RelatedArr.map(post =>
                                             <Post
                                                 key={post.id}
+                                                PostID={post.id}
 
                                                 href={post.fields.slug}
 
