@@ -76,7 +76,7 @@ const Post = props => {
 }
 
 Post.propTypes = {
-    PostID: PropTypes.number.isRequired,
+    PostID: PropTypes.isRequired,
     PostPosition: PropTypes.number,
     FirstPostSpecialStyle: PropTypes.bool,
     CoverSource: PropTypes.string,
