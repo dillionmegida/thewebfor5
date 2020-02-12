@@ -104,6 +104,8 @@ export default ({ data }, props) => {
             PageLink = {fields.slug}
             PageDescription = {frontmatter.pageDescription}
             PageKeywords={frontmatter.pageKeywords}
+            AuthorName = {author.name}
+            AuthorTwitter = {author.twitter}
             ImageCard={frontmatter.cover}
 
             FirstSection = {

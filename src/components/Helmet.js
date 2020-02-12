@@ -15,7 +15,10 @@ const AppHelmet = props => (
 
         <meta name='description' content={props.PageDescription} /> {/* edit */}
         <meta name="keywords" content={`thewebfor5, web, explain like I'm five, ELI5, beginners, ${props.PageKeywords}`} /> {/* edit */}
-        <meta name='author' content='Dillion Megida' />
+        
+        {/* Choose author name from blogs. If authorName prop isn't declared, use DIllion Megida */}
+        <meta name='author' content={props.AuthorName ? props.AuthorName : "Dillion Megida"}/>
+
 
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#262625" />
@@ -33,7 +36,7 @@ const AppHelmet = props => (
         <meta name="twitter:title" content={props.PageTitle} /> {/* edit */}
         <meta name="twitter:description" content={props.PageDescription} /> {/* edit */}
         <meta name="twitter:image" content={props.ImageCard ? props.ImageCard : `https://thewebfor5.com${MainImg}`} /> {/* edit */}
-        <meta name="twitter:creator" content="iamdillion" />
+        <meta name="twitter:creator" content={props.AuthorTwitter ? props.AuthorTwitter : "iamdillion"} />
 
         <meta name="referrer" content="origin-when-crossorigin" />
 
