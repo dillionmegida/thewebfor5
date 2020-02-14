@@ -155,7 +155,7 @@ let func = async () => {
     let result =  await value;
 } 
 //or
-{(async() => {
+(async () => {
     let result = await value;
 })
 ```
