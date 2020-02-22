@@ -23,7 +23,7 @@ async function myFunc() {
 }
 ```
     
-The `async` keyword before the function declaration states that the function should **return a promise.** The `await` keyword inside the function allows us to "wait" for values before performing executions.
+The `async` keyword before the function declaration states that the function **returns a promise.** The `await` keyword inside the function allows us to "wait" for values before performing executions.
 
 **Note that:** `await` can only be used inside an  `async` function.
 
@@ -35,7 +35,7 @@ What it does is that if the value would delay, the function is moved to the even
 
 ## Return Value
 
-The return value of the `async` function is either a resolved promise or a rejected promise.
+The return value of the `async` function is a promise.
 
 ## Example
 
