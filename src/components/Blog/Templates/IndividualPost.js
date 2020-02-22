@@ -106,7 +106,7 @@ export default ({ data }, props) => {
             PageKeywords={frontmatter.pageKeywords}
             AuthorName = {author.name}
             AuthorTwitter = {author.twitter}
-            ImageCard={frontmatter.cover ? frontmatter.cover : require(`../../../post-images/${fields.generatedCover}`)}
+            ImageCard={frontmatter.cover ? frontmatter.cover : require(`../../../post-images/${fields.generatedCoverSlug}`)}
 
             FirstSection = {
               <Header OtherClasses={Styles.LeftContents}/>
@@ -165,7 +165,7 @@ export const query = graphql`
       id
       fields {
         slug
-        generatedCover
+        generatedCoverSlug
       }
       html
       timeToRead
