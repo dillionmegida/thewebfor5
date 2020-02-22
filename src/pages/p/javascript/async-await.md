@@ -112,7 +112,7 @@ It's the same old `try...catch`. For example (from our code above):
 ...
 async function g() {
     console.log("games");
-    let result = await ret;
+    let result = ret;
     console.log(result);
     return result;
 }
@@ -155,7 +155,7 @@ let func = async () => {
     let result =  await value;
 } 
 //or
-{(async() => {
+(async () => {
     let result = await value;
 })
 ```
