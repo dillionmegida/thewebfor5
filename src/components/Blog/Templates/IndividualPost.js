@@ -106,7 +106,7 @@ export default ({ data }, props) => {
             PageKeywords={frontmatter.pageKeywords}
             AuthorName = {author.name}
             AuthorTwitter = {author.twitter}
-            ImageCard={frontmatter.cover}
+            ImageCard={frontmatter.cover ? frontmatter.cover : require(`../../../post-images/${fields.generatedCover}`)}
 
             FirstSection = {
               <Header OtherClasses={Styles.LeftContents}/>
@@ -118,7 +118,7 @@ export default ({ data }, props) => {
                 <article className={Styles.PostSection}>
                     <Header OtherClasses={Styles.PageHeader}/>
                     {
-                      // Display post cover if available
+                      // Display customized post cover if available
                       frontmatter.cover ?
                         <div className={Styles.PostCover}>
                           <img src={frontmatter.cover} alt={Styles.PostCover} />
@@ -165,6 +165,7 @@ export const query = graphql`
       id
       fields {
         slug
+        generatedCover
       }
       html
       timeToRead

@@ -2,6 +2,7 @@ const path = require('path');
 const _ = require("lodash");
 const { createFilePath } = require('gatsby-source-filesystem');
 const createPaginatedPages = require('gatsby-paginate');
+const createImage = require('gatsby-plugin-blog-cover');
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
@@ -12,6 +13,21 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             name: 'slug',
             value: slug,
         })
+
+        const { title } = node.frontmatter;
+		const generatedCoverSlug = createImage({
+            title,
+            imgPath: './src/post-images',
+            domain: "https://thewebfor5.com",
+            bgColor: "#262625",
+            titleColor: "#90ee90"
+        })
+        createNodeField({
+            node,
+            name: 'generatedCoverSlug',
+            value: generatedCoverSlug
+        })
+
     }
 }
 
@@ -56,13 +72,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        
+        // let { title } = node.frontmatter;
+        // imgPath = './images';
+        // const imageSlug = createImage(title, imgPath);
+
         createPage({
             path: node.fields.slug,
             component: path.resolve('./src/components/Blog/Templates/IndividualPost.js'),
             context: {
-                // Data passed to context is available
-                // in page queries as GraphQL variables.
-                slug: node.fields.slug,
+                slug: node.fields.slug
             }
         })
     })
