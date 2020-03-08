@@ -4,7 +4,7 @@ category: javascript
 date: 2020-03-07
 authorID: 1
 pageDescription: >-
-  
+  The callback queue is a feature in Javascript which queues codes that would be called back when the call stack is empty while the event loop continually checks if the call stack is empty then executes the codes in the callback queue.
 pageKeywords: 'callback queue, event loop, call stack'
 tags: ["javascript"]
 ---
