@@ -7,7 +7,7 @@ pageDescription: >-
   CSS animations allows elements on a page to change their styles in specified order and duration. It constitutes two parts which are the animation declaration and keyframes which controls specific points in time with specified styles.
 pageKeywords: 'css, animations, transition, animation, css animations'
 cover: >-
-
+    https://res.cloudinary.com/dillionmegida/image/upload/v1583726680/images/thewebfor5/pankaj-patel-SXihyA4oEJs-unsplash_bghm1v.jpg
 tags: ["css"]
 ---
 
