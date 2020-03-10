@@ -11,11 +11,11 @@ cover: >-
 tags: ["css"]
 ---
 
-CSS animations allows elements on a page to change their styles in specified order and duration. This is different from `transition` which watches changes and automatically acts on the changes. With animations, you manually set up the animation style of the element. These animations do not require Javascript. It's pure CSS.
+CSS animations allows elements on a page to change their styles in specified order and duration. This is different from `transition` which makes smooth changes on a property. With animations, you manually set up the animation style of the properties of the element at different point in time. These animations do not require Javascript. It's pure CSS.
 
 ## Syntax
 
-CSS animations constitutes two parts: The CSS style declaration for the animiation and a set of keyframes which specifies different points in time which styles are applied. Example:
+CSS animations can be made up of two parts: The CSS style declaration for the animiation and a set of keyframes which specifies different points in time which styles are applied. Example:
 
 ```css
 element {
@@ -32,7 +32,9 @@ element {
 }
 ```
 
-In the above, the animation name `spin` is declared for the element. At the keyframes section, it is specified that at 0% of 2 seconds, the element would rotate by 40deg and at 100% of 2 seconds, the element would rotate by 100deg.
+In the above, the animation name `spin` is declared for the element. This speicification would act on any keyframe with the same name. The keyframes specify several points in time whereby the properties and values would be changed.
+
+At the keyframes section, it is specified that at 0% of 2 seconds, the element would rotate by 40deg and at 100% of 2 seconds, the element would rotate by 100deg.
 
 Another easier configuration for the above is:
 
@@ -47,7 +49,7 @@ Another easier configuration for the above is:
 }
 ```
 
-`from` is the same thing as 0% and `to` refers to 100%. For 2 seconds, CSS would determine the rotation at every point in time before 100%.
+`from` is the same thing as 0% and `to` refers to 100%. For 2 seconds, CSS would determine the rotation at every point in time from % to 100%.
 
 To manually calculate this, we have 100deg - 40deg = 60deg being the difference in degrees. 60/100 = 0.6 been the degree per percentage. So at 0% of 2 seconds, the element has a rotation degree of 40, at 1%, the rotation degree becomes 40.6 and so on until 100%.
 
