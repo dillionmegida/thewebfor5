@@ -1,7 +1,7 @@
 ---
 title: Object.create() in Javascript
 category: javascript
-date: 2020-02-14
+date: 2020-03-21
 authorID: 1
 pageDescription: >-
   Object.create() is a method in Javascript used for creating new objects while using a former object as the new object's prototype.
