@@ -23,11 +23,11 @@ async function myFunc() {
 }
 ```
     
-The `async` keyword before the function declaration states that the function **returns a promise.** The `await` keyword inside the function allows us to "wait" for values before performing executions.
+The `async` keyword before the function declaration states that the function **returns a promise.**, hence treating it asynchronously like promises. The `await` keyword inside the function allows us to "wait" for values before performing executions.
 
 **Note that:** `await` can only be used inside an  `async` function.
 
-The `await` keyword pauses the execution of the function until the value is gotten before proceeding to other codes. It transfers the function to the event queue. It doesn't disrupt other codes outside the function.
+The `await` keyword pauses the execution of the function until the value is gotten (just like `then` waits) before proceeding to other codes. It transfers the function to the event queue. It doesn't disrupt other codes outside the function.
 
 `async/wait` codes has a synchronous looking structure (sequential execution of codes). Hence, `async` makes asynchronous operations readable by making them look synchronous.
 
@@ -112,16 +112,13 @@ It's the same old `try...catch`. For example (from our code above):
 ...
 async function g() {
     console.log("games");
-    let result = ret;
-    console.log(result);
-    return result;
+    let result = await ret;
+    try {
+        console.log(result);
+    } catch(err => {
+        console.log(`Error: ${err}`);    
+    })
 }
-try {
-    let toBePrinted = g();
-    console.log(toBePrinted);
-} catch(err => {
-    console.log(`Error: ${err}`);s
-})
 ```
 
 The `try...catch` block waits for the `async` function to return a value, then it "tries" to work with that value. If for any reasons there is an error withing the `try` block, execution flow is directed immediately to `catch` block.
