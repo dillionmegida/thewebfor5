@@ -35,7 +35,7 @@ Static sites are called static because **nothing changes** when browsed. Every u
 
 ### Demerits of static sites
 
-- Adding contents become a pain because unlike dynamic sites where the database needs to be updated, static files would require an entire...
+- Adding contents become a pain because unlike dynamic sites where the database is updated, static files would require an entire deployment to the server.
 - Real-time content like notifications, updates, generally things which require a background code running are not possible because everything is static once the page loads.
 
 Now we see the beauty of static sites. To make things easier, SSGs were created.
@@ -56,6 +56,6 @@ Some SSGs now support Content Management Systems. This doesn't introduce somethi
 
 ## Wrap up
 
-SSGs are becoming the next big thing in tech as many companies are beginning to adopt the concept for their static websites. Added to this is that SSGs can also be configured to work like dynamic sites.
+SSGs are becoming the next big thing in tech as many companies are beginning to adopt the concept for their static websites. Added to this is that SSGs can also be configured to work like dynamic sites. Talk about authentication, dynamic contents and so much more.
 
 Thanks for reading : )
