@@ -58,9 +58,9 @@ export default ({ data }, props) => {
             <p>
                 {formatBlogDate(frontmatter.date)}
                 <br />
-                <em>
+                <span className='greyText'>
                     {post.timeToRead} min{post.timeToRead > 1 ? "s" : null} read
-                </em>
+                </span>
             </p>
             {frontmatter.authorID ? (
                 <p className={Styles.Author}>
@@ -116,7 +116,7 @@ export default ({ data }, props) => {
             PageTitle={`${frontmatter.title} - ${Brand.name}`}
             PageLink={fields.slug}
             PageDescription={frontmatter.pageDescription}
-            PageKeywords={frontmatter.pageKeywords}
+            PageKeywords={`${frontmatter.pageKeywords}, ${author.name.toLowerCase()}`}
             AuthorName={author.name}
             AuthorTwitter={author.twitter}
             ImageCard={frontmatter.cover}
