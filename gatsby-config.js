@@ -32,11 +32,11 @@ module.exports = {
 
         // For transforming markdowns
         `gatsby-plugin-sharp`,
-        `gatsby-remark-images`,
         {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
+                    `gatsby-remark-autolink-headers`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {
