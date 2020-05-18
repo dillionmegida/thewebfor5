@@ -50,7 +50,7 @@ export default ({ pageContext, data }) => {
                                 return (
                                     <Post
                                         key={node.id}
-
+                                        PostID={node.id}
                                         href={slug}
                                         title={title}
 

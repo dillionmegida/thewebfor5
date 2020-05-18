@@ -97,6 +97,7 @@ export default class Search extends React.Component {
                                     {this.state.filteredArr.map(({ node }) => (
                                         <article key={node.id}>
                                             <Post
+                                                PostID={node.id}
                                                 href={node.fields.slug}
                                                 title={node.frontmatter.title}
                                                 tags={node.frontmatter.tags}
