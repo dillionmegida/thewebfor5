@@ -7,6 +7,7 @@ pageDescription: >-
     package.json and package-lock.json are two important files in node packages, but package-lock.json is often git-ignored. Let's look at how these files work together
 pageKeywords: " package.json, package-lock.json, package.json vs package-lock.json, npm, node"
 tags: ["javascript"]
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1590842144/images/thewebfor5/package-lock_package-lock.json_kjjnho.png"
 ---
 
 `package.json` and `package-lock.json` are two very common files you'll find in most packages.
