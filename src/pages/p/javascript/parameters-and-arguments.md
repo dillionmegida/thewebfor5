@@ -3,6 +3,7 @@ title: Parameters and Arguments
 category: javascript
 date: 2020-06-23
 authorID: 2
+cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1593078685/images/thewebfor5/parameters-arguments_hbrnzt.png'
 pageDescription: >-
   Parameters, simply put, are variable names which are used to hold values which are passed when we call a function or a method. We pass in parameters when we create functions. They are optional in nature, not every function needs to have a parameter, but they are very helpful. Arguments on the other hand are the actual values we want the parameters/variables in the function to hold.
 pageKeywords: 'parameters, functions, arguments, methods, variable, default parameters, es6, variable assignment'
