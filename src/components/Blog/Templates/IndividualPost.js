@@ -143,6 +143,7 @@ export default ({ data }, props) => {
                             className={Styles.PostContent}
                         >
                             <div
+                                className={Styles.Html}
                                 dangerouslySetInnerHTML={{ __html: post.html }}
                             />
                             <p>
