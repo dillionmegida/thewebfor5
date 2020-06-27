@@ -5,9 +5,9 @@ date: 2020-03-08
 authorID: 1
 pageDescription: >-
   CSS animations allows elements on a page to change their styles in specified order and duration. It constitutes two parts which are the animation declaration and keyframes which controls specific points in time with specified styles.
-pageKeywords: 'css, animations, transition, animation, css animations'
+pageKeywords: "css, animations, transition, animation, css animations"
 cover: >-
-    https://res.cloudinary.com/dillionmegida/image/upload/v1583726680/images/thewebfor5/pankaj-patel-SXihyA4oEJs-unsplash_bghm1v.jpg
+  https://res.cloudinary.com/dillionmegida/image/upload/v1583726680/images/thewebfor5/pankaj-patel-SXihyA4oEJs-unsplash_bghm1v.jpg
 tags: ["css"]
 ---
 
@@ -19,16 +19,16 @@ CSS animations can be made up of two parts: The CSS style declaration for the an
 
 ```css
 element {
-    animation-name: spin;
-    animation-duration: 2s;
+  animation-name: spin;
+  animation-duration: 2s;
 }
 @keyframes animation {
-    0% {
-        transform: rotate(40deg);
-    }
-    100% {
-        transform: rotate(100deg);
-    }
+  0% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(100deg);
+  }
 }
 ```
 
@@ -40,12 +40,12 @@ Another easier configuration for the above is:
 
 ```css
 @keyframes animation {
-    from {
-        transform: rotate(40deg);
-    }
-    to {
-        transform: rotate(100deg);
-    }
+  from {
+    transform: rotate(40deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
 }
 ```
 
@@ -57,15 +57,15 @@ Time points between 0% and 100% can also be specified with different styles. An 
 
 ```css
 @keyframes animation {
-    from {
-        transform: rotate(40deg);
-    }
-    45% {
-        transform: rotate(80deg);
-    }
-    to {
-        transform: rotate(100deg);
-    }
+  from {
+    transform: rotate(40deg);
+  }
+  45% {
+    transform: rotate(80deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
 }
 ```
 
@@ -103,7 +103,7 @@ Instead of specifying all sub-properties, you can use a short-hand property call
 
 ```css
 element {
-    animation: spin 2s infinite alternate 3s backwards;
+  animation: spin 2s infinite alternate 3s backwards;
 }
 ```
 
@@ -132,26 +132,26 @@ Multiple animations can be specified for elements. An example is:
 
 ```css
 element {
-    animation-name: spin, moveRight;
-    animation-delay: 2s;
-    animation-duration: 3s 5s;
-    animation-iteration-count: infinite 4;
+  animation-name: spin, moveRight;
+  animation-delay: 2s;
+  animation-duration: 3s 5s;
+  animation-iteration-count: infinite 4;
 }
 @keyframes spin {
-    from {
-        transform: rotate(40deg);
-    }
-    to {
-        transform: rotate(100deg);
-    }
+  from {
+    transform: rotate(40deg);
+  }
+  to {
+    transform: rotate(100deg);
+  }
 }
 @keyframes moveRight {
-    from {
-        margin-left: 20px;
-    }
-    to {
-        margin-left: 100px;
-    }
+  from {
+    margin-left: 20px;
+  }
+  to {
+    margin-left: 100px;
+  }
 }
 ```
 
@@ -161,7 +161,7 @@ The shorthand representation of the above is:
 
 ```css
 element {
-    animation: spin 3s 2s infinite, moveRight 5s 2s 4;
+  animation: spin 3s 2s infinite, moveRight 5s 2s 4;
 }
 ```
 

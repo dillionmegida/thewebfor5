@@ -1,11 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import Author from '../../components/Author/Author';
+import Author from "../../components/Author/Author"
 
 export default () => {
-    return (
-        <Author
-            authorID = {1}
-        />
-    )
+  return <Author authorID={1} />
 }

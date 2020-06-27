@@ -5,7 +5,7 @@ date: 2020-05-03
 authorID: 1
 pageDescription: >-
   Static site generators are a new and popular technology used in creating fast, powerful and secured static sites.
-pageKeywords: 'ssg, static sites, static site generators, wordpress, cms, drupal, gatsby, hugo, jekyll'
+pageKeywords: "ssg, static sites, static site generators, wordpress, cms, drupal, gatsby, hugo, jekyll"
 tags: ["ssg"]
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1588479985/images/thewebfor5/SSGs_gzcmxa.png"
 ---

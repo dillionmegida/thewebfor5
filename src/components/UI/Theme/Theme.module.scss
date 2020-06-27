@@ -1,27 +1,28 @@
-.DarkBtn, .LightBtn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    font-size: 10px;
-    width: 25px;
+.DarkBtn,
+.LightBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 10px;
+  width: 25px;
 
-    & i {
-        font-size: 25px;
-    }
+  & i {
+    font-size: 25px;
+  }
 
-    &:focus {
-        outline: 1px solid var(--color1);
-    }
+  &:focus {
+    outline: 1px solid var(--color1);
+  }
 }
 
 .DarkBtn i {
-    // display: none;
-    color: lightgreen;
-    text-shadow: 1px 0px 3px lightgreen;
+  // display: none;
+  color: lightgreen;
+  text-shadow: 1px 0px 3px lightgreen;
 }
 
 .LightBtn i {
-    color: orange;
-    text-shadow: 1px 0px 3px orange;
+  color: orange;
+  text-shadow: 1px 0px 3px orange;
 }

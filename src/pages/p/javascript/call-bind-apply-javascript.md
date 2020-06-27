@@ -4,10 +4,10 @@ category: javascript
 date: 2020-03-28
 authorID: 1
 pageDescription: >-
-   call, bind and  apply are three methods in Javascript used to change the scope of this variable in a function.
-pageKeywords: 'call, bind, apply, this, call this, apply this'
+  call, bind and  apply are three methods in Javascript used to change the scope of this variable in a function.
+pageKeywords: "call, bind, apply, this, call this, apply this"
 tags: ["javascript"]
-cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1585408872/images/thewebfor5/call_bind_apply_ujjhbs.png'
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1585408872/images/thewebfor5/call_bind_apply_ujjhbs.png"
 ---
 
 These methods in Javascript are used to scope the keyword `this` in a function. In my [article (Almighty this, demystified)](https://dillionmegida.com/p/this-demystified), I wrote:
@@ -20,12 +20,12 @@ For example:
 
 ```js
 const me = {
-    name: 'Dillion',
-    printName: function() {
-        console.log(this.name)
-    }
+  name: "Dillion",
+  printName: function () {
+    console.log(this.name)
+  },
 }
-me.printName();
+me.printName()
 ```
 
 In the above, `printName()` would work as expected (log 'Dillion') because `this` at that point in time refers to the object (`me`) calling the method.
@@ -34,20 +34,20 @@ But look at this example:
 
 ```js
 const me = {
-    name: 'Dillion',
-    age: 56,
-    print: function() {
-        function printName() {
-            console.log(this.name);
-        }
-        printName()
-        function printAge() {
-            console.log(this.age);
-        }
-        printAge()
+  name: "Dillion",
+  age: 56,
+  print: function () {
+    function printName() {
+      console.log(this.name)
     }
+    printName()
+    function printAge() {
+      console.log(this.age)
+    }
+    printAge()
+  },
 }
-me.printName();
+me.printName()
 ```
 
 The expected outputs are `undefined` and `undefined`. This is because, the functions `printName` and `printAge` do not use `me` as their `this`. `me` did not directly call them, so their default `this` is `window`. And on `window`, `name` and `age` property do not exist.
@@ -66,15 +66,15 @@ This method is used set `this` in a function which is afterwards, executed. Exam
 
 ```js
 const me = {
-    name: 'Dillion',
-    print: function() {
-        function printName() {
-            console.log(this.name);
-        }
-        printName.call(this)
+  name: "Dillion",
+  print: function () {
+    function printName() {
+      console.log(this.name)
     }
+    printName.call(this)
+  },
 }
-me.printName();
+me.printName()
 ```
 
 The expected output now is 'Dillion'.
@@ -85,13 +85,13 @@ Another example is;
 
 ```js
 const me = {
-    name: 'Dillion'
+  name: "Dillion",
 }
 function printName(arg1) {
-    console.log(arg1 + ' ' + this.name);
+  console.log(arg1 + " " + this.name)
 }
-printName();
-printName.call(me, 'Hello');
+printName()
+printName.call(me, "Hello")
 ```
 
 The expected outputs are `undefined` and 'Hello Dillion'. This is because, `printName()` called without an object uses the global `this` which points to `window` (and doesn't have the `name` property) whie `printName.call(me)` uses `me` to define it's `this`.
@@ -112,12 +112,12 @@ Example:
 
 ```js
 const me = {
-    name: 'Dillion'
+  name: "Dillion",
 }
 function printName(arg1) {
-    console.log(arg1 + ' ' + this.name);
+  console.log(arg1 + " " + this.name)
 }
-const newPrint = printName.bind(me, 'Hello');
+const newPrint = printName.bind(me, "Hello")
 newPrint()
 ```
 
@@ -137,12 +137,12 @@ Example:
 
 ```js
 const me = {
-    name: 'Dillion'
+  name: "Dillion",
 }
 function printName(arg1, arg2) {
-    console.log(arg1 + ' ' + this.name + ' >> ' + arg2);
+  console.log(arg1 + " " + this.name + " >> " + arg2)
 }
-printName.apply(me, ['Hello', 'Wow']);
+printName.apply(me, ["Hello", "Wow"])
 ```
 
 The expected output is 'Hello Dillion >> Wow'.

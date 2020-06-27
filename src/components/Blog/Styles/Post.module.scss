@@ -1,102 +1,100 @@
 .Post {
-    width: 100%;
-    margin: 20px 0;
-    height: min-content;
-    border: 1px solid var(--color2);
-    padding: 20px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    // align-content: center;
-    
-    flex-wrap: wrap;
-    color: var(--color3);
-    box-shadow: 10px 10px 0 var(--color5);
-    
-    &.FirstPost {
-        flex-flow: column;
-        max-height: 450px;
-        padding: 10px;
+  width: 100%;
+  margin: 20px 0;
+  height: min-content;
+  border: 1px solid var(--color2);
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  // align-content: center;
 
-        & .PostCover {
-            width: 100%;
-            height: auto;
-            background-color: var(--color3);
-            overflow: hidden;
+  flex-wrap: wrap;
+  color: var(--color3);
+  box-shadow: 10px 10px 0 var(--color5);
 
-            & img {
-                width: 100%;
-                height: 100%;   
-                object-fit: cover;
-            }
-        }
-    }
+  &.FirstPost {
+    flex-flow: column;
+    max-height: 450px;
+    padding: 10px;
 
-    & .PostDetails {
+    & .PostCover {
+      width: 100%;
+      height: auto;
+      background-color: var(--color3);
+      overflow: hidden;
+
+      & img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 
-        & h2 {
-            color: var(--color2);
-            margin: 3px 0;
-            font-size: 30px;
-            border-bottom: 1px solid var(--color1);
+  & .PostDetails {
+    width: 100%;
 
-            &:hover, &:focus {
-                border-bottom: 1px solid var(--color2);
-            }
-        }
+    & h2 {
+      color: var(--color2);
+      margin: 3px 0;
+      font-size: 30px;
+      border-bottom: 1px solid var(--color1);
 
-        & p {
-            margin: 5px 0;
-            line-height: 1.5;
-        }
-
-        
-        & .Extra {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            width: 100%;
-            justify-content: space-between;
-
-                & p {
-                    font-weight: bold;
-                    font-size: 14px;
-                }
-
-                & button {
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-                    padding: 5px;
-
-                    &:hover, &:focus {
-                        text-decoration: underline;
-                    }
-
-                    &.Unsave {
-                        color: var(--color2);
-                    }
-
-                    &.Save {
-                        color: var(--color4);
-                    }
-                    
-                }
-
-        }
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid var(--color2);
+      }
     }
 
+    & p {
+      margin: 5px 0;
+      line-height: 1.5;
+    }
+
+    & .Extra {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+
+      & p {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      & button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+
+        &.Unsave {
+          color: var(--color2);
+        }
+
+        &.Save {
+          color: var(--color4);
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .Post .PostDetails h2 {
-        font-size: 20px;
-    }
+  .Post .PostDetails h2 {
+    font-size: 20px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
-    .Post .PostDetails .Extra > p {
-        font-size: 11px;
-    }
+  .Post .PostDetails .Extra > p {
+    font-size: 11px;
+  }
 }

@@ -5,7 +5,7 @@ date: 2020-03-21
 authorID: 1
 pageDescription: >-
   Object.create() is a method in Javascript used for creating new objects while using a former object as the new object's prototype.
-pageKeywords: 'javascript, object.create, prototypes'
+pageKeywords: "javascript, object.create, prototypes"
 tags: ["javascript"]
 ---
 
@@ -17,17 +17,13 @@ Prototypes are also objects. For an object (A) to be a protoype of object (B), i
 
 ```js
 let obj = {
-    name: 'Object',
-    number: 3,
-    print: function() {
-        return 'A method, yeah'
-    }
+  name: "Object",
+  number: 3,
+  print: function () {
+    return "A method, yeah"
+  },
 }
-console.log(
-    obj.name,
-    obj.number,
-    object.print()
-)
+console.log(obj.name, obj.number, object.print())
 // Expected output
 // Object
 // 3
@@ -53,19 +49,19 @@ Where does `hasOwnProperty` method come from?
 Well, from the global `Object` which is a prototype of `obj`. To check this out, try this:
 
 ```js
-console.log(obj);
+console.log(obj)
 ```
 
 In the console, you'll find the properties and method logged, but with one faded (hidden) property - `__proto__`. When you view more about the property, you'll find the constructor `Object` which has the `hasOwnProperty` method. That's basically what prototypes are.
 
-##  `Object.create()` in action
+## `Object.create()` in action
 
 ### Syntax
 
 `Object.create()` is a method which takes an argument of the object which would be the prototype of the new object.
 
 ```js
-const newObj = Object.create(existingObj);
+const newObj = Object.create(existingObj)
 ```
 
 `null` can also be passed as an argument which means the new object would not have any prototype.
@@ -82,12 +78,12 @@ The return value of this method is an empty object. Yes, the object is literally
 
 ```js
 const obj = {
-    name: "Javascript",
-    print: function() {
-        return 'Prototype'
-    }
+  name: "Javascript",
+  print: function () {
+    return "Prototype"
+  },
 }
-const newObj = Object.create(obj);
+const newObj = Object.create(obj)
 console.log(newObj)
 console.log(newObj.name)
 // Expected output
@@ -98,7 +94,7 @@ console.log(newObj.name)
 As you can see, when `newObj` is logged, an empty object is gotten, but `newObj.name` outputs the `name` property of it's object prototype. Let's check the properties of `newObj`
 
 ```js
-console.log(newObj);
+console.log(newObj)
 ```
 
 When you check the output in the console, you'll see an empty object, with the same `__proto__` property which contains all the properties and methods of `obj`. You'll also find another `__proto__`. As you may have thought, the second `__proto__` references the global `Object` prototype. Remember I said that all objects are creaed from the `Object` prototype. So even if `obj` was used as prototype for another object, it also has it's own existing prototype.

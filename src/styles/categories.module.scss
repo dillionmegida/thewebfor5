@@ -1,67 +1,67 @@
 .CategoriesContainer {
-    width: 100%;
-    margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 
-    & > h1 {
-        text-align: center;
-        color: var(--color2);
-    }
+  & > h1 {
+    text-align: center;
+    color: var(--color2);
+  }
 
-    & .Categories {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+  & .Categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-        & .Category {
-            width: 180px;
-            height: 180px;
-            border-radius: 10px;
-            border: 1px solid var(--color2);
-            flex: 1fr 2fr;
-            margin: 20px;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-flow: column;
-            box-shadow: 10px 10px 0 var(--color5);
+    & .Category {
+      width: 180px;
+      height: 180px;
+      border-radius: 10px;
+      border: 1px solid var(--color2);
+      flex: 1fr 2fr;
+      margin: 20px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      box-shadow: 10px 10px 0 var(--color5);
 
-            & > * {
-                margin: 5px 0;
-            }
+      & > * {
+        margin: 5px 0;
+      }
 
-            &:hover {
-                box-shadow: none;
-                border-color: var(--color4);
+      &:hover {
+        box-shadow: none;
+        border-color: var(--color4);
 
-                & > h2 {
-                    color: var(--color4);
-                }
-            }
-
-            & > h2 {
-                color: var(--color2);
-            }
-
-            & > .Excerpt {
-                color: var(--color3);
-                text-align: center;
-
-                & p:last-child {
-                    text-decoration: underline;
-                }
-            }
+        & > h2 {
+          color: var(--color4);
         }
+      }
+
+      & > h2 {
+        color: var(--color2);
+      }
+
+      & > .Excerpt {
+        color: var(--color3);
+        text-align: center;
+
+        & p:last-child {
+          text-decoration: underline;
+        }
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 800px) {
-    .CategoriesContainer .Categories {
-        justify-content: center;
+  .CategoriesContainer .Categories {
+    justify-content: center;
 
-        & .Category {
-            width: 200px;
-            height: 200px;
-        }
+    & .Category {
+      width: 200px;
+      height: 200px;
     }
+  }
 }

@@ -4,23 +4,27 @@ category: general
 date: 2020-01-22
 authorID: 2
 pageDescription: >-
-  Cross-Origin Resource Sharing is a security measure that defines how two URLs interact with each other. Resource sharing is the act of data exchange between two or more URLs. 
-pageKeywords: 'cors, cors error, introduction to cors, response headers, cors basic, cors extension, 3rd party server, origin, cross origin resource sharing'
-cover: >- 
-  
+  Cross-Origin Resource Sharing is a security measure that defines how two URLs interact with each other. Resource sharing is the act of data exchange between two or more URLs.
+pageKeywords: "cors, cors error, introduction to cors, response headers, cors basic, cors extension, 3rd party server, origin, cross origin resource sharing"
+cover: >-
+
 tags: ["cors"]
 ---
+
 ## What is CORS?
+
 Cross-Origin Resource Sharing (CORS) is a security measure that defines how two URLs interact with each other. The word origin here simply means the source, where something comes from. The origin of man according to Christians can be traced to God, the origin of clothing can be traced the early years when people wore animal skin, so also the origin of a video can be traced to its YouTube URL or in this case an API request can be traced to your laptop(http://127.0.0.1:5500/index.html or example.com).
 
 Resource sharing is the act of data exchange between two or more urls. For example, you make an api GET request and you get a response back or you click on a link to view cute cat videos and the page opens up with hundreds of videos for you to view, the server on which the cute cat videos are hosted on is sharing its resource with you.
 
 ### Same-Origin
+
 By default, APIs run on the same origin, this means that the requests are sent internally and the response is also internal. An example of these are private APIs used by developers working in a company. They can make requests and add to application functionality with these APIs, so both the origin of the request and the response are the same because it is all internal.
 
 However, if we were to make a request from say example.com to index.com/api, the CORS policy would step in and we might get the popular CORS error because the two origins are different and are cross-origin not same-origin.
 
 ### Cross-Origin
+
 CORS is a W3C standard that was created as a security measure to safeguard the whole process of requests and response between different URLs. CORS makes it safer by making sure that suspicious or malicious URLs cannot just extract data from you without proper authorization.
 
 Whenever a request goes through successfully, it means the response included a “Access-Control-Allow-Origin” header in it’s response and this is why the request origin gets a response back instead of the CORS policy stepping in and disallowing the communication.
@@ -33,7 +37,8 @@ The Access-Control-Allow-Origin header simply specifies that an origin trying to
 
 You can check response headers by navigating to network in Chrome Dev tools. Without making a request, the headers will not be visible, however after making a request, the network activity becomes visible.
 
-### Ways to allow CORS 
+### Ways to allow CORS
+
 Below two of the most popular ways to allow cors are discussed extensively:
 
 #### 1. CORS chrome extension
@@ -55,5 +60,3 @@ By doing this, you would first be making a request to the cors-anywhere app whic
 One of the minor problems is that it takes a slightly longer time to get back a response and this is because we are in a way calling two servers.
 
 This is an introduction to the CORS topic and does not cover every topic, methods for allowing CORS or possible error scenario.
-
-

@@ -1,16 +1,17 @@
 .Newsletter {
-    width: 230px;
-    display: flex;
-    justify-content: center;
-    margin: 30px auto;
+  width: 230px;
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
 
-    & a {
-        border: 1px solid var(--color5);
-        padding: 5px;
-        color: var(--color2);
+  & a {
+    border: 1px solid var(--color5);
+    padding: 5px;
+    color: var(--color2);
 
-        &:hover, &:focus {
-            border: 1px solid var(--color3);
-        }
+    &:hover,
+    &:focus {
+      border: 1px solid var(--color3);
     }
+  }
 }

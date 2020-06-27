@@ -4,7 +4,7 @@ category: javascript
 date: 2020-05-30
 authorID: 1
 pageDescription: >-
-    package.json and package-lock.json are two important files in node packages, but package-lock.json is often git-ignored. Let's look at how these files work together
+  package.json and package-lock.json are two important files in node packages, but package-lock.json is often git-ignored. Let's look at how these files work together
 pageKeywords: " package.json, package-lock.json, package.json vs package-lock.json, npm, node"
 tags: ["javascript"]
 cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1590842144/images/thewebfor5/package-lock_package-lock.json_kjjnho.png"
@@ -28,12 +28,12 @@ Let's look at a few of those properties.
 
 ### Properties of `package.json`
 
--   `name`: The name of your package.
--   `description`: The purpose of your package.
--   `main`: The path to the default file which Node.js uses as a starting point for your package. In cases where your package is required without a path to a file (like this: `require('package-name')`), the main file is used.
--   `scripts`: It contains a list of custom scripts which can be run with npm.
--   `dependencies`: It contains dependencies which would be required by your package to work.
--   `devDependencies`: It contains dependencies which are not required for your package to be used during production.
+- `name`: The name of your package.
+- `description`: The purpose of your package.
+- `main`: The path to the default file which Node.js uses as a starting point for your package. In cases where your package is required without a path to a file (like this: `require('package-name')`), the main file is used.
+- `scripts`: It contains a list of custom scripts which can be run with npm.
+- `dependencies`: It contains dependencies which would be required by your package to work.
+- `devDependencies`: It contains dependencies which are not required for your package to be used during production.
 
 package.json holds important information of your package.
 
@@ -53,8 +53,8 @@ This feature comes with a good and a bad side effect.
 
 > A higher major version of a package with 1.3.5 can be 1.4.7, 1.9.3 but cannot be 2.0.0 or more.
 
--   **Good**: you always get to use the latest versions of packages.
--   **Bad**: you always get to use the latest versions of packages.
+- **Good**: you always get to use the latest versions of packages.
+- **Bad**: you always get to use the latest versions of packages.
 
 ??
 
@@ -94,6 +94,6 @@ Your package can exist without package-lock.json but you should understand what 
 
 ## Read More
 
--   [Everything You Wanted To Know About package-lock.json But Were Too Afraid To Ask](https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8)
+- [Everything You Wanted To Know About package-lock.json But Were Too Afraid To Ask](https://medium.com/coinmonks/everything-you-wanted-to-know-about-package-lock-json-b81911aa8ab8)
 
 Thanks for reading : )

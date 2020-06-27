@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react"
 
-import Saved from '../components/Blog/Saved/Saved';
+import Saved from "../components/Blog/Saved/Saved"
 
 export default () => {
-	return (
-		<Saved />
-	)
+  return <Saved />
 }

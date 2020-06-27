@@ -3,39 +3,38 @@
 /* Theme and color variables is configured in Layout.module.scss */
 
 ::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #ddd; 
+  background: #ddd;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #333;
-    border-radius: 10px;
+  background: #333;
+  border-radius: 10px;
 }
 
-
 body {
-    margin: 0;
-    font-family: 'Open sans', 'Open Sans Light', Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: "Open sans", "Open Sans Light", Arial, Helvetica, sans-serif;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
-    transition: all 300ms;
+  box-sizing: border-box;
+  transition: all 300ms;
 }
 
 .greyText {
-    color: rgb(109, 109, 109);
+  color: rgb(109, 109, 109);
 }

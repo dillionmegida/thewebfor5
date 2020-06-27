@@ -4,10 +4,10 @@ category: javascript
 date: 2020-04-10
 authorID: 1
 pageDescription: >-
-    The sort method is used on arrays to arrange the values in a specified order which depends on a compare function. If no compare function is specified, the default order is ascending/alphabetic which treats the values to strings.
+  The sort method is used on arrays to arrange the values in a specified order which depends on a compare function. If no compare function is specified, the default order is ascending/alphabetic which treats the values to strings.
 pageKeywords: "sort, array sort, sort method"
 tags: ["array"]
-cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1586542714/images/thewebfor5/array.sort_ymjvlp.png'
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1586542714/images/thewebfor5/array.sort_ymjvlp.png"
 ---
 
 The `sort` method just as the name implies sorts element in an array in a specificied order (could be ascending which is the **default**, descending, alphabetic or numeric)
@@ -59,7 +59,7 @@ For example:
 
 ```js
 function compareNums(a, b) {
-    return a - b
+  return a - b
 }
 const nums = [11, 1000, 554]
 nums.sort(compareNums)
@@ -76,7 +76,7 @@ Now we know that the order function is based on the returned value being either 
 
 ```js
 function compareNums(a, b) {
-    return b - a
+  return b - a
 }
 ```
 
@@ -90,18 +90,18 @@ In the following example, we want to arrange an array of objects with informatio
 
 ```js
 const people = [
-    {
-        name: "Stedy",
-        age: 23,
-    },
-    {
-        name: "James",
-        age: 89,
-    },
-    {
-        name: "Alice",
-        age: 34,
-    },
+  {
+    name: "Stedy",
+    age: 23,
+  },
+  {
+    name: "James",
+    age: 89,
+  },
+  {
+    name: "Alice",
+    age: 34,
+  },
 ]
 ```
 
@@ -109,7 +109,7 @@ Above is the array of names. Now the compare function.
 
 ```js
 function comparePeople(a, b) {
-    return b.age - a.age
+  return b.age - a.age
 }
 ```
 
@@ -117,11 +117,11 @@ This can also be translated as:
 
 ```js
 function comparePeople(a, b) {
-    if (b.age > a.age) {
-        return 1
-    } else {
-        return -1
-    }
+  if (b.age > a.age) {
+    return 1
+  } else {
+    return -1
+  }
 }
 ```
 

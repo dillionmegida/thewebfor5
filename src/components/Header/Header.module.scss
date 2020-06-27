@@ -1,84 +1,81 @@
 .Header {
-    background-color: var(--color1);
-    height: 50px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--color3);
-    padding: 0 20px;
-    position: fixed;
-    top: 0;
-    z-index: 1;
+  background-color: var(--color1);
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color3);
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 
-    & .Brand {
+  & .Brand {
+    & > a {
+      color: var(--color2);
+      height: 100%;
+      display: flex;
+      align-items: center;
 
-        & > a {
-            color: var(--color2);
-            height: 100%;
-            display: flex;
-            align-items: center;
+      & .Logo {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
 
-            & .Logo {
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-
-                & img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            & .Name {
-                font-size: 30px;
-            }
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
-    }
+      }
 
-    & .DrawerBtn {
-        display: none;
+      & .Name {
+        font-size: 30px;
+      }
     }
+  }
 
+  & .DrawerBtn {
+    display: none;
+  }
 }
 
-    
-
 .NavLinks ul {
-    display: flex;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 
-    & .ActiveLink {
-        font-weight: bold;
-        color: var(--color2);
+  & .ActiveLink {
+    font-weight: bold;
+    color: var(--color2);
+    background-color: var(--color2);
+    color: var(--color1);
+  }
+
+  & li {
+    margin: 0 5px;
+    // width: 90px;
+    width: 110px;
+    height: 100%;
+
+    & a {
+      display: block;
+      width: 100%;
+      color: var(--color3);
+      text-align: center;
+      border-bottom: 1px solid var(--color1);
+      padding: 5px;
+      font-size: 15px;
+
+      &:hover,
+      &:focus {
         background-color: var(--color2);
         color: var(--color1);
+      }
     }
-
-    & li {
-        margin: 0 5px;
-        // width: 90px;
-        width: 110px;
-        height: 100%;
-
-        & a {
-            display: block;
-            width: 100%;
-            color: var(--color3);
-            text-align: center;
-            border-bottom: 1px solid var(--color1);
-            padding: 5px;
-            font-size: 15px;
-            
-            &:hover, &:focus {
-                background-color: var(--color2);
-                color: var(--color1);
-            }
-        }
-    }
+  }
 }
 
 // @media only screen and (max-width: 670px) {
@@ -88,25 +85,25 @@
 // }
 
 @media only screen and (max-width: 800px) {
-    .Header ul li {
-        width: 40px;
-        font-size: 16px;
-    }
-    .Header .LinkTitleClass {
-        display: none;
-    }
+  .Header ul li {
+    width: 40px;
+    font-size: 16px;
+  }
+  .Header .LinkTitleClass {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 670px) {
-    .Header .Brand a .Name {
-        font-size: 25px;
-    }
+  .Header .Brand a .Name {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .Header .Brand a .Name {
-        display: none;
-    }
+  .Header .Brand a .Name {
+    display: none;
+  }
 }
 
 // @media only screen and (max-width: 670px) {

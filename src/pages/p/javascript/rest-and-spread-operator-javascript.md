@@ -4,10 +4,10 @@ category: javascript
 date: 2020-06-14
 authorID: 1
 pageDescription: >-
-    The Rest and Spread operator are two features of JavaScript introduced in ES6 which makes development easier with JavaScript. Learn their differences in this article.
+  The Rest and Spread operator are two features of JavaScript introduced in ES6 which makes development easier with JavaScript. Learn their differences in this article.
 pageKeywords: "rest, spread, rest vs spread"
 tags: ["es6"]
-cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1592158803/images/thewebfor5/rest_and_spread_xmwdsn.png'
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1592158803/images/thewebfor5/rest_and_spread_xmwdsn.png"
 ---
 
 The Rest and Spread operator are two features of JavaScript introduced in [ES6](http://es6-features.org/). They work entirely different but their similar syntax (triple dots `...`) brings some misconceptions when working with them.
@@ -30,7 +30,7 @@ This operator is used to get all or remaining arguments in a function as an arra
 
 ```js
 function printArgs(args) {
-    console.log(args)
+  console.log(args)
 }
 ```
 
@@ -40,8 +40,8 @@ Although, before `rest`, was `arguments`. Here's an example:
 
 ```js
 function printArgs(args) {
-    console.log(args)
-    console.log(arguments)
+  console.log(args)
+  console.log(arguments)
 }
 printArgs(1, 2, 3, 4, 5)
 // 1
@@ -52,7 +52,7 @@ The same program with `rest`:
 
 ```js
 function printArgs(...args) {
-    console.log(args)
+  console.log(args)
 }
 printArgs(1, 2, 3, 4, 5)
 // [1, 2, 3, 4, 5]
@@ -60,15 +60,15 @@ printArgs(1, 2, 3, 4, 5)
 
 `rest` is more useful than `arguments` because:
 
--   it allows you to name the arguments array whatever you like (as we saw above, `args`)
--   it returns an array, while `arguments` is an object, hence, array methods can be performed on `rest`'s result
--   while `arguments` gets **all** the arguments in the function, `rest` can be used to get the **remaining** arguments after some have been selected. Here's what I mean:
+- it allows you to name the arguments array whatever you like (as we saw above, `args`)
+- it returns an array, while `arguments` is an object, hence, array methods can be performed on `rest`'s result
+- while `arguments` gets **all** the arguments in the function, `rest` can be used to get the **remaining** arguments after some have been selected. Here's what I mean:
 
 ```js
 function printNumbers(firstNumber, secondNumber, ...remainingNumbers) {
-    console.log(firstNumber)
-    console.log(secondNumber)
-    console.log(remainingNumbers)
+  console.log(firstNumber)
+  console.log(secondNumber)
+  console.log(remainingNumbers)
 }
 printNumbers(1, 2, 3, 4, 5)
 // 1
@@ -150,10 +150,10 @@ For example:
 
 ```js
 function add(a, b) {
-    console.log(a + b)
+  console.log(a + b)
 }
 const numbers = [5, 6]
-add(...numbers);
+add(...numbers)
 // 11
 ```
 
@@ -171,16 +171,16 @@ For example:
 
 ```js
 const oldObj = {
-    lang: 'javascript',
-    score: 23
+  lang: "javascript",
+  score: 23,
 }
-const newObj1 ={...oldObj}
+const newObj1 = { ...oldObj }
 console.log(newObj1)
 // {lang: 'javascript', score: 23}
-const newObj2 = {...oldObj,short: 'JS'}
+const newObj2 = { ...oldObj, short: "JS" }
 console.log(newObj2)
 // { lang: 'javascript', score: 23, short: 'JS' }
-const newObj3 = {...oldObj, score: 40}
+const newObj3 = { ...oldObj, score: 40 }
 console.log(newObj3)
 // { lang: 'javascript', score: 40 }
 ```

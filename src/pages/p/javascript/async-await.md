@@ -5,7 +5,7 @@ date: 2020-02-14
 authorID: 1
 pageDescription: >-
   Async/Await is syntactic sugar for Promises which makes asynchronous code look synchronous. That is, easily readable and understandable.
-pageKeywords: 'javascript, promises, javascript promises, async, await, async/await, asunchronous, promises asynchronous, promise chain, promise chaining, then, catch, rejected, fulfilled, resolved'
+pageKeywords: "javascript, promises, javascript promises, async, await, async/await, asunchronous, promises asynchronous, promise chain, promise chaining, then, catch, rejected, fulfilled, resolved"
 tags: ["async", "javascript"]
 ---
 
@@ -19,13 +19,13 @@ No prior knowledge of Promises? Read about promises here - [Promises in Javascri
 async function myFunc() {
     ...
     await...
-    ... 
+    ...
 }
 ```
-    
+
 The `async` keyword before the function declaration states that the function **returns a promise.**, hence treating it asynchronously like promises. The `await` keyword inside the function allows us to "wait" for values before performing executions.
 
-**Note that:** `await` can only be used inside an  `async` function.
+**Note that:** `await` can only be used inside an `async` function.
 
 The `await` keyword pauses the execution of the function until the value is gotten (just like `then` waits) before proceeding to other codes. It transfers the function to the event queue. It doesn't disrupt other codes outside the function.
 
@@ -43,19 +43,19 @@ Examine the following code
 
 ```javascript
 let ret = new Promise((resolve, reject) => {
-    setTimeout(() => resolve("I'm done!"), 3000)
-});
+  setTimeout(() => resolve("I'm done!"), 3000)
+})
 async function g() {
-    console.log("games");
-    let result = await ret;
-    console.log(result);
+  console.log("games")
+  let result = await ret
+  console.log(result)
 }
 function hi() {
-    console.log("hi");
+  console.log("hi")
 }
-g();
-hi();
-console.log(5);
+g()
+hi()
+console.log(5)
 ```
 
 The output is
@@ -79,14 +79,13 @@ For our example above, we could adjust function `g` to return a promise (without
 
 ```js
 async function g() {
-    console.log("games");
-    let result = ret;
-    console.log(result);
-    return result;
+  console.log("games")
+  let result = ret
+  console.log(result)
+  return result
 }
-g()
-.then(res => console.log("Then: " + res));
-````
+g().then((res) => console.log("Then: " + res))
+```
 
 And the result would be:
 
@@ -116,7 +115,7 @@ async function g() {
     try {
         console.log(result);
     } catch(err => {
-        console.log(`Error: ${err}`);    
+        console.log(`Error: ${err}`);
     })
 }
 ```
@@ -142,19 +141,19 @@ This is exactly what `promises` do, but you could easily realize this in `async`
 The downsides of `async/await` is that unlike `promises`, `await` (which is sort of a replacement for `.then`) cannot be used at top-level. **It must be inside an `async` function**.
 
 ```js
-let result = await value;
+let result = await value
 ```
 
 **WRONG!!**
 
 ```js
 let func = async () => {
-    let result =  await value;
-} 
+  let result = await value
+}
 //or
-(async () => {
-    let result = await value;
-})
+;async () => {
+  let result = await value
+}
 ```
 
 **RIGHT!!**

@@ -5,7 +5,7 @@ date: 2020-05-16
 authorID: 1
 pageDescription: "Functions are objects in JavaScript which can be evoked and at the same time possess properties and methods. They are called first-class objects"
 tags: ["javascript", "objects"]
-cover: 'https://res.cloudinary.com/dillionmegida/image/upload/v1589586488/images/thewebfor5/Functions_hkbie2.png'
+cover: "https://res.cloudinary.com/dillionmegida/image/upload/v1589586488/images/thewebfor5/Functions_hkbie2.png"
 ---
 
 Did you know that functions are also objects in JavaScript?
@@ -14,7 +14,7 @@ However, `typeof` would print out `function` as seen below:
 
 ```js
 function print(name) {
-    console.log(name)
+  console.log(name)
 }
 console.log(typeof print)
 // 'function'
@@ -78,8 +78,8 @@ console.dir(print2)
 
 ```js
 print2.type = "language"
-print2.showType = function() {
-    console.log(this.type)
+print2.showType = function () {
+  console.log(this.type)
 }
 print2.showType()
 // language

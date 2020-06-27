@@ -5,7 +5,7 @@ date: 2020-03-07
 authorID: 1
 pageDescription: >-
   The callback queue is a feature in Javascript which queues codes that would be called back when the call stack is empty while the event loop continually checks if the call stack is empty then executes the codes in the callback queue.
-pageKeywords: 'callback queue, event loop, call stack'
+pageKeywords: "callback queue, event loop, call stack"
 tags: ["javascript"]
 ---
 
@@ -21,11 +21,11 @@ Javascript is a single-threaded language, which means that only one thing can ha
 In asynchronous Javascript, you must have come across the following features: `promise`, `async/await` and `setTimeout`. If you've seen them in execution, you'd observe that codes surrounding them are usually executed at a later time. Let's look at setTimeout (a web API) in action.
 
 ```js
-let name = "JS";
+let name = "JS"
 setTimeout(() => {
-    console.log(name);
-}, 1000);
-console.log(33);
+  console.log(name)
+}, 1000)
+console.log(33)
 ```
 
 If you look at this codes in the synchronous way, what we expect is: declare name variable, wait 1 seconds (1000ms) and log the name variable in the console, then log 33.
@@ -37,11 +37,11 @@ If you tried the above, you'd observe that 33 was logged first and after 1 secon
 Examine the following code:
 
 ```js
-let name = "JS";
+let name = "JS"
 setTimeout(() => {
-    console.log(name);
-}, 0);
-console.log(33);
+  console.log(name)
+}, 0)
+console.log(33)
 ```
 
 The time has been shorten to 0 seconds. But if you tried it, you'd observe that 33 was logged again before `name` 😕.

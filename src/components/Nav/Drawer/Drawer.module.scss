@@ -1,69 +1,68 @@
 .DrawerSection {
-    display: none;
-    margin: 0;
+  display: none;
+  margin: 0;
 }
 
 .Drawer {
-    width: 70%;
-    height: 100vh;
-    left: 30%;
-    top: 0;
-    position: fixed;
-    z-index: 5;
-    background-color: var(--color2);
+  width: 70%;
+  height: 100vh;
+  left: 30%;
+  top: 0;
+  position: fixed;
+  z-index: 5;
+  background-color: var(--color2);
 
-    & button {
-        float: right;
-        margin: 20px;
-        background: none;
-        color: red;
-        border: 0;
-        font-size: 30px;
-        cursor: pointer;
-    }
+  & button {
+    float: right;
+    margin: 20px;
+    background: none;
+    color: red;
+    border: 0;
+    font-size: 30px;
+    cursor: pointer;
+  }
 
-    & ul {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 50px;
-        margin: 50px 0 0;
-        padding: 0;
-        
+  & ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 50px 0 0;
+    padding: 0;
 
-        & li {
-            font-size: 20px;
-            width: 90%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
+    & li {
+      font-size: 20px;
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
 
-            & .ActiveLink {
-                font-weight: bold;
-                color: var(--color1);
-                border-bottom: 1px solid var(--color1);
-            }
+      & .ActiveLink {
+        font-weight: bold;
+        color: var(--color1);
+        border-bottom: 1px solid var(--color1);
+      }
 
-            & a {
-                width: 200px;
-                display: block;
-                color: var(--color1);
-                text-align: center;
-                padding: 5px;
-                
-                &:hover {
-                    color: var(--color1);
-                    border-bottom: 1px solid var(--color1);
-                }
-            }
+      & a {
+        width: 200px;
+        display: block;
+        color: var(--color1);
+        text-align: center;
+        padding: 5px;
+
+        &:hover {
+          color: var(--color1);
+          border-bottom: 1px solid var(--color1);
         }
+      }
     }
+  }
 }
 
 @media only screen and (max-width: 670px) {
-    .DrawerSection {
-        display: block;
-    }
+  .DrawerSection {
+    display: block;
+  }
 }

@@ -32,7 +32,7 @@ To get more information about the file selected (asides the name displayed on th
 
 ```js
 const userImage = document.getElementById("userImage")
-userImage.addEventListener("change", function(e) {
+userImage.addEventListener("change", function (e) {
   console.log(e.target.files)
 })
 ```

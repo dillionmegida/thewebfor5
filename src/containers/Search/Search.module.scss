@@ -1,28 +1,29 @@
 .Search {
-    width: 100%;
-    display: flex;
-    padding: 0 10px 0 0;
-    display: flex;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 0 10px 0 0;
+  display: flex;
+  align-items: center;
 
-    & input {
-        width: 95%;
-        border: 1px solid #ddd;
-        font-size: 16px;
-        background-color: var(--color1);
-        color: var(--color3);
-        padding: 10px 0 10px 10px;
+  & input {
+    width: 95%;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 10px 0 10px 10px;
 
-        &:hover, &:focus {
-            outline: none;
-            background-color: var(--color5);
-        }
+    &:hover,
+    &:focus {
+      outline: none;
+      background-color: var(--color5);
     }
+  }
 
-    & p {
-        width: 5%;
-        margin: 0;
-        text-align: center;
-        color: var(--color3);
-    }
+  & p {
+    width: 5%;
+    margin: 0;
+    text-align: center;
+    color: var(--color3);
+  }
 }
