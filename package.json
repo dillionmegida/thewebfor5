@@ -1,7 +1,7 @@
 {
   "name": "thewebfor5",
   "private": true,
-  "description": "A website that simplies web topics",
+  "description": "A website that simplifies web topics",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -10,7 +10,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "mocha"
   },
   "dependencies": {
     "gatsby": "^2.18.11",
@@ -39,7 +39,15 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
+    "ghooks": "^2.0.4",
+    "mocha": "^8.0.1",
     "prettier": "^1.18.2"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
   },
   "repository": {
     "type": "git",
