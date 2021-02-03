@@ -23,7 +23,7 @@ const checkGlobal = () => {
 ;(() => {
   if (checkGlobal()) {
     const savedKeys = JSON.parse(window.localStorage.getItem(storageKey))
-    if (savedKeys.includes(null)) {
+    if (savedKeys && savedKeys.includes(null)) {
       const filteredKeys = savedKeys.filter((key) => key !== null)
       window.localStorage.setItem(storageKey, JSON.stringify(filteredKeys))
     }
