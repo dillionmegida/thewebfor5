@@ -15,7 +15,7 @@ export default ({ data }) => {
     <Layout
       PageTitle={`About ${Brand.name}`}
       PageLink="/about"
-      PageDescription={`${Brand.name} founded by ${Brand.founder.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old. This platform hopes to be different from other platforms such that the topics aren't entirely explained in technical terms but simpler ones which a five year old would understand.`}
+      PageDescription={`${Brand.name} founded by ${Brand.founder.name} is a blog platform for demystifying web topics thereby making them easy to understand and concept.`}
       PageKeywords="about"
     >
       <section className={Styles.AboutSection}>
@@ -26,27 +26,18 @@ export default ({ data }) => {
         <div className={Styles.About}>
           <h2>About</h2>
           <p>
-            {Brand.name} is a blog platform for demystifying web topics as
-            assumed to be teaching a five year old. It was launched by{" "}
-            {Brand.founder.name} on January 1st, 2020 (more details on him
-            below).
+            {Brand.name} is a blog platform for demystifying web topics and
+            making them easy to understand and digest. The term "Web For 5" can
+            be confusing, but this platform is not targetted towards 5 year
+            olds. The term connotes simplicity, which means we do our best on
+            this platform to make short and long content simple.
+            <br />
+            <br />
+            It was launched by {Brand.founder.name} on January 1st, 2020 (more
+            details on him below).
           </p>
           <p>
-            So far, there are <b>{noOfArticles}</b> articles already written.
-          </p>
-          <p>
-            There are undeniably numerous platforms already built for teaching
-            web topics but this hopes to be different such that the topics
-            aren't entirely explained in technical terms but simpler ones which
-            a five year old would understand. Also note that despite the means
-            used in explanation, the technicalities involved in such topics
-            would not be left behind.
-          </p>
-          <p>
-            The little requirement for five year olds (lol) hoping to learn from
-            this platform is that they should have the appetite for reading.
-            This is stated because literally, five year olds wouldn't actually
-            like reading. Right?{" "}
+            So far, there are <b>{noOfArticles}</b> articles written.
           </p>
           <p>
             We hope to give you the best in this platform : ). Kindly reach us
@@ -68,9 +59,9 @@ export default ({ data }) => {
               <b>{Brand.founder.name}</b>
             </p>
             <p>
-              A front-end developer, graphics designer and technical writer. He
-              founded this site with the purpose of breaking down topics in web
-              development into its simplest pieces.
+              A software engineer and technical writer. He founded this site
+              with the purpose of making web topics and practices easier to
+              understand.
             </p>
             <div className={Styles.Links}>
               <WebsiteMedia

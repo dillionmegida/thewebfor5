@@ -24,7 +24,7 @@ export default ({ pageContext }) => {
       PageTitle={`${Brand.nameWithSpace} - Simplifying web development topics.`}
       PageLink="/"
       PageDescription={`${Brand.name} is a blog platform for demystifying web topics and practices.`}
-      PageKeywords="home, The Web For Five, The Web For 5, simplified web topics, javascript"
+      PageKeywords="home, The Web For Five, The Web For 5, The Web Simplified, simplified web topics, javascript"
       FirstSection={
         <div className={Styles.TagsSection}>
           <h3>#tags</h3>
