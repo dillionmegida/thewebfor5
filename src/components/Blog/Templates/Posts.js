@@ -9,6 +9,7 @@ import Brand from "../../Brand/Details"
 import Tags from "../Tags/Tags"
 import Newsletter from "../../Newsletter/Newsletter"
 import SuggestArticles from "../SuggestArticles/SuggestArticles"
+import Not5YearOldLiterallyNote from "../../Not5YearOldLiterallyNote"
 
 export default ({ pageContext }) => {
   const { pageCount } = pageContext
@@ -32,6 +33,7 @@ export default ({ pageContext }) => {
       }
       SecondSection={
         <>
+        <Not5YearOldLiterallyNote />
           <section className={Styles.Posts}>
             {pageContext.group.map(({ node }, index) => {
               return (
