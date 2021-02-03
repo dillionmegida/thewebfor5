@@ -20,9 +20,9 @@ export default ({ pageContext }) => {
 
   return (
     <Layout
-      PageTitle={`${Brand.nameWithSpace} - Simplifying web topics like teaching a five year old.`}
+      PageTitle={`${Brand.nameWithSpace} - Simplifying web development topics.`}
       PageLink="/"
-      PageDescription={`${Brand.name} is a blog platform for demystifying web topics as assumed to be teaching a five year old.`}
+      PageDescription={`${Brand.name} is a blog platform for demystifying web topics and practices.`}
       PageKeywords="home, The Web For Five, The Web For 5, simplified web topics, javascript"
       FirstSection={
         <div className={Styles.TagsSection}>
