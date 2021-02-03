@@ -4,6 +4,9 @@ module.exports = {
   },
 
   plugins: [
+      // Styled Components
+    `gatsby-plugin-styled-components`,
+
     // Sass
     `gatsby-plugin-sass`,
 
